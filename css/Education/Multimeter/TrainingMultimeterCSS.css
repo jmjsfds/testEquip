@@ -1,0 +1,183 @@
+
+        .edu-contents{
+			height: 100vh;
+			width:93vw;
+			position: relative;
+            background-image: url("media/imgs/low-noise-darker.png");
+            background-size: cover;
+            color:  black;
+			overflow: hidden;
+        }
+
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        opacity: 1;
+    }
+
+        
+            .multi-meter-container{
+            }
+                #mm-svg-id{
+                    width: 95%;
+                    border: 2px solid blue;
+                }
+                    .red-plugin-id{
+                        position: absolute;
+                        top: 5vh;
+                        left: 5vw;
+                        width: auto;
+                        height: 120vh;
+                        border: 2px dashed red;
+                    }
+                    .black-plugin-id{
+                        position: absolute;
+                        top: 5vh;
+                        left: 50vw;
+                        width: auto;
+                        height: 50vh;
+                        border: 2px dashed black;
+                    }
+                    #warning-label-id{
+                        position: absolute;
+                        top: 1rem;
+                        right: 10vw;
+                        padding: 0.5rem;
+                        background-color: lightblue;
+                        border: 3px solid red;
+                        z-index: 100;
+                    }
+                        #warning-label-id h1{
+                            display: block;
+                            text-align: center;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            color: red;
+                        }
+                        #warning-label-id label{
+                            font-size: 1.6rem;
+                            font-weight: bold;
+                            color: black;
+                        }
+
+
+                /*.probes-container{
+                    position: absolute;
+                    top: 65vh;
+                    left: 1rem;
+                    right: 1rem;
+                    height: 50vw;
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 5px;
+                    border: 2px solid green;
+                }
+                    #red-probe-id{
+                        width: auto;
+                        height: 50vh;
+                        border: 2px solid red;
+                    }
+                    #black-probe-id{
+                        width: auto;
+                        height: 50vh;
+                        border: 2px solid black;
+                    }*/
+
+
+                #mm-mamp-plugin-click-area-id:hover,
+                #mm-ten-amp-plugin-click-area-id:hover,
+                #mm-com-plugin-click-area-id:hover,
+                #mm-select-button-click-area-id:hover,
+                #mm-light-button-click-area-id:hover,
+                #mm-range-button-click-area-id:hover,
+                #mm-hold-button-click-area-id:hover,
+                #mm-max-min-button-click-area-id:hover,
+                #mm-light-button-id:hover,
+                #mm-sel-label-red-id:hover,
+                #mm-sel-label-white-id:hover,
+                #mm-sel-push-button-id:hover,
+                #mm-off-click-area-id:hover,
+                #mm-micro-amp-click-area-id:hover,
+                #mm-milli-amp-click-area-id:hover,
+                #mm-ten-amp-click-area-id:hover,
+                #mm-volts-click-area-id:hover,
+                #mm-hertz-click-area-id:hover,
+                #mm-ohms-click-area-id:hover,
+                #mm-cap-diode-click-area-id:hover,
+                #mm-temp-click-area-id:hover{
+                    cursor: pointer;
+                }
+                .fill-opacity{
+                    opacity: 0;
+                }
+                .hidden-selector,
+                .hidden-element{
+                    display: none;
+                    visibility: hidden;
+                }
+                .selector-label{
+                    border: 2px solid red;
+                    background-color: gray;
+                    font-size: 5rem;
+                }
+                .red-bckgrnd{
+                    fill: red;
+                }
+                .orange-bckgrnd{
+                    fill: orange;
+                }
+                .gray-bckgrnd{
+                    fill: #a0a0a0;
+                }
+                .white-bckgrnd{
+                    fill: #ffffff;
+                }
+                .options-item{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 80%;
+                    margin: 0.5rem;
+                }
+        .project-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #2196F3;
+            padding: 1rem;
+            width: 97vw;
+            height: 90vh;
+            border: 2px solid black;
+            background-color: #a0a0a0;
+            overflow: hidden;
+        }
+
+        .project-container{
+            display: grid;
+            grid-template-columns: 70vw 21vw 0;
+            gap: 10px;
+        }
+            #about-multimeter-id{
+                grid-area: 1 / 1 / 6 / 2;
+                background-color: whitesmoke;
+            }
+            #multimeter-svg-id{
+                grid-area: 1 / 2 / 6 / 3;
+                background-color: blue;
+            }
+            #testing-container-id{
+                grid-area: 1 / 3 / 6 / 7;
+                background-color: lightsalmon;
+                display: none;
+            }
+            .testing-container{
+                position: relative;
+                border: 2px solid white;
+            }
+                .testing-options-container{
+                    border: 2px solid blueviolet;
+                }
+                    .testing-options-container article{
+                    }
+

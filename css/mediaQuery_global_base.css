@@ -1,0 +1,254 @@
+/*  base CSS for: 
+ *    1) Global Navigation
+ *    2) Home page
+ *    3) All pages that uses class="page";
+ */
+
+    * {
+        box-sizing: border-box;
+        margin:0;
+        padding:0; 
+    }
+
+    html, body {
+    	width:100vw;
+        height: 100vh;
+        font-size: 16px;
+        font-family:  Arial, Helvetica, sans-serif;
+        background-color:black;
+    }
+
+/* End CSS for all pages */
+
+/* CSS for the mainContainer (class="mainCntnr") */
+    .main-cntnr {
+        width: 100%;
+        height: 99vh;
+        overflow: hidden;
+        background: black;
+    }
+/* End CSS for mainContainer */
+
+/* CSS for Nav */
+    /*.nav-cntnr{
+        position: relative;
+        top: 0rem;
+        left: 1rem;*/
+        /*width: 1rem;*/
+        /*height: 10rem;*/
+        /*color: yellow;
+        z-index: 10;
+        border: 1px solid greenyellow;
+    }*/
+
+       /* .nav-label-container{
+            position: absolute;
+            background-color: rgb(0, 0, 50);
+            top: 0;
+            left: 0;
+            z-index: 15;
+        }*/
+
+            .nav-label{
+                position: relative;
+                top: 0;
+                left: 0;
+                display: block;
+                text-align: center;
+                /*font-size: 2rem;*/
+                color: white;
+                font-weight: bolder;
+                cursor: pointer; 
+                width: 100%; /*8.5rem;*/
+                height: 2.4rem;
+                /*border: 2px solid red;*/
+                background-color: black;
+                z-index: 20;
+            }
+
+        /*.hide-dropdown{
+            margin-top: -15rem;
+        }*/
+        .dbe-hide-dropdown{
+            margin-top: -13rem;
+        }
+        .nav-dropdown{
+            position: relative;
+            z-index: 10;;
+        }
+        .edu-nav-dropdown,
+        .nav-dropdown{
+           /* display: none;
+            position: absolute;
+            top: 0rem;
+            left: 10rem;*/
+            width: 100%; /*8.5rem; */
+            padding: 0.1rem;
+		    list-style: none;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: margin-top 0.5s;
+            background-image: radial-gradient(blue, black);
+            border: 2px solid yellow;
+            border-radius: 5px;
+            z-index: 15; 
+        }
+            .dept-container ul{
+                list-style: none;
+            }
+            .dept-label{
+                font-weight: bolder;
+                color: yellow;
+                padding-bottom: 0.2rem;
+            }
+
+            .nav-dropdown a{
+                /*font-size: 1.1rem;*/
+                font-weight: bold;
+                text-decoration: none;
+                color: white;
+                padding-bottom: 0.3rem;
+            }
+
+                .nav-dropdown a:hover{
+                    text-decoration: none;
+                    color: yellow;
+                }
+
+            .dept-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              /*  padding-left: 1rem;*/
+            } 
+
+              /*  .dept-container a{
+                    font-size: 1.1rem;
+                    text-decoration: none;
+                    color: white;
+                    padding-bottom: 0.3rem;
+                } */
+/* End CSS for Nav */
+
+
+/* CSS for page */
+    .page{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99vw;
+        height: 97vh; 
+    	display: flex;
+        justify-content: center;
+        align-content: center;
+        background-image: radial-gradient(blue, black);
+        overflow-x: hidden;
+        color: yellow; 
+    }
+        .transition-fade-in{ 
+            transition: opacity 0.5s;
+        }
+        .close-html{
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            color: black;
+            border-radius: 5px;
+            background-color: red;
+            padding: 0 0.2rem;
+            font-size: 1.5rem;
+        }
+       /* .close-html:hover{
+            font-size: 1.6rem;
+            font-weight: bold;
+        }*/
+        
+        a{
+            color: yellow;
+        }
+/* End CSS for page */
+
+/* CSS for Home Page  */
+	.home-page{
+		overflow: hidden;
+	}
+    .home-page label{
+        position: absolute;
+        font-weight: bold;
+        color: white;
+        transition: top 1s, left 1s, right 1s, font-size 1s; 
+    }
+    .d-label-start{
+        top: 50vh;
+        left: 50%;
+        font-size: 0vh;
+    }
+
+    .d-label-finish{
+        top: 50%;
+        left: 5%;
+        font-size: min(9.5vh, 9.5vw);
+    }
+
+    .b-label-start{
+        top: 50vh;
+        left: 50%;
+        font-size: 0vh;
+    }
+
+    .b-label-finish{
+        top: 0.5em;
+        left: 45%;
+        font-size: min(9.5vh, 9.5vw);
+    }
+
+    .e-label-start{
+        top: 50vh;
+        right: 45%;
+        font-size: 0vh;
+    }
+
+    .e-label-finish{
+        top: 50%;
+        right: 5%;
+        font-size: min(9.5vh, 9.5vw);
+    }
+
+    .dbe-logo{
+        position: absolute;
+        top: min(50%, calc((20vh + 20vw)/2));
+        width: min(50%, calc((30vh + 20vw)/2));/* 35%;*/
+        z-index: 15;
+    }
+/* End of CSS for Home Page  */
+
+				.dept-label{
+					font-weight: bold;
+				}
+
+                .nav-label{
+                    position: relative;
+                    display: block;
+                    text-align: center;
+                    cursor: pointer;
+                    color: yellow;
+                    font-weight: bold;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.4rem;
+                    /*background-color: black;*/
+                    /*border: 1px solid red;*/
+                    z-index: 30;
+                }
+                
+                .nav-dropdown{
+                    width: 100%;
+                }
+                .nav-dropdown li a{
+                    text-decoration: none;
+                }
+                
+/* BEGIN CSS for IC-Data */  

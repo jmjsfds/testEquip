@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="28.226152mm"
+   height="24.035456mm"
+   viewBox="0 0 28.226153 24.035455"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><g
+     id="dc-power-supply-id"
+     transform="translate(-68.393176,-91.38835)"><g
+       id="g4"><path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 81.839876,108.93765 h 2.786322"
+         id="path5" /><g
+         id="g9"
+         transform="translate(44.044974,-1.0391057)"
+         style="display:inline"><path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 39.299636,95.483562 v 3.11902"
+           id="path8" /><path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 37.844095,97.063866 h 2.931957"
+           id="path9" /></g></g><g
+       id="g5"><g
+         id="g1"><path
+           style="display:inline;fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 77.831226,93.274924 v 6.841216"
+           id="path10" /><path
+           style="display:inline;fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 93.178279,93.294563 h -15.138"
+           id="path1" /></g><path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 77.845813,111.76316 v -6.54961"
+         id="path11" /></g><g
+       id="g2"><path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 68.743176,100.41161 H 86.854278"
+         id="path12" /><path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 71.529497,104.88221 h 12.55925"
+         id="path13" /></g><g
+       id="g3"
+       style="display:inline"
+       transform="translate(-77.716884,-0.02001542)"><path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         id="dc-pos-probe-connection-id"
+         d="m 171.70199,94.467378 a 1.4762102,1.4762102 0 0 1 -0.42916,-2.037337 1.4762102,1.4762102 0 0 1 2.035,-0.440126 1.4762102,1.4762102 0 0 1 0.45108,2.032596 1.4762102,1.4762102 0 0 1 -2.03014,0.462022" /><path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.7;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         id="dc-neg-probe-connection-id"
+         d="m 154.84271,114.85358 a 1.4762102,1.4762102 0 0 1 -0.42916,-2.03734 1.4762102,1.4762102 0 0 1 2.03499,-0.44012 1.4762102,1.4762102 0 0 1 0.45108,2.03259 1.4762102,1.4762102 0 0 1 -2.03013,0.46202" /></g></g></svg>

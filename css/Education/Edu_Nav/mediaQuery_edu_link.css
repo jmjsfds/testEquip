@@ -1,0 +1,103 @@
+/* CSS for "links" between HTMLs (all Screen Widths) 
+*   Codes:  Introduction
+*           Truth Tables
+*           Gates & ICs
+*           Design
+*/
+
+/*CSS for Links  (BASE) */
+    .link-container{
+        position: relative;
+        margin-top: 1rem;
+        left: 0;
+        top: 0;
+    }
+    .link-general{
+        position: absolute;
+        background-image: radial-gradient(blue, black);
+        font-weight: bold;
+        color: yellow;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+    .link-previous{
+        left: 5vw;
+    }
+    .link-next{
+        right: 5vw;
+    }
+    /*End CSS for Codes (BASE) */
+
+@media only screen and (max-width: 599px){
+    .link-container{
+        padding-bottom: 3rem;
+    }
+    .link-general{
+        font-size: 1.3rem;
+        border-radius: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 749px){
+    .link-container{
+        padding-bottom: 4rem;
+    }
+    .link-general{
+        font-size: 1.3rem;
+        border-radius: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 899px){
+    .link-container{
+        padding-bottom: 5rem;
+    }
+    .link-general{
+        font-size: 1.4rem;
+        border-radius: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1049px){
+    .link-container{
+        padding-bottom: 5rem;
+    }
+    .link-general{
+        font-size: 1.5rem;
+        border-radius: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+    .link-container{
+        padding-bottom: 6rem;
+    }
+    .link-general{
+        font-size: 1.6rem;
+        border-radius: 0.8rem;
+        padding: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .link-container{
+        padding-bottom: 7rem;
+    }
+    .link-general{
+        font-size: 1.9rem;
+        border-radius: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .link-container{
+        padding-bottom: 7rem;
+    }
+    .link-general{
+        font-size: 2.1rem;
+        border-radius: 0.9rem;
+        padding: 0.8rem;
+    }
+}

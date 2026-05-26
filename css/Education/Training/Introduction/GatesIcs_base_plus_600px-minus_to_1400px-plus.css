@@ -1,0 +1,1085 @@
+/* CSS common to all Screen Widths: 
+*   for Training/Introduction/GatesIcs:   6
+*   
+*/
+/* CSS for "Introduction/GatesIcs" Base */
+    /* CSS Base (CONTENTS) */
+        /*CSS Global & Text */
+           /* .contents{
+                overflow: visible;
+                font-weight: bold;
+                border: 3px solid blue; 
+            }
+            .header-one,
+            .header-two{
+                display: block;
+                text-align: center;
+            }*/
+            .square-root{
+                height: 1.6rem;
+            }
+            .not-gate{
+                height: 1.6rem;
+                margin-bottom: -0.3rem;
+            }
+            .and-gate{
+                width: 15vw;
+            }
+            .ic-139-container{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .ic-139{
+                width: 15rem;
+            }
+        /*End CSS Global & Text */
+
+        /*CSS Selections */
+            .circuit-selection-show-container,
+            .basic-selection-show-container{
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 60vw;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    margin-bottom: 1rem;
+                    /*border: 1px solid orange;*/
+                }
+                    .gate-selection-container label{
+                        display: block;
+                        text-align: center;
+                        width: 4rem;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        padding: 0.5rem 0rem;
+                        margin: 0.3rem 0.3rem;
+                        background: darkblue ;
+                        color: yellow;
+                        cursor: pointer;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 10rem;
+                        cursor: pointer;
+                        margin: 0.3rem 0rem;
+                        padding: 0.4rem 0rem;
+                        background-color: lightyellow;
+                        border: 3px solid darkblue;
+                    }
+                        .circuit-selection-container img:hover{
+                            background-color: lightblue;
+                        }
+                        .selected-gate{
+                            color: darkorange !important;
+                        }
+                    /* #NotXor,*/
+                        .circuit-selected{
+                            background-color: lightblue !important;
+                        }
+                        .gate-selection-container label:hover{
+                            color: darkorange;
+                        }
+                        .select-data-type-outer-container{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                        }
+                        .select-data-type-container{
+                            display: flex;
+                            font-size: 2rem;
+                            flex-direction: column;
+                            justify-content: center;
+                           /* border: 1px solid red;*/
+                        }
+                        .radio-inputs-container{
+                            width: 10rem;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                           /* border: 1px solid green; */
+                        }
+                            .radio-inputs-container label{
+                                font-size: 2.4rem;
+                                cursor: pointer;
+                            }
+                                .radio-inputs-container label:hover{
+                                    font-size: 2.5rem;
+                                    cursor: pointer;
+                                }
+                                .selected-data-type{
+                                    color: yellow;
+                                } 
+                                .hide-basic-solution{
+                                    /*display: none;*/
+                                    opacity: 0;
+                                }
+                                .hide-circuit-solution{
+                                    /*display: none;*/
+                                    opacity: 0;
+                                }
+                                .show-solution-table{
+                                    opacity: 1;
+                                }
+                                .show-solution-label{
+                                    position: absolute;
+                                    bottom: 0.5rem;
+                                    cursor: pointer;
+                                    font-size: 2rem;
+                                }
+                                    .show-solution-label:hover{
+                                        cursor: pointer;
+                                        color: yellow;
+                                    }
+
+        /*End CSS Selections */
+
+        /*CSS Tables */
+        #basic-table-id{
+            table-layout: fixed;
+        }
+            .table-container{
+                display: flex;
+                justify-content: center;
+            }
+            .circuit-table-container,   
+            .basic-table-container{
+                display: flex;
+                justify-content: space-around;
+            } 
+            
+                .tdth-wrapper{
+                    display: block;
+                    text-align: center;
+                }
+            /*CSS Theads */
+                tHead{
+                    background-color: lightblue;
+                }
+                    #basic-thead-id tr th{
+                        border: 3px solid black;
+                    }
+            /*End CSS Theads */
+
+            /*CSS Tbodys */
+                tBody{
+                    background-color: lightgoldenrodyellow;
+                }
+                #basic-tbody-id tr td{
+                    border: 3px solid black;
+                }
+                .output-value:hover{
+                    cursor: pointer;
+                    color: yellow;
+                }
+                .hide-table-td{
+                    display: none;
+                    opacity: 0;
+                }
+                .tdInput{
+                    display: block;
+                    text-align: center;
+                }
+            /*End CSS Tbodys */
+        /*End CSS Tables */
+
+        /*CSS for Table class="table-basic-ic"  */
+        .table-basic-ics-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+            .table-basic-ics{
+                display: block;
+                text-align: center;
+                border-collapse: collapse;
+            }
+
+                .table-basic-ics thead{
+                    font-weight: bold;
+                }
+                .table-basic-ics tbody{
+                    font-weight: bold;
+                }
+                    .table-basic-ics thead th:nth-child(1){
+                        padding: 0 3rem;
+                    }
+                    .table-basic-ics thead th:nth-child(2){
+                        padding: 0 1rem;
+                    }
+                    .table-basic-ics tbody td:nth-child(3) img{
+                        padding: 0 1rem;
+                    }  
+        /*END CSS for Table class="table-basic-ic"  */
+
+/*End for "Introduction/GatesIcs" Base  */
+
+@media only screen and (max-width: 599px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+            padding: 0 1rem;
+            } 
+            .header-one{
+                font-size: 1.4rem;
+            }
+            .header-two{
+                font-size: 1.4rem;
+            }
+            p{
+            font-size: 1.2rem;
+            text-indent: 2.5rem;
+            }
+        /*End CSS Global & Text */
+
+        /*CSS Selections */
+            .circuit-selection-container,
+            .gate-selection-container{
+                width: 60vw;
+                margin-bottom: 1rem;
+                /*border: 2px solid red;*/
+            }
+                .gate-selection-container label{
+                    width: 4rem;
+                    font-size: 1rem;
+                    padding: 0.5rem 0.5rem;
+                    margin: 0.3rem 0.3rem;
+                    border-radius: 5px;
+                }
+                .circuit-selection-container img{
+                    height: 3rem;
+                    margin: 0.3rem 0.3rem;
+                    padding: 0.5rem 0.8rem;
+                }
+                .show-solution-label{
+                    font-size: 1.7rem;
+                    right: -1rem;
+                }
+        /*End CSS Selections */
+
+        /*CSS Tables */
+            /*CSS Thead */
+                
+                #circuit-thead-id tr th,
+                #basic-thead-id tr th{
+                    margin: 0;
+                    padding: 0;
+                    height: 3rem;
+                }
+                    #circuit-thead-id tr:nth-child(1),
+                    #basic-thead-id tr:nth-child(1){
+                        font-size: 1.8rem;
+                    }
+
+            /*End CSS Thead */
+
+            /*CSS Tbodys */
+                #circuit-tbody-id,
+                #basic-tbody-id{
+                    font-size: 1.6rem;
+                }
+                    #circuit-tbody-id tr td,
+                    #basic-tbody-id tr td{
+                        text-align: center;
+                        padding: 0.3rem 0.3rem;
+                    }
+                    /* CSS for Input */
+                    #circuit-tbody-id tr td input,
+                    #basic-tbody-id tr td input{
+                        text-align: center;
+                        width: 3rem;
+                        height: 3rem;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        padding: 0;
+                        background-color:lightgoldenrodyellow;
+                        border: 3px solid black;
+                    }
+                    /* size and padding around img */
+                    #circuit-img-id,
+                    #basic-img-id{
+                        width: 15rem;
+                        padding: 0.3rem;
+                    }
+                    input::-webkit-outer-spin-button,
+                    ::-webkit-inner-spin-button{
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }    
+                    input[type-number]{
+                        -moz-appearance: textfield;
+                    }
+            /*End CSS Tbodys */
+
+            /*CSS for table class="table-basic-ics" */
+
+                .table-basic-ics thead{
+                    font-size: 1.5rem;
+                }
+                .table-basic-ics tbody{
+                    font-size: 1.4rem;
+                }
+                    .table-basic-ics thead th:nth-child(1){
+                        padding: 0 1rem;
+                    }
+                    .table-basic-ics thead th:nth-child(2){
+                        padding: 0 1rem;
+                        width: 10rem;
+                    }
+                    .table-basic-ics tbody td:nth-child(3) img{
+                        padding: 0 1rem;
+                        width: 12rem;
+                    }  
+            /*END CSS for table class="table-basic-ics" */
+        /*End CSS Tables */
+    /*End CSS for "Introduction/GatesIcs" */
+}
+
+    
+@media only screen and (min-width: 600px) and (max-width: 749px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+                padding: 0 1rem;
+                } 
+                .header-one{
+                    font-size: 1.7rem;
+                }
+                .header-two{
+                    font-size: 1.6rem;
+                    /* text-indent: 1.5rem; */
+                }
+                p{
+                font-size: 1.4rem;
+                text-indent: 2.5rem;
+                }
+            /*End CSS Global & Text */
+    
+            /*CSS Selections */
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 60vw;
+                    margin-bottom: 1rem;
+                }
+                    .gate-selection-container label{
+                        width: 4rem;
+                        font-size: 1rem;
+                        padding: 0.5rem 0rem;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 4rem;
+                        margin: 0.3rem 0.3rem;
+                        padding: 0.5rem 0.8rem;
+                    }
+                    .show-solution-label{
+                        font-size: 1.7rem;
+                        right: 0rem;
+                    }
+            /*End CSS Selections */
+    
+            /*CSS Tables */
+                /*CSS Thead */
+                    
+                    #circuit-thead-id tr th,
+                    #basic-thead-id tr th{
+                        margin: 0;
+                        padding: 0;
+                        height: 3rem;
+                    }
+                        #circuit-thead-id tr:nth-child(1),
+                        #basic-thead-id tr:nth-child(1){
+                            font-size: 1.8rem;
+                        }
+    
+                /*End CSS Thead */
+    
+                /*CSS Tbodys */
+                    #circuit-tbody-id,
+                    #basic-tbody-id{
+                        font-size: 1.6rem;
+                    }
+                        #circuit-tbody-id tr td,
+                        #basic-tbody-id tr td{
+                            text-align: center;
+                            padding: 0.3rem 0.3rem;
+                        }
+                        /* CSS for Input */
+                        #circuit-tbody-id tr td input,
+                        #basic-tbody-id tr td input{
+                            text-align: center;
+                            width: 3rem;
+                            height: 3rem;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            padding: 0;
+                            background-color:lightgoldenrodyellow;
+                            border: 3px solid black;
+                        }
+                        /* size and padding around img */
+                        #circuit-img-id,
+                        #basic-img-id{
+                            width: 15rem;
+                            padding: 0.3rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        ::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }    
+                        input[type-number]{
+                            -moz-appearance: textfield;
+                        }
+                /*End CSS Tbodys */
+
+                /*CSS for table class="table-basic-ics" */
+
+                    .table-basic-ics thead{
+                        font-size: 1.5rem;
+                    }
+                    .table-basic-ics tbody{
+                        font-size: 1.4rem;
+                    }
+                        .table-basic-ics thead th:nth-child(1){
+                            padding: 0 1rem;
+                        }
+                        .table-basic-ics thead th:nth-child(2){
+                            padding: 0 1rem;
+                            width: 10rem;
+                        }
+                        .table-basic-ics tbody td:nth-child(3) img{
+                            padding: 0 1rem;
+                            width: 14rem;
+                        }  
+                /*END CSS for table class="table-basic-ics" */
+            /*End CSS Tables */
+    /*End CSS for "Introduction/GatesIcs" */
+    }
+
+    
+@media only screen and (min-width: 750px) and (max-width: 899px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+                padding: 0 1rem;
+                } 
+                .header-one{
+                    font-size: 1.9rem;
+                }
+                .header-two{
+                    font-size: 1.7rem;
+                    /* text-indent: 1.5rem; */
+                }
+                p{
+                font-size: 1.5rem;
+                text-indent: 2.5rem;
+                }
+            /*End CSS Global & Text */
+    
+            /*CSS Selections */
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 60vw;
+                    margin-bottom: 1rem;
+                }
+                    .gate-selection-container label{
+                        width: 5rem;
+                        font-size: 1.3rem;
+                        padding: 0.5rem 0.7rem;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 4rem;
+                        margin: 0.3rem 0.3rem;
+                        padding: 0.5rem 0.8rem;
+                    }
+                    .show-solution-label{
+                        right: 0;
+                        font-size: 1.7rem;
+                    }
+            /*End CSS Selections */
+    
+            /*CSS Tables */
+                /*CSS Thead */
+                    
+                    #circuit-thead-id tr th,
+                    #basic-thead-id tr th{
+                        margin: 0;
+                        padding: 0;
+                        height: 3rem;
+                    }
+                        #circuit-thead-id tr:nth-child(1),
+                        #basic-thead-id tr:nth-child(1){
+                            font-size: 1.8rem;
+                        }
+    
+                /*End CSS Thead */
+    
+                /*CSS Tbodys */
+                    #circuit-tbody-id,
+                    #basic-tbody-id{
+                        font-size: 1.6rem;
+                    }
+                        #circuit-tbody-id tr td,
+                        #basic-tbody-id tr td{
+                            text-align: center;
+                            padding: 0.3rem 0.3rem;
+                        }
+                        /* CSS for Input */
+                        #circuit-tbody-id tr td input,
+                        #basic-tbody-id tr td input{
+                            text-align: center;
+                            width: 3rem;
+                            height: 3rem;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            padding: 0;
+                            background-color:lightgoldenrodyellow;
+                            border: 3px solid black;
+                        }
+                        /* size and padding around img */
+                        #circuit-img-id,
+                        #basic-img-id{
+                            width: 15rem;
+                            padding: 0.3rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        ::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }    
+                        input[type-number]{
+                            -moz-appearance: textfield;
+                        }
+                /*End CSS Tbodys */    
+                
+                /*CSS for table class="table-basic-ics" */
+
+                    .table-basic-ics thead{
+                        font-size: 1.7rem;
+                    }
+                    .table-basic-ics tbody{
+                        font-size: 1.5rem;
+                    }
+                        .table-basic-ics thead th:nth-child(1){
+                            padding: 0 1rem;
+                        }
+                        .table-basic-ics thead th:nth-child(2){
+                            padding: 0 1rem;
+                            width: 11rem;
+                        }
+                        .table-basic-ics tbody td:nth-child(3) img{
+                            padding: 0 1rem;
+                            width: 20rem;
+                        }  
+                /*END CSS for table class="table-basic-ics" */
+            /*End CSS Tables */
+    /*End CSS for "Introduction/GatesIcs" */
+    }
+
+    
+@media only screen and (min-width: 900px) and (max-width: 1049px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+                padding: 0 1rem;
+                } 
+                .header-one{
+                    font-size: 2.1rem;
+                }
+                .header-two{
+                    font-size: 1.9rem;
+                    /* text-indent: 1.5rem; */
+                }
+                p{
+                font-size: 1.7rem;
+                text-indent: 2.5rem;
+                }
+            /*End CSS Global & Text */
+    
+            /*CSS Selections */
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 70vw;
+                    margin-bottom: 1rem;
+                }
+                    .gate-selection-container label{
+                        width: 5.3rem;
+                        font-size: 1.3rem;
+                        padding: 0.5rem 0.7rem;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 5rem;
+                        margin: 0.3rem 0.1rem;
+                        padding: 0.5rem 0.5rem;
+                    }
+                    .show-solution-label{
+                        right: 0;
+                        font-size: 1.7rem;
+                    }
+            /*End CSS Selections */
+    
+            /*CSS Tables */
+                /*CSS Thead */
+                    
+                    #circuit-thead-id tr th,
+                    #basic-thead-id tr th{
+                        margin: 0;
+                        padding: 0;
+                        height: 3rem;
+                    }
+                        #circuit-thead-id tr:nth-child(1),
+                        #basic-thead-id tr:nth-child(1){
+                            font-size: 1.8rem;
+                        }
+    
+                /*End CSS Thead */
+    
+                /*CSS Tbodys */
+                    #circuit-tbody-id,
+                    #basic-tbody-id{
+                        font-size: 1.6rem;
+                    }
+                        #circuit-tbody-id tr td,
+                        #basic-tbody-id tr td{
+                            text-align: center;
+                            padding: 0.3rem 0.3rem;
+                        }
+                        /* CSS for Input */
+                        #circuit-tbody-id tr td input,
+                        #basic-tbody-id tr td input{
+                            text-align: center;
+                            width: 3rem;
+                            height: 3rem;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            padding: 0;
+                            background-color:lightgoldenrodyellow;
+                            border: 3px solid black;
+                        }
+                        /* size and padding around img */
+                        #circuit-img-id,
+                        #basic-img-id{
+                            width: 15rem;
+                            padding: 0.3rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        ::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }    
+                        input[type-number]{
+                            -moz-appearance: textfield;
+                        }
+                /*End CSS Tbodys */   
+                
+                /*CSS for table class="table-basic-ics" */
+
+                    .table-basic-ics thead{
+                        font-size: 1.9rem;
+                    }
+                    .table-basic-ics tbody{
+                        font-size: 1.7rem;
+                    }
+                        .table-basic-ics thead th:nth-child(1){
+                            padding: 0 1rem;
+                            width: 8rem;
+                        }
+                        .table-basic-ics thead th:nth-child(2){
+                            padding: 0 1rem;
+                            width: 13rem;
+                        }
+                        .table-basic-ics tbody td:nth-child(3) img{
+                            padding: 0 1rem;
+                            width: 22rem;
+                        }  
+                /*END CSS for table class="table-basic-ics" */
+            /*End CSS Tables */
+    /*End CSS for "Introduction/GatesIcs" */
+    }
+
+    
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+                padding: 0 1.5rem;
+                } 
+                .header-one{
+                    font-size: 2.1rem;
+                }
+                .header-two{
+                    font-size: 1.9rem;
+                    /* text-indent: 1.5rem; */
+                }
+                p{
+                font-size: 1.8rem;
+                text-indent: 3rem;
+                }
+            /*End CSS Global & Text */
+    
+            /*CSS Selections */
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 70vw;
+                    margin-bottom: 1rem;
+                }
+                    .gate-selection-container label{
+                        width: 5.3rem;
+                        font-size: 1.3rem;
+                        padding: 0.5rem 0.7rem;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 5.6rem;
+                        margin: 0.3rem 0.1rem;
+                        padding: 0.5rem 0.5rem;
+                    }
+                    .show-solution-label{
+                        right: 0;
+                        font-size: 1.7rem;
+                    }
+            /*End CSS Selections */
+    
+            /*CSS Tables */
+                /*CSS Thead */
+                    
+                    #circuit-thead-id tr th,
+                    #basic-thead-id tr th{
+                        margin: 0;
+                        padding: 0;
+                        height: 3rem;
+                        font-size: 2rem;
+                    }
+                        #circuit-thead-id tr:nth-child(1),
+                        #basic-thead-id tr:nth-child(1){
+                            font-size: 2.2rem;
+                        }
+    
+                /*End CSS Thead */
+    
+                /*CSS Tbodys */
+                    #circuit-tbody-id,
+                    #basic-tbody-id{
+                        font-size: 1.6rem;
+                    }
+                        #circuit-tbody-id tr td,
+                        #basic-tbody-id tr td{
+                            font-size: 2rem;
+                            text-align: center;
+                            padding: 0.6rem 0.6rem;
+                        }
+                        /* CSS for Input */
+                        #circuit-tbody-id tr td input,
+                        #basic-tbody-id tr td input{
+                            text-align: center;
+                            width: 3rem;
+                            height: 3rem;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            padding: 0;
+                            background-color:lightgoldenrodyellow;
+                            border: 3px solid black;
+                        }
+                        /* size and padding around img */
+                        #circuit-img-id,
+                        #basic-img-id{
+                            width: 15rem;
+                            padding: 0.3rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        ::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }    
+                        input[type-number]{
+                            -moz-appearance: textfield;
+                        }
+                /*End CSS Tbodys */
+                
+                /*CSS for table class="table-basic-ics" */
+
+                    .table-basic-ics thead{
+                        font-size: 1.9rem;
+                    }
+                    .table-basic-ics tbody{
+                        font-size: 1.7rem;
+                    }
+                        .table-basic-ics thead th:nth-child(1){
+                            padding: 0 1rem;
+                            width: 8rem;
+                        }
+                        .table-basic-ics thead th:nth-child(2){
+                            padding: 0 1rem;
+                            width: 13rem;
+                        }
+                        .table-basic-ics tbody td:nth-child(3) img{
+                            padding: 0 1rem;
+                            width: 22rem;
+                        }  
+                /*END CSS for table class="table-basic-ics" */
+            /*End CSS Tables */
+     /*End CSS for "Introduction/GatesIcs" */
+    }
+
+    
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+                padding: 0 1.5rem;
+                } 
+                .header-one{
+                    font-size: 2.5rem;
+                }
+                .header-two{
+                    font-size: 2.3rem;
+                    /* text-indent: 1.5rem; */
+                }
+                p{
+                font-size: 2.2rem;
+                text-indent: 3rem;
+                }
+            /*End CSS Global & Text */
+    
+            /*CSS Selections */
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 75vw;
+                    margin-bottom: 1rem;
+                }
+                    .gate-selection-container label{
+                        width: 6rem;
+                        font-size: 1.5rem;
+                        padding: 0.5rem 0.7rem;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 6.5rem;
+                        margin: 0.3rem 0.1rem;
+                        padding: 0.5rem 0.5rem;
+                    }
+                    .show-solution-label{
+                        right: 0;
+                        font-size: 1.7rem;
+                    }
+            /*End CSS Selections */
+    
+            /*CSS Tables */
+                /*CSS Thead */
+                    
+                    #circuit-thead-id tr th,
+                    #basic-thead-id tr th{
+                        margin: 0;
+                        padding: 0;
+                        height: 4rem;
+                        font-size: 2rem;
+                    }
+                        #circuit-thead-id tr:nth-child(1),
+                        #basic-thead-id tr:nth-child(1){
+                            font-size: 2.8rem;
+                        }
+    
+                /*End CSS Thead */
+    
+                /*CSS Tbodys */
+                    #circuit-tbody-id,
+                    #basic-tbody-id{
+                        font-size: 1.6rem;
+                    }
+                        #circuit-tbody-id tr td,
+                        #basic-tbody-id tr td{
+                            font-size: 2rem;
+                            text-align: center;
+                            padding: 0.6rem 0.6rem;
+                        }
+                        /* CSS for Input */
+                        #circuit-tbody-id tr td input,
+                        #basic-tbody-id tr td input{
+                            text-align: center;
+                            width: 3rem;
+                            height: 3rem;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            padding: 0;
+                            background-color:lightgoldenrodyellow;
+                            border: 3px solid black;
+                        }
+                        /* size and padding around img */
+                        #circuit-img-id,
+                        #basic-img-id{
+                            width: 20rem;
+                            padding: 0.3rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        ::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }    
+                        input[type-number]{
+                            -moz-appearance: textfield;
+                        }
+                /*End CSS Tbodys */
+                
+                /*CSS for table class="table-basic-ics" */
+
+                    .table-basic-ics thead{
+                        font-size: 2.3rem;
+                    }
+                    .table-basic-ics tbody{
+                        font-size: 2.1rem;
+                    }
+                        .table-basic-ics thead th:nth-child(1){
+                            padding: 0 1rem;
+                            width: 9rem;
+                        }
+                        .table-basic-ics thead th:nth-child(2){
+                            padding: 0 1rem;
+                            width: 15rem;
+                        }
+                        .table-basic-ics tbody td:nth-child(3) img{
+                            padding: 0 1rem;
+                            width: 29rem;
+                        }  
+                /*END CSS for table class="table-basic-ics" */
+            /*End CSS Tables */
+     /*End CSS for "Introduction/GatesIcs" */
+    }
+   
+@media only screen and (min-width: 1400px){
+    /* CSS for "Introduction/GatesIcs" */
+        /* CSS Global & Text */
+            .contents{
+                padding: 0 1.5rem;
+                } 
+                .header-one{
+                    font-size: 3.2rem;
+                }
+                .header-two{
+                    font-size: 3rem;
+                    /* text-indent: 1.5rem; */
+                }
+                p{
+                font-size: 2.8rem;
+                text-indent: 3rem;
+                }
+            /*End CSS Global & Text */
+    
+            /*CSS Selections */
+                .circuit-selection-container,
+                .gate-selection-container{
+                    width: 75vw;
+                    margin-bottom: 1rem;
+                }
+                    .gate-selection-container label{
+                        width: 6rem;
+                        font-size: 1.5rem;
+                        padding: 0.5rem 0.7rem;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 5px;
+                    }
+                    .circuit-selection-container img{
+                        height: 6.5rem;
+                        margin: 0.3rem 0.1rem;
+                        padding: 0.5rem 0.5rem;
+                    }
+                    .show-solution-label{
+                        right: 0;
+                        font-size: 1.7rem;
+                    }
+            /*End CSS Selections */
+    
+            /*CSS Tables */
+                /*CSS Thead */
+                    
+                    #circuit-thead-id tr th,
+                    #basic-thead-id tr th{
+                        margin: 0;
+                        padding: 0;
+                        height: 4rem;
+                        font-size: 2rem;
+                    }
+                        #circuit-thead-id tr:nth-child(1),
+                        #basic-thead-id tr:nth-child(1){
+                            font-size: 5.5rem;
+                        }
+    
+                /*End CSS Thead */
+    
+                /*CSS Tbodys */
+                    #circuit-tbody-id,
+                    #basic-tbody-id{
+                        font-size: 1.6rem;
+                    }
+                        #circuit-tbody-id tr td,
+                        #basic-tbody-id tr td{
+                            font-size: 2rem;
+                            text-align: center;
+                            padding: 0.6rem 0.6rem;
+                        }
+                        /* CSS for Input */
+                        #circuit-tbody-id tr td input,
+                        #basic-tbody-id tr td input{
+                            text-align: center;
+                            width: 3rem;
+                            height: 3rem;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            padding: 0;
+                            background-color:lightgoldenrodyellow;
+                            border: 3px solid black;
+                        }
+                        /* size and padding around img */
+                        #circuit-img-id,
+                        #basic-img-id{
+                            width: 25rem;
+                            padding: 0.3rem;
+                        }
+                        input::-webkit-outer-spin-button,
+                        ::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }    
+                        input[type-number]{
+                            -moz-appearance: textfield;
+                        }
+                /*End CSS Tbodys */
+                
+                /*CSS for table class="table-basic-ics" */
+
+                    .table-basic-ics thead{
+                        font-size: 2.7rem;
+                    }
+                    .table-basic-ics tbody{
+                        font-size: 2.5rem;
+                    }
+                        .table-basic-ics thead th:nth-child(1){
+                            padding: 0 1rem;
+                            width: 11rem;
+                        }
+                        .table-basic-ics thead th:nth-child(2){
+                            padding: 0 1rem;
+                            width: 18rem;
+                        }
+                        .table-basic-ics tbody td:nth-child(3) img{
+                            padding: 0 1rem;
+                            width: 35rem;
+                        }  
+                /*END CSS for table class="table-basic-ics" */
+            /*End CSS Tables */
+     /*End CSS for "Introduction/GatesIcs" */
+}

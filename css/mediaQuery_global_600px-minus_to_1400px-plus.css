@@ -1,0 +1,247 @@
+/*  CSS for media Queries width= [1400, . . .] 
+ *    1) Global Navigation
+ *    2) Home page
+ *    3) All pages that uses class="page";
+ */
+
+    body{
+        overflow: hidden;
+    }*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     }
+
+ @media only screen and (max-width: 599px) {
+    /* For Global Nav [. . . ,600px)*/
+        .nav-container{
+            position: relative;
+            left: 1.5rem;
+            width: 8.2rem;
+           /* border: 2px solid green;
+            z-index: 100;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.6rem;
+                border: 1px solid red;
+            }
+                .dept-label{
+                    font-size: 1rem;
+                }
+            .dbe-hide-dropdown{
+                margin-top: -13rem;
+            }
+            .nav-dropdown{               
+                /*margin-top: -13rem;*/
+            }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+
+    /* End Global Nav [. . . ,600px) */      
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 749px) {
+    /* For Global Nav [600px,749px*/
+        .nav-container{
+            position: relative;
+            left: 2rem;
+            width: 9.4rem;
+           /* border: 2px solid green;
+            z-index: 100;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.5rem;
+                border: 1px solid green;
+            }
+                .dept-label{
+                    font-size: 1.2rem;
+                }
+            .dbe-hide-dropdown{
+                margin-top: -15rem;
+            }
+            .nav-dropdown{               
+                /*margin-top: -15rem;*/
+            }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1.2rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+
+    /* End Global (Nav) [600px,749px) */
+}
+
+@media only screen and (min-width: 750px) and (max-width: 899px) {
+    /* For Global Nav [600px,749px*/
+        .nav-container{
+            position: relative;
+            left: 2rem;
+            width: 9.4rem;
+           /* border: 2px solid green;
+            z-index: 100;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.7rem;
+                border: 1px solid green;
+            }
+                .dept-label{
+                    font-size: 1.4rem;
+                }
+            .dbe-hide-dropdown{
+                margin-top: -17rem;
+            }
+            .nav-dropdown{               
+                /*margin-top: -15rem;*/
+            }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1.3rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+
+    /* End Global (Nav) [600px,749px) */
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1049px) {
+    /* For Global Nav [750px,899px) */
+        .nav-container{
+            position: relative;
+            left: 2.5rem;
+            width: 12rem;
+            /*border: 4px solid green;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.8rem;
+                border: 1px solid blueviolet;
+            }
+                .dept-label{
+                    font-size: 1.5rem;
+                }
+
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1.4rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+                    .dbe-hide-dropdown{
+                        margin-top: -18rem;
+                    }
+    /* End Global (Nav) [750px,899px) */
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1199px) {
+    /* For Global Nav [1050px,1199px) */
+        .nav-container{
+            position: absolute;
+            left: 3.5rem;
+            width: 12.4rem;
+            /*border: 2px solid yellow;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.9rem;
+                border: 1px solid yellow;
+            }
+                .dept-label{
+                    font-size: 1.5rem;
+                }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1.5rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+                    .dbe-hide-dropdown{
+                        margin-top: -19rem;
+                    }
+    /* End Global (Nav) [1050px,1199px) */
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) { 
+    /* For Global Nav [1200px,1399px) */
+        .nav-container{
+            position: absolute;
+            left: 3.5rem;
+            width: 13rem;
+            /*border: 2px solid yellow;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 2.2rem;
+                border: 1px solid pink;
+            }
+                .dept-label{
+                    font-size: 1.9rem;
+                }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1.8rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+                    .dbe-hide-dropdown{
+                        margin-top: -22rem;
+                    }
+    /* End Global (Nav) [1200px,1399px) */
+}
+
+@media only screen and (min-width: 1400px) {
+    /* For Global Nav [1400px =>) */
+        .nav-container{
+            position: absolute;
+            left: 3.5rem;
+            width: 15rem;
+            /*border: 2px solid yellow;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 2.4rem;
+                border: 1px solid greenyellow;
+            }
+                .dept-label{
+                    font-size: 2.1rem;
+                }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 2rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+                    .dbe-hide-dropdown{
+                        margin-top: -23rem;
+                    }
+    /* End Global (Nav) [1400px =>) */
+}

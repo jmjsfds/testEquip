@@ -1,0 +1,905 @@
+/* CSS for media Queries width= [1400px plus)": 
+/  for education.html
+ */
+/* (170px/in for my Acer laptop)    */
+@media only screen and (max-width: 599px){
+/*BEGIN CSS for max-width 599px */
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 3rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 3rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 1rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 0.9rem;
+                }
+
+            .be-videos-buffer,    
+            .ic-data-buffer{
+                height: 3rem;
+                opacity: 0;
+            }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                width: 8rem;
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1rem;
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 8.2rem;
+                border: 1px solid red;
+            }
+            .menu-label-lev-1{
+                width: 7.2rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 0.9rem;
+            }
+                .dept-label{
+                    font-size: 1rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -15rem; /* margin-top: -8rem; */
+            }
+
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.5rem;
+                left: 6.8rem;  /*left: 9rem;*/
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 0.9rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 10rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+    
+    /*BEGIN CSS for Videos, IC-Data, Training, Testing, & Packets (CONTENTS)*/
+        /*BEGIN CSS for Ben Eater Videos (CONTENTS) */
+            .ben-eater-videos-header{
+                font-size: 1.5rem;
+            } 
+            .be-mod-header{
+                font-size: 1.3rem;
+            }  
+            .be-sub-labels{
+                font-size: 3.2rem;
+            }
+            .be-ol-type-1{
+                font-size: 1.1rem;
+            }
+            .be-sub-labels-ol{
+                font-size: 1.1rem;
+            }
+        /*END CSS for Ben Eater Videos (CONTENTS) */
+    /*END CSS for Videos, IC-Data, Training, Testing, & Packets (CONTENTS)*/
+/*END CSS for max-width 599px */
+             
+}
+
+@media only screen and (min-width: 600px) and (max-width: 749px){
+/*BEGIN CSS for max-width 600PX TO 749px */
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 4rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 4rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 1.5rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 0.9rem;
+                }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                /*width: 8rem;*/
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1.1rem;
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 9rem;
+                border: 1px solid green;
+            }
+            .menu-label-lev-1{
+                width: 7.4rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 1rem;
+            }
+                .dept-label{
+                    font-size: 1.1rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -8rem;
+            }
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.5rem;
+                left: 6.8rem;
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 0.9rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 10rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+    
+    /*BEGIN CSS for Videos, IC-Data, Training, Testing, & Packets (CONTENTS)*/
+        /*BEGIN CSS for Ben Eater Videos (CONTENTS) */
+            .ben-eater-videos-header{
+                font-size: 1.5rem;
+            } 
+            .be-mod-header{
+                font-size: 1.3rem;
+            }  
+            .be-sub-labels{
+                font-size: 3.2rem;
+            }
+            .be-ol-type-1{
+                font-size: 1.1rem;
+            }
+            .be-sub-labels-ol{
+                font-size: 1.1rem;
+            }
+        /*END CSS for Ben Eater Videos (CONTENTS) */
+    /*END CSS for Videos, IC-Data, Training, Testing, & Packets (CONTENTS)*/
+/*END CSS for max-width 600PX TO 749px */
+    
+}
+
+@media only screen and (min-width: 750px) and (max-width: 899px){
+/*BEGIN CSS for max-width 750PX TO 899px */
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 5rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 5rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 2rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 1.2rem;
+                }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                /*width: 8rem;*/
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1.4rem; /* 1.2rem */
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 10.5rem;
+                border: 1px solid blueviolet;
+            }
+            .menu-label-lev-1{
+                width: 8.7rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 1.2rem;
+            }
+                .dept-label{
+                    font-size: 1.3rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -8rem;
+            }
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.7rem;
+                left: 8.2rem;
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 1.1rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 10rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+    
+    /*BEGIN CSS for Videos, IC-Data, Training, Testing, & Packets (CONTENTS)*/
+        /*BEGIN CSS for Ben Eater Videos (CONTENTS) */
+          /*  .ben-eater-videos-header{
+                font-size: 1.5rem;
+            } 
+            .be-mod-header{
+                font-size: 1.3rem;
+            }  
+            .be-sub-labels{
+                font-size: 3.2rem;
+            }
+            .be-ol-type-1{
+                font-size: 1.1rem;
+            }
+            .be-sub-labels-ol{
+                font-size: 1.1rem;
+            }*/
+        /*END CSS for Ben Eater Videos (CONTENTS) */
+    /*END CSS for Videos, IC-Data, Training, Testing, & Packets (CONTENTS)*/
+/*END CSS for max-width 750PX TO 899px */
+   
+
+        /* CSS for Ben Eater Videos */
+        .ben-eater-videos-header{
+            font-size: 2rem;
+        } 
+        .be-mod-header{
+            font-size: 1.8rem;
+        }  
+        .be-sub-labels{
+            font-size: 1.6rem;
+        }
+        .be-ol-type-1{
+            font-size: 1.4rem;
+        }
+        .be-sub-labels-ol{
+            font-size: 1.4rem;
+        }
+    /*End CSS for Ben Eater Videos */
+
+}
+
+
+@media only screen and (min-width: 900px) and (max-width: 1049px){
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 5rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 5rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 2rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 1.2rem;
+                }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                /*width: 8rem;*/
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1.4rem; /* 1.2rem */
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 10.5rem;
+                border: 1px solid orange;
+            }
+            .menu-label-lev-1{
+                width: 8.7rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 1.2rem;
+            }
+                .dept-label{
+                    font-size: 1.3rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -8rem;
+            }
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.7rem;
+                left: 8.2rem;
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 1.15rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 20rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+    
+    /* CSS for Ben Eater Videos */
+        .ben-eater-videos-header{
+            font-size: 2.5rem;
+        } 
+        .be-mod-header{
+            font-size: 2.3rem;
+        }  
+        .be-sub-labels{
+            font-size: 2rem;
+        }
+        .be-ol-type-1{
+            font-size: 1.8rem;
+        }
+        .be-sub-labels-ol{
+            font-size: 1.8rem;
+        }
+    /*End CSS for Ben Eater Videos */
+}
+
+
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 5rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 5rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 2rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 1.2rem;
+                }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                /*width: 8rem;*/
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1.4rem; /* 1.2rem */
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 10.5rem;
+                border: 1px solid yellow;
+            }
+            .menu-label-lev-1{
+                width: 8.7rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 1.2rem;
+            }
+                .dept-label{
+                    font-size: 1.3rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -8rem;
+            }
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.7rem;
+                left: 8.2rem;
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 1.15rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 20rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+        
+        
+    /* CSS for Ben Eater Videos */   
+        .ben-eater-videos-header{
+            font-size: 2.5rem;
+        } 
+        .be-mod-header{
+            font-size: 2.3rem;
+        }  
+        .be-sub-labels{
+            font-size: 2rem;
+        }
+        .be-ol-type-1{
+            font-size: 1.8rem;
+        }
+        .be-sub-labels-ol{
+            font-size: 1.8rem;
+        }
+    /*End CSS for Ben Eater Videos */
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 5rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 5rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 2rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 1.2rem;
+                }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                /*width: 8rem;*/
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1.4rem; /* 1.2rem */
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 10.5rem;
+                border: 1px solid pink;
+            }
+            .menu-label-lev-1{
+                width: 8.7rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 1.2rem;
+            }
+                .dept-label{
+                    font-size: 1.3rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -8rem;
+            }
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.7rem;
+                left: 8.2rem;
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 1.15rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 20rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+        
+        
+    /* CSS for Ben Eater Videos */   
+        .ben-eater-videos-header{
+            font-size: 2.5rem;
+        } 
+        .be-mod-header{
+            font-size: 2.3rem;
+        }  
+        .be-sub-labels{
+            font-size: 2rem;
+        }
+        .be-ol-type-1{
+            font-size: 1.8rem;
+        }
+        .be-sub-labels-ol{
+            font-size: 1.8rem;
+        }
+    /*End CSS for Ben Eater Videos */
+}
+
+@media only screen and (min-width: 1400px){
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/ 
+        .videos-datasheets-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 5rem;
+            left: 0;
+            width: 2rem;
+            height: calc(100vh - 5rem);
+            border: 1px solid red;
+        }
+            .videos-container{
+                margin-bottom: 2rem;
+            } 
+                .videos-label, 
+                .datasheets-label{
+                    font-size: 1.2rem;
+                }
+    /* END CSS for Videos & Datasheets (NAV) */
+    
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Containers) */
+            .nav-training-testing-packets-container{
+                width: 98vw;
+                /*height: 2.4rem;*/
+            }
+            .edu-nav-container{
+                /*width: 8rem;*/
+                /*border: 2px solid yellow;*/
+            }
+            .menu-container{
+                padding: 2px;
+            /* border: 3px solid yellow;*/
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Containers) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                font-size: 1.4rem; /* 1.2rem */
+            }   
+            .menu-label-lev-1{
+           /* margin-bottom: -0.1rem;*/
+            border: 1px solid yellowgreen;
+            background-color: black;
+        }
+            .edu-nav-label{
+                width: 10.5rem;
+                border: 1px solid khaki;
+            }
+            .menu-label-lev-1{
+                width: 8.7rem;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a, 
+            .menu-label-lev-2{
+                font-size: 1.2rem;
+            }
+                .dept-label{
+                    font-size: 1.3rem;
+                }
+
+            .hide-nav-dropdown{
+                margin-top: -16rem;
+            }
+            .menu-dd-lev-1-hidden{
+                margin-top: -8rem;
+            }
+            .menu-dd-lev-1 li,
+            .edu-nav-dropdown li{
+                margin: 0.2rem 0;
+            }
+
+     
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-dd-lev-2{
+                padding: 0.5rem 0.6rem;
+                top: -0.7rem;
+                left: 8.2rem;
+                /* width: 7.1rem;*/
+            }
+                .menu-dd-lev-2 li a{
+                    font-size: 1.15rem;
+                }
+
+                .bottom-buffer{
+                    padding-bottom: 20rem;
+                }
+                    
+          /*  #testing-menu-intro-dd-id,
+            #training-menu-intro-dd-id{
+                height: 7rem;
+            }*/
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+        
+        
+    /* CSS for Ben Eater Videos */   
+        .ben-eater-videos-header{
+            font-size: 2.5rem;
+        } 
+        .be-mod-header{
+            font-size: 2.3rem;
+        }  
+        .be-sub-labels{
+            font-size: 2rem;
+        }
+        .be-ol-type-1{
+            font-size: 1.8rem;
+        }
+        .be-sub-labels-ol{
+            font-size: 1.8rem;
+        }
+    /*End CSS for Ben Eater Videos */
+ 
+}

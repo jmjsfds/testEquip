@@ -1,0 +1,31 @@
+/* CSS for media Queries width= [1200px, 1400px)":
+*   for Ben Eater Videos:   6
+*   for IC Datasheets:      104
+*/
+/* (170px/in for my Acer laptop)    */
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+ 
+/* CSS for Videos, IC-Data (CONTENTS) */
+        .ben-eater-videos-container{
+            padding-left: 2rem;
+        }
+        .datasheets-header,
+        .ben-eater-videos-header{
+            font-size: 2.7rem;
+        } 
+        .ds-mod-header,
+        .be-mod-header{
+            font-size: 2.5rem;
+        }  
+        .be-sub-labels{
+            font-size: 2.2rem;
+        }
+        .ds-ol-type-1,
+        .be-ol-type-1{
+            font-size: 2rem;
+        }
+        .be-sub-labels-ol{
+            font-size: 2rem;
+        }
+/*End CSS for Videos, IC-Data (CONTENTS) */
+}

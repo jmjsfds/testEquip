@@ -1,0 +1,76 @@
+/* CSS common to all Screen Widths: 
+*   for Training/Introduction/Design:   6
+*   
+*/
+/* CSS for "Introduction/Design" Base */
+    .header-one{
+        display: block;
+        text-align: center;
+    }
+
+    .design-contents label{
+        display: block;
+        text-align: center;
+    }
+    .container-label-contents-img{
+        float: right;
+        width: 30vw;
+    }
+/*End for "Introduction/Design" Base  */
+
+
+@media only screen and (max-width: 599px){
+    /* CSS for "Introduction/Design" */
+    /*End CSS for "Introduction/Design" */
+    .label-container-contents{
+        font-size: 1.2rem;
+    }
+    .label-container-contents ul li{
+        font-size: 1.2rem;
+        margin-left: 3rem;
+    }
+    .design-question-container label{
+        font-size: 1.4rem;
+    }
+    .design-question-container p{
+        font-size: 1.2rem;
+    }
+
+}
+
+    
+@media only screen and (min-width: 600px) and (max-width: 749px){
+    /* CSS for "Introduction/Design" */
+    /*End CSS for "Introduction/Design" */
+    }
+
+    
+@media only screen and (min-width: 750px) and (max-width: 899px){
+    /* CSS for "Introduction/Design" */
+    /*End CSS for "Introduction/Design" */
+    }
+
+    
+@media only screen and (min-width: 900px) and (max-width: 1049px){
+    /* CSS for "Introduction/Design" */
+    /*End CSS for "Introduction/Design" */
+    }
+
+    
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+    /* CSS for "Introduction/Design" */
+     /*End CSS for "Introduction/Design" */
+    }
+
+    
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+ 
+    /* CSS for "Introduction/Design" */
+    /*End CSS for "Introduction/Design" */
+    }
+
+    
+@media only screen and (min-width: 1400px){
+    /* CSS for "Introduction/Design" */
+    /*End CSS for "Introduction/Design" */
+}

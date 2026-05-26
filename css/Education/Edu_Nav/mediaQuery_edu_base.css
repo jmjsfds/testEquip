@@ -1,0 +1,597 @@
+/* CSS common to all Screen Widths: 
+*     for education.html
+*   Page,Edu: 11                                Videos & Datasheets (NAV): 66      
+*   Training, Testing & Packets (NAV): 94       Packets (NAV): 208  
+*   
+*   Videos (CONTENTS): 259                      Datasheets (CONTENTS): 358
+*   Training (CONTENTS): 437
+*
+*
+*/
+/* CSS for page & edu (NAV) & (CONTENTS)   */ 
+    .body{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Arial, sans-serif ;
+    }
+    .page{
+          display: flex;
+          flex-direction: column; 
+          justify-content: center;
+          align-content: center;
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style:none;
+
+    }
+
+    .edu-contents{
+        position: absolute;
+        top: 2.6rem;
+        left: 2rem;
+        width: calc(100vw - 2rem);
+        bottom: 0vh; 
+        color: black;
+        /*font-size: 1.5rem;*/
+        font-weight: bold;
+      /* padding: 1rem;*/
+        opacity: 1;
+        background-image: url("media/imgs/low-noise-darker.png"); 
+      /*  background-image: radial-gradient(blue, black);*/
+        overflow-x: hidden; 
+        overflow-y: auto;
+        /*border: 1px solid green;*/
+        z-index: 5;
+    }
+        .transition-0-1{
+            transition: opacity 0.7s;
+        }
+        
+        .transition-1-0{
+            transition: opacity 0.2s;
+        }
+/*End CSS page & edu  contents */ 
+   
+/*BEGIN CSS for Videos, Datasheets, Training, Testing & Packets (NAV) */
+    /*BEGIN CSS for Videos & Datasheets (NAV)*/
+        .videos-datasheets-container{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            /*padding: 0.3rem 1rem; */ 
+            background-color: rgb(0, 0, 50);
+            z-index: 10;
+        /*  border: 2px solid red;*/
+        }
+            .videos-label-container, 
+            .datasheets-label-container{
+                color: yellow;
+                /*cursor: pointer;*/ 
+                z-index: 20;
+            }
+                .videos-label, 
+                .datasheets-label{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bold;
+                    writing-mode: vertical-lr;
+                    text-orientation: upright; 
+                    cursor: pointer;
+                    background-color: black;
+                }
+                
+    /*End CSS for Videos & Datasheets (NAV) */
+
+    /*BEGIN CSS for NAV, Training, Testing & Packets (NAV) */
+        .nav-training-testing-packets-container{
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /*border: 1px solid rgb(233, 12, 185); */
+            z-index: 100;
+        }
+
+        .nav-training-testing-packets-background{
+            position: absolute;
+            top: -0.2rem;
+            left: 0;
+            width: 100%;
+            height: 1rem;
+            background-color: black;
+            z-index:29;
+        }
+            #packets-menu-container-id{
+                position: relative;
+                /*border: 3px solid blue;*/
+            }
+            .span-blank{
+                opacity: 0;
+            }
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (Main Labels) */
+            .edu-nav-label,
+            .menu-label-lev-1{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               /* display: block;
+                text-align: center;*/
+                cursor: pointer;
+                color: yellow;
+                font-weight: bold;
+                padding-top: 0.5rem;
+                padding-bottom: 0.4rem;
+                background-color: black;
+                /*border: 1px solid red;*/
+                z-index: 30;
+            }
+            
+                .menu-label-lev-1:hover{
+                    color: #FFD700;
+                }
+
+                .dept-label{
+                    font-weight: bold;
+                }
+
+            .menu-label-lev-2{
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+                padding: 0 0.5rem;
+            }
+                .menu-label-lev-2:hover{
+                    color: yellow;
+                    /*margin-left: 0.3rem;*/
+                }
+	    /*END CSS for NAV, Training, Testing & Packets (Main Labels) */
+        
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
+            .edu-nav-dropdown li a{
+                color: white;
+                text-decoration: none;
+            }
+                .edu-nav-dropdown li a:hover{
+                    color: yellow;
+                }
+            .menu-dd-lev-1{
+                position: relative;
+            } 
+            .menu-dd-lev-2,
+            .menu-dd-lev-1{
+            /* position: absolute;*/
+                margin-top: 0.01rem;
+                background-image: radial-gradient(blue, black);
+                padding: 0.5rem 0;
+                border: 2px solid yellow;
+                border-radius: 10px;
+                /*transition: margin-top 0.00001s;*/
+                z-index: 25;
+            }
+            .packets-menu-dd-lev-1{
+                display: block;
+                text-align: center;
+                z-index: -1;
+                background-image: radial-gradient(blue, black);
+                padding: 0.5rem 0;
+                border: 2px solid yellow;
+                border-radius: 10px;
+            }
+                .packets-menu-dd-lev-1 li a{
+                    font-weight: bold;
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            .packets-menu-dd-lev-1,
+            .menu-dd-lev-1{
+                transition: margin-top 0.5s;
+            }
+	    /*END CSS for NAV, Training, Testing & Packets (1st DropDown) */
+        
+	    /*BEGIN CSS for NAV, Training, Testing & Packets (2nd DropDown) */ 
+            .menu-container-lev-2{
+                position: relative;
+            } 
+                .menu-dd-lev-2{
+                    position: absolute;
+                    top: 0rem;
+                    z-index: 10;
+                }
+                .menu-dd-lev-2-hidden{
+                    display: none;
+                } 
+                    .menu-dd-lev-2 li{
+                        display: block;
+                        text-align: center;
+                    }
+                        .menu-dd-lev-2 li a{
+                            text-decoration: none;
+                            color: white;
+                            font-weight: bold;
+                        }
+                    .packets-menu-dd-lev-1 li a:hover,
+                    .menu-dd-lev-2 li a:hover{
+                        color: yellow;
+                        /*margin-left: 0.3rem;*/
+                    }
+
+                    .span-1-sp{
+                        opacity: 0;
+                    }
+	    /*END CSS for NAV, Training, Testing & Packets (2nd DropDown) */
+                /*.packets-dd-zindex,
+                .testing-dd-zindex,
+                .training-dd-zindex{
+                    z-index: 10;
+                }*/
+    /*END CSS for NAV, Training, Testing & Packets (NAV) */
+/*END CSS for Videos, Datasheets, Training, Testing & Packets (NAV) */
+
+
+
+
+/*BEGIN CSS for Videos, Datasheets, Packets, Training & Testing (CONTENTS) */
+
+    /* CSS for Videos (CONTENTS) */
+    .ben-eater-videos-header{
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        /* margin-left: 30%;*/ 
+    }
+    .ben-eater-videos-container{
+        color: black;
+    /* background-color: rgb(5, 133, 245); */
+        width: 100%;
+        /* height: 84vh; */
+       /* padding: 0 0;*/
+        margin-left: -0.7rem;
+        display: grid;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    /*  grid-auto-rows: 5em; */
+        grid-template-areas:
+        "head head" 
+        "alu pc"
+        "alu pc"
+        "alu pc"
+        "bus clk"
+        "bus clk"
+        "cntrl mem"
+        "cntrl mem"
+        "cntrl mem"
+        "cntrl mem"
+        "cntrl mem"
+        "out mem"
+        "gen mem"
+        "gen mem";
+        padding:0.5rem  1rem;
+        overflow: hidden;
+       /* border: 1px solid red; */
+    }
+
+    .ben-eater-videos-header{
+        grid-area: head;
+    }
+
+    .be-mod-header{
+        display: block;
+        text-align: center; 
+    } 
+    .be-sub-labels{
+        margin-left: 2rem;
+    }
+    .be-ol-type-1{
+        margin-left: 3rem;
+    }
+    .be-ol-type-1 li{
+        margin-top: 0.1rem;
+    }
+    .be-sub-labels-ol{
+        margin-left: 5rem;
+    }
+    .be-sub-labels-ol li{
+        margin-top: 0.1rem;
+    }
+
+    .be-alu-container{
+        grid-area: alu;
+    }
+    .be-counter-container{
+        grid-area: pc;
+    }
+    .be-bus-container{
+        grid-area: bus;
+    }
+    .be-clock-container{
+        grid-area: clk;
+    }
+    .be-control-container{
+        grid-area: cntrl;
+    }
+    .be-memory-container{
+        grid-area: mem;
+    }
+    .be-output-container{
+        grid-area: out;
+    }
+    .be-general-container{
+        grid-area: gen;
+    }
+
+    .be-common-container ol li{
+        padding-bottom: 0.4em;
+    }
+    .be-common-container a{
+        color: black;
+    }
+
+    /*End CSS for Videos (CONTENTS) */
+
+
+    /* CSS for Datasheets (CONTENTS) */
+    .datasheets-header{
+        display: block;
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: black;
+        padding-top: 1rem; 
+    }
+
+    .datasheets-nav-container{
+        width: 98%;
+        /* height: 84vh; */
+       /* padding: 0 0; */
+        /*  right: 1.4em; */
+        margin-left: -0.5rem;
+        display: grid;
+        column-gap: 0.8rem;
+        row-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        /*  grid-auto-rows: 5em; */
+        grid-template-areas:
+        "head head" 
+        "basic mem"
+        "basic mem"
+        "basic mem"
+        "counter mux"
+        "binary bus";
+       /* border: 2px solid blue;*/
+    }
+    .datasheets-header{
+        grid-area: head;
+    }
+
+    .ds-mod-header{
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    } 
+    .ds-mod-header ol{
+        font-size: 1.3rem;
+        margin-left: 5rem;
+    }
+    
+    .ds-mod-header li {
+        margin-top: 0.2rem; 
+    } 
+
+    .ds-basic-container{
+        grid-area: basic;
+    }
+    .ds-mux-container{
+        grid-area: mux;
+    }
+    .ds-bus-container{
+        grid-area: bus;
+    }
+    .ds-counter-container{
+        grid-area: counter;
+    }
+    .ds-memory-container{
+        grid-area: mem;
+    }
+    .ds-binary-adder-container{
+        grid-area: binary;
+    }
+
+    .ds-ol-type-1{
+        font-size: 1.3rem;
+        margin-left: 3rem;
+    }
+
+    .ds-common-container ol li{
+        padding-bottom: 0.4em;
+        cursor: pointer;
+    }
+    /*End CSS for Datasheets (CONTENTS) */
+
+    /* CSS for Training (CONTENTS) */
+        /*CSS for Training Codes  */
+        .nav-one-two-container{
+            position: fixed;
+            top: 2.5rem;
+            left: 2rem;
+            right: 3.4rem;
+            border: 2px solid yellow;
+            z-index: 10; 
+        }
+            .edu-nav-one-contents{
+               /* border: 1px solid red; */
+                color: blue;
+            }
+            .edu-nav-two-contents{
+             /*   border: 1px solid blue;*/
+                color: red;
+            }
+            .edu-secondary-contents{
+                position: absolute;
+                top: 7rem;
+                left: 0;
+                right: 0;
+                padding: 0 1rem;
+                padding-bottom: 5rem;
+                z-index: 2;
+                border: 3px solid red; 
+            }
+
+            .tabs-container{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around; 
+                padding: 0.5em 0;
+                background-image: radial-gradient(blue, black);
+                border: 1px solid yellow;
+                z-index: 40;
+            }
+                .tab-background-general{
+                    width: 100vw;
+                    margin-left: 13.5vw;
+                }
+
+                .tab{
+                    font-size: 1em;
+                    font-weight: bold; 
+                    cursor: pointer;
+                }
+                .unselected-tab{
+                    color: white;
+                    opacity: 0.7;
+                }
+                .selected-tab{
+                    color: yellow;
+                    opacity: 1; 
+                } 
+
+                .selected-contents{
+                    display: block;
+                }
+                .unselected-contents{
+                    display: none;
+                }
+                .boundry{
+                    height: 4em;
+                }
+                .boundry_container-3{
+                    position: relative;
+                    right: 0;
+                    height: 4em;
+                    border: 2px solid red;
+                } 
+
+            .introduction-contents,
+            .example-contents,
+            .computer-contents{
+                overflow: auto;
+            }
+            .introduction-contents h1,
+            .example-contents h1,
+            .computer-contents h1{
+                display:block;
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+                .header-example-morse-code{
+                    padding-top: 2rem;
+                }
+                p{
+                    margin-top: 0.5rem;
+                }
+
+            .introduction-contents a{
+                color: yellow;
+            }
+            .samuel-morse-table{
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+
+            .table-title{
+                border-collapse: collapse;
+                border: 2px solid black;
+                padding: 0.3rem;
+            }
+
+            th{
+                border-collapse: collapse;
+                border: 2px solid black;
+                padding: 1rem;
+            }
+            td{
+                width: 6rem;
+                border-collapse: collapse;
+                padding: 1.6rem;
+                border: 2px solid black;
+            }
+                .header{
+                    background-color: lightblue;
+                }
+                .data{
+                    background-color: lightgoldenrodyellow;
+                }
+                .samuel-morse-table thead tr th,
+                .samuel-morse-table tbody tr td{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    padding: 1rem;
+                    border: 3px solid black;
+                    border-collapse: collapse;
+                }
+                .td-1{
+                    width: 7rem;
+                }
+                .th-2{
+                    width: 8rem;
+                }
+                .td-2{
+                    width: 14rem;
+                }
+                .td-3{
+                    width: 16rem;
+                    font-size: 1.8rem;
+                }
+                .td-4{
+                    width: 8rem;
+                    font-size: 1.1rem;
+                }
+            .secret-message-audacity{
+                margin-bottom: 16rem;
+            }
+
+            .audio-sos,
+            .audio-secret-message{
+                width: 100%;
+                padding-left: 2rem;
+            } 
+        /*End CSS for Training Codes  */
+
+
+    /*End CSS for Training (CONTENTS) */
+    
+    /* CSS for Testing (CONTENTS) */
+    /*End CSS for Testing (CONTENTS) */
+      
+    /* CSS for Packets (CONTENTS) */
+            .packet-container{
+                margin-top: 0rem;
+            }
+    /*End CSS for Packets (CONTENTS) */
+/*End CSS for Videos, Datasheets, Training & Testing, Packets (CONTENTS) */

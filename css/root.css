@@ -1,0 +1,14 @@
+/* CSS root */
+:root {
+/* CSS Navigation Label fontsize */
+    --nav1-8: 1.2rem;  --nav600-749: 1.8rem  --nav750-899: 2rem;    --nav900-1049: 2.2rem;
+    --fs1: 1rem;    --fs1-1: 1.1rem;   --fs1-2: 1.2rem;    --fs1-3: 1.3rem;   --fs1-4: 1.4rem;    --fs1-5: 1.5rem;   --fs1-6: 1.6rem;    --fs1-7: 1.7rem;   --fs1-8: 1.8rem;    --fs1-9: 1.9rem;
+    --fs2: 2rem;    --fs2-1: 2.1rem;   --fs2-2: 2.2rem;    --fs2-3: 2.3rem;   --fs2-4: 2.4rem; 
+
+/* End fontsize */
+
+
+
+
+
+}	

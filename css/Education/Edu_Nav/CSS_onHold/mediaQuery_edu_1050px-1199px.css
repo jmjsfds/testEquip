@@ -1,0 +1,180 @@
+/* CSS for media Queries width= [1050px, 1199px)": 
+/  for education.html
+ */
+/* (170px/in for my Acer laptop)    */
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+/* CSS for Training, Testing, & Packets (NAV)*/
+    /* CSS for Videos, IC-Data (NAV) */
+        .videos-datasheets-container{
+            bottom: 0.2rem;
+            left: 0.2rem;
+            width: 2.4rem;
+            height: 80vh;
+        }
+            .videos-label, 
+            .datasheets-label{
+                font-size: 1.4rem;
+                padding: 0 0.2rem;
+            }
+    /*End CSS for Videos, IC-Data (NAV) */
+
+    /* CSS for Training & Testing (NAV) */
+    .training-testing-packets-container{
+        left: 14rem;
+        width: calc(98vw - 14rem);
+        height: 2.4rem;
+        border: 1px solid red;
+    }
+    .training-testing-packets-background{
+        width: calc(100vw - 13rem);
+        height: 2.4rem;
+    }
+    .training-label, 
+    .testing-label{
+        font-size: 1.5rem;
+        padding-top: 0.45rem;
+        margin-top: -0.65rem;
+        padding-bottom: 0.4rem;
+        width:100%
+    }
+    .training-container, 
+    .testing-container{
+        top: 0.55rem;
+        border: 1px solid green;
+    }
+        .testing-dropdown,
+        .training-dropdown{
+            width: 11rem;
+            padding: 0.5rem 0;
+        }
+            .testing-dropdown-label,
+            .training-dropdown-label{
+                font-size: 1.3rem;
+                margin: 0.2rem 0;
+            }
+            .dept-label{
+                font-size: 1.4rem;
+                margin-left: 0;/*-0.2rem;*/
+            }
+            .hide-training-dropdown{
+                margin-top: -11rem;
+            }
+            .hide-testing-dropdown{
+                margin-top: -11rem;
+            }
+                .test-media-arts-dropdown, 
+                .test-tech-dropdown,
+                .test-architecture-dropdown,
+                .test-introduction-dropdown,
+                .media-arts-dropdown, 
+                .tech-dropdown,
+                .architecture-dropdown,
+                .introduction-dropdown{
+                    padding: 0.5rem 0;
+                }
+                    .second-dropdown-label{
+                        font-size: 1.2rem;
+                        margin: 0.2rem 0;
+                    }
+                .introduction-dropdown{
+                    top: -0.3rem;
+                    right: -10.1rem;
+                    width: 9rem;
+                }
+                .architecture-dropdown{
+                    top: -0.3rem;
+                    right: -8.6rem;
+                    width: 7.5rem;
+                }
+                .tech-dropdown{
+                    top: -1rem;
+                    right: -13rem;
+                    width: 9.5rem;
+                }
+                .media-arts-dropdown{
+                    top: -2rem;
+                    right: -13.3rem;
+                    width: 11.5rem;
+                }
+                .test-introduction-dropdown{
+                    top: -0.3rem;
+                    right: -10.3rem;
+                    width: 9rem;
+                }
+                .test-architecture-dropdown{
+                    top: -0.3rem;
+                    right: -8.6rem;
+                    width: 7.5rem;
+                }
+                .test-tech-dropdown{
+                    top: -1rem;
+                    right: -13rem;
+                    width: 9.5rem;
+                }
+                .test-media-arts-dropdown{
+                    top: -2rem;
+                    right: -13.3rem;
+                    width: 11.5rem;
+                }
+    /*End CSS for Training & Testing (NAV) */
+
+    /* CSS for Packets (NAV)  */
+    .packets-label{
+        /*color: green;*/
+    }
+    
+    .packets-container{
+        top: -0.35rem;
+        width:  10rem;/*7rem;*/
+    }
+        .packets-label-container{
+            padding-top: 0.75rem;
+            padding-bottom: 0.4rem;
+            width: 10.2rem;
+        } 
+        .packets-label{
+            font-size: 1.5rem;
+            padding: 0 1rem;
+        }  
+        .packets-dropdown{
+            font-size: 1.25rem;
+            width: 10rem;
+            padding: 0.5rem 0.5rem;
+        }
+            .packets-dropdown ul{
+               /* margin-left: 1rem;*/
+            }
+            .packets-dropdown li{
+                display: block;
+                text-align: center;
+               /* margin-left: -1rem;*/
+                margin-top: 0.3rem;
+            }
+            .hide-packets-dropdown{
+                margin-top: -14rem; 
+            }
+
+
+    /* CSS for Packets (NAV)  */
+/*End CSS for Training, Testing, & Packets (NAV) */ 
+    
+    
+    
+/* CSS for Ben Eater Videos */   
+    .ben-eater-videos-header{
+        font-size: 2.5rem;
+    } 
+    .be-mod-header{
+        font-size: 2.3rem;
+    }  
+    .be-sub-labels{
+        font-size: 2rem;
+    }
+    .be-ol-type-1{
+        font-size: 1.8rem;
+    }
+    .be-sub-labels-ol{
+        font-size: 1.8rem;
+    }
+/*End CSS for Ben Eater Videos */
+}
