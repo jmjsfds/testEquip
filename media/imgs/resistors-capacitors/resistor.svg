@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="596.99506"
+   height="117.71031"
+   viewBox="0 0 596.99506 117.71031"
+   sodipodi:docname="resistor.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="1.8015424"
+     inkscape:cx="270.879"
+     inkscape:cy="232.30095"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="1909"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1">
+    <sodipodi:guide
+       position="334.11086,255.5419"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="238.73954,138.51831"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="278.71728,243.04235"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="294.49954,148.94616"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="466.55897,211.65805"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="449.75855,184.28496"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="596.93995,238.98487"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0.50203402,240.94994"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="210.06297,339.25431"
+       orientation="1,0"
+       id="guide10"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="251.19502,196.59561"
+       orientation="0,-1"
+       id="guide11"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="364.0185,269.0112"
+       orientation="1,0"
+       id="guide12"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="332.8798,266.6939"
+       orientation="1,0"
+       id="guide13"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="240.76717,269.44569"
+       orientation="1,0"
+       id="guide14"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="177.91045,274.08029"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="396.46068,253.36943"
+       orientation="1,0"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="271.90588,313.76403"
+       orientation="1,0"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="302.89975,302.4672"
+       orientation="1,0"
+       id="guide18"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="49.957194,165.16964"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="549.25159,132.14239"
+       orientation="1,0"
+       id="guide19"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="37.745435,222.06534"
+       orientation="1,0"
+       id="guide20"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="62.724032,242.60329"
+       orientation="1,0"
+       id="guide21"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(4.9820346,-67.90221)">
+    <path
+       style="display:inline;fill:#d0af1a;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 358.86996,68.542496 c 0,0 32.38742,-0.652096 32.38742,-0.362275 0,0.28982 19.9976,25.721549 19.9976,25.721549 l 0.43473,70.57124 -21.15688,20.50478 -30.72095,0.38018 z"
+       id="resistor-fourth-band-id"
+       inkscape:label="Fourth Band"
+       sodipodi:nodetypes="csccccc" />
+    <g
+       id="g21"
+       inkscape:label="Bands">
+      <path
+         style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 297.79034,80.859858 h 30.21376 l 15.72275,26.953282 v 46.95089 l -16.22993,19.92514 h -29.92395 z"
+         id="resistor-third-band-id"
+         inkscape:label="Third Band" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 235.18916,80.932313 h 31.59041 l 14.92574,20.359877 v 58.6886 l -14.63592,15.07066 -31.59041,-0.36228 c 0,0 0.21736,-93.322127 -0.28982,-93.756857 z"
+         id="resistor-second-band-id"
+         inkscape:label="Second Band" />
+      <path
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 172.95025,68.687406 h 32.38742 l 20.21496,28.692208 v 71.005966 l -20.43233,16.73712 -32.09759,0.28982 z"
+         id="resistor-first-band-id"
+         inkscape:label="First Band" />
+    </g>
+    <g
+       id="g23"
+       inkscape:label="Body">
+      <g
+         id="g20"
+         inkscape:label="Interior Body"
+         style="display:inline">
+        <path
+           style="fill:#9d8883;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 204.97203,68.831606 c 8.57609,-0.379038 19.03563,11.743893 30.21057,12.027936 11.60943,19.981078 11.94855,78.320538 0.29329,93.902238 -9.04829,0.0848 -15.91456,7.31963 -30.35641,10.57656 19.08656,-19.26433 18.57714,-90.782241 0.0698,-116.506734 z"
+           id="path3"
+           sodipodi:nodetypes="cccccc"
+           inkscape:label="left side" />
+        <path
+           style="fill:#9d8883;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 266.62557,80.932589 c 11.73449,13.91161 10.46276,83.061161 0.29045,94.119021 1.12453,0.48518 31.01172,-3.1e-4 31.01172,-3.1e-4 8.55703,-10.69382 11.18837,-73.03243 0.001,-94.046532 -9.90296,-0.11309 -25.73124,-0.09358 -31.15837,-0.07218 z"
+           id="path4"
+           sodipodi:nodetypes="cccccc"
+           inkscape:label="center" />
+        <path
+           style="fill:#9d8883;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 327.81488,81.005242 c 17.12411,0.25326 7.57002,-12.776494 30.98263,-12.607656 21.5298,15.810604 19.06906,104.431414 1.01437,116.942484 -10.95797,0.34525 -12.29798,-10.49795 -32.43815,-10.57844 10.58385,-26.87199 10.60358,-66.53257 0.44115,-93.756388 z"
+           id="path5"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="right side" />
+      </g>
+      <g
+         id="g19"
+         inkscape:label="Resistor Heads"
+         style="display:inline">
+        <path
+           style="fill:#9d8883;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 105.20586,112.45287 c 18.60993,0.483 36.26262,-42.680638 67.52703,-43.765464 14.73398,23.828714 19.55423,96.750234 0.57964,116.652344 -29.54726,0.0602 -52.60229,-46.07748 -68.68686,-46.07748 0,0 0.50866,-22.94745 0.58019,-26.8094 z"
+           id="path2"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="Left Head" />
+        <path
+           style="fill:#9d8883;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+           d="m 391.11247,68.107765 c 36.38902,-0.579325 51.90827,44.341775 66.07855,44.342505 0.26647,3.18661 0.65279,24.07536 4.7e-4,27.2431 -12.96297,0.85044 -36.70852,45.3021 -66.66214,45.35688 14.65439,-24.27686 15.52439,-81.67038 0.58312,-116.942485 z"
+           id="path6"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="Right Head" />
+      </g>
+    </g>
+    <g
+       id="g18"
+       inkscape:label="silver leads"
+       style="fill:#c0c0c0;fill-opacity:1">
+      <path
+         style="fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 591.81301,112.30536 v 27.38801 H 457.19149 v -27.2431 z"
+         id="path8"
+         inkscape:label="right lead" />
+      <path
+         style="display:inline;fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="m -4.7820346,139.54846 v -27.2431 H 104.91494 v 27.2431 z"
+         id="path9"
+         inkscape:label="left lead" />
+    </g>
+  </g>
+</svg>

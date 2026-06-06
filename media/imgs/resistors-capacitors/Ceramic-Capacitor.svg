@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="272.60156"
+   height="398.37939"
+   viewBox="0 0 272.60157 398.37939"
+   sodipodi:docname="Ceramic-Capacitor.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.359492"
+     inkscape:cx="100.31278"
+     inkscape:cy="224.58753"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="1909"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(-6.9931994,-29.877359)">
+    <g
+       id="g4"
+       inkscape:label="Leads"
+       style="stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1">
+      <rect
+         style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3"
+         width="12.253854"
+         height="142.11066"
+         x="200.5858"
+         y="215.18141"
+         inkscape:label="Left Lead"
+         transform="rotate(28.294293)" />
+      <rect
+         style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4"
+         width="12.253854"
+         height="142.11066"
+         x="61.182823"
+         y="352.71069"
+         inkscape:label="Right Lead"
+         transform="rotate(-23.813107)" />
+    </g>
+    <g
+       id="g5"
+       inkscape:label="BodyLeadConnectors">
+      <path
+         style="fill:#722922;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round"
+         d="M 70.704097,283.8197 88.250458,291.99803 105.08676,281.99292 71.007926,263.743 Z"
+         id="path2"
+         inkscape:label="Left Leg" />
+      <path
+         style="fill:#722922;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round"
+         d="m 194.3157,299.53874 17.6282,-8.00041 3.35981,-19.29443 -36.0341,13.99893 z"
+         id="path3"
+         inkscape:label="Right Leg" />
+    </g>
+    <path
+       style="display:inline;fill:#722922;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:square;stroke-linejoin:round"
+       id="path1"
+       sodipodi:type="arc"
+       sodipodi:cx="149.0806"
+       sodipodi:cy="160.39087"
+       sodipodi:rx="130.29903"
+       sodipodi:ry="130.29903"
+       sodipodi:start="2.1512762"
+       sodipodi:end="2.129731"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 77.621318,269.34686 A 130.29903,130.29903 0 0 1 39.741288,89.519494 130.29903,130.29903 0 0 1 219.36201,50.671414 130.29903,130.29903 0 0 1 259.17702,230.08029 130.29903,130.29903 0 0 1 79.9852,270.86106"
+       inkscape:label="Capacitor Body" />
+  </g>
+</svg>

@@ -27,7 +27,6 @@
         capDiodeClick:{},
     //END Selectors
         multimeterHead: {},
-        warningLabel: {},
         selButtonBckgrnd: {},
         
     //Status of particular elements 
@@ -84,15 +83,9 @@
             if(selectorLabel != "sel"){
                 ScreenManager.onSymbol.classList.remove("hidden-element");
             }
-            if((ProbeConnectionManager.presentAmpConnection == "high") && (selectorLabel != "tenAmp")){
-                this.warningLabel.classList.remove("hidden-element");
-            } 
-            if((ProbeConnectionManager.presentAmpConnection == "low") && (selectorLabel == "tenAmp")){
-                this.warningLabel.classList.remove("hidden-element");
-            } 
             switch (selectorLabel){
                 case "sel":
-                    console.log("in 'sel'");
+                   // console.log("in 'sel'");
                    // console.log("KnobSelectorManager.presentKnobSelectorLabel = " +  KnobSelectorManager.presentKnobSelectorLabel);
                         if(KnobSelectorManager.presentKnobSelectorLabel == "off"){return;}
                         if(this.presentSELcolor == "orange"){
@@ -104,17 +97,20 @@
                             this.selButtonBckgrnd.classList.add("orange-bckgrnd");
                             this.presentSELcolor = "orange";
                         }
-                        console.log("Going to Screen.PrefixUnitManager");
+                       // console.log("Going to Screen.PrefixUnitManager");
                         ScreenManager.PrefixUnitManager(KnobSelectorManager.presentKnobSelectorLabel, "hide"); 
                         ScreenManager.PrefixUnitManager(KnobSelectorManager.presentKnobSelectorLabel, "show");
-                        console.log("going to ScreenManager.AuxillarySymbolsManager();");
+                       // console.log("going to ScreenManager.AuxillarySymbolsManager();");
                         ScreenManager.AuxillarySymbolsManager();
                         DisplayValueManager.InitialSetUp(KnobSelectorManager.presentKnobSelectorLabel);
-                        //KnobSelectorManager.changeSetting(KnobSelectorManager.presentKnobSelectorLabel); 
+                        //KnobSelectorManager.changeSetting(KnobSelectorManager.presentKnobSelectorLabel);
+                        SelectionOptionsManager.changeKnob(this.presentKnobSelectorLabel,this.presentSELcolor); 
                     break;
                 case "temp":
                     //console.log("selectorLabel = " + selectorLabel);
                     this.tempSelectorKnob.classList.toggle("hidden-selector");
+                   // console.log("in KnobSelectorManager and this.presentSELcolor = " + this.presentSELcolor);
+                    SelectionOptionsManager.changeKnob("temp",this.presentSELcolor);
                     /*if(showHide == "hide"){
                         this.tempSelectorKnob.classList.add("hidden-selector");
                     }else{
@@ -124,10 +120,11 @@
                     break;
                 case "microAmp":
                     this.microAmpSelectorKnob.classList.toggle("hidden-selector");
-                    console.log("in KnobSelectorManager.KnobSelectorHandler('microAmp'");
-                    console.log("going to DisplayValueManager.InitialSetUp('microAmp')")
+                   // console.log("in KnobSelectorManager.KnobSelectorHandler('microAmp'");
+                   // console.log("going to DisplayValueManager.InitialSetUp('microAmp')")
                     DisplayValueManager.InitialSetUp("microAmp");
-                    console.log("back from DisplayValueManager.InitialSetUp('microAmp')");
+                   // console.log("back from DisplayValueManager.InitialSetUp('microAmp')");
+                    SelectionOptionsManager.changeKnob("microAmp",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.ampAcOption);
                     }else{
@@ -136,6 +133,7 @@
                     break;
                 case "milliAmp":
                     this.milliAmpSelectorKnob.classList.toggle("hidden-selector");
+                    SelectionOptionsManager.changeKnob("milliAmp",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.ampAcOption);
                     }else{
@@ -145,9 +143,7 @@
                 case "tenAmp":
                    // console.log("Toggling KnobSelectorManagerr tenAmp 'hidden-selector'");
                     this.tenAmpSelectorKnob.classList.toggle("hidden-selector");
-                    if(ProbeConnectionManager.presentAmpConnection == "low"){
-                        this.warningLabel.classList.remove("hidden-element");
-                    }
+                    SelectionOptionsManager.changeKnob("tenAmp",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.ampAcOption);
                     }else{
@@ -168,6 +164,7 @@
                         ButtonManager.reset();
                         ProbeConnectionManager.reset();
                         TimingManager.reset();
+                        SelectionOptionsManager.reset();
                     }
                     //this.offSelectorKnob.classList.toggle("hidden-selector");
                    // this.autoSymbol.classList.remove('hidden-element');
@@ -175,6 +172,7 @@
                 case "volts":
                     console.log("in KnobSelectorManager.js case 'volts'");
                     this.voltSelectorKnob.classList.toggle("hidden-selector");
+                    SelectionOptionsManager.changeKnob("volts",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.voltsAcOption);
                     }else{
@@ -183,6 +181,7 @@
                     break;
                 case "hertz":
                     this.hertzSelectorKnob.classList.toggle("hidden-selector");
+                    SelectionOptionsManager.changeKnob("hertz",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.hertzOption);
                     }else{
@@ -191,6 +190,7 @@
                     break;
                 case "ohms":
                     this.ohmsSelectorKnob.classList.toggle("hidden-selector");
+                    SelectionOptionsManager.changeKnob("ohms",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.continuityOption);
                     }else{
@@ -199,6 +199,7 @@
                     break;
                 case "capDiode":
                     this.capDiodeSelectorKnob.classList.toggle("hidden-selector");
+                    SelectionOptionsManager.changeKnob("capDiode",this.presentSELcolor);
                     /*if(this.presentSELcolor == "orange"){
                         this.showHideTestingOption(this.capacitorOption);
                     }else{
@@ -216,12 +217,12 @@
 
         reset: function(){
             this.presentSELcolor = "orange";
-            this.warningLabel.classList.add("hidden-element");
+           // this.warningLabel.classList.add("hidden-element");
             this.selButtonBckgrnd.classList.add("orange-bckgrnd");
         },
 
         init: function(){
-            console.log("in KnobSelectorManager.init()");
+           // console.log("in KnobSelectorManager.init()");
            // Selectors
             this.offSelectorKnob = document.getElementById("selector-knob-off-id")
             this.capDiodeSelectorKnob = document.getElementById("selector-knob-cap-diode-id");
@@ -256,8 +257,7 @@
             this.capDiodeClick.addEventListener("click",function(){KnobSelectorManager.changeSetting("capDiode")});
            // console.log("ending 'selector click' elements");
 
-            this.warningLabel = document.getElementById("warning-label-id");
-            this.warningLabel.classList.add("hidden-element");
+
             this.selButtonBckgrnd = document.getElementById("mm-sel-button-bckgrnd-id");
 
             // Selector Labels
@@ -288,7 +288,7 @@
             //console.log("Finished ProbeConnectionManager.init()"); 
             DisplayValueManager.init();
             DisplayValueManager.initiated = "true";
-            console.log("Finished KnobSelectorManager.init()"); 
+           // console.log("Finished KnobSelectorManager.init()"); 
             this.initiated = true; 
         }
     }

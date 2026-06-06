@@ -18,19 +18,18 @@
 	
     <!--<link rel="stylesheet" type="text/css" href="css/Education/Edu_Nav/eduTrainingNav.css">-->
 
-	<link rel="stylesheet" type="text/css" href="css/Education/Training/VideosIcData/mediaQuery_Videos_IcData_base_plus_600px-minus_to_1400px-plus.css">
-	<!--<link rel="stylesheet" type="text/css" href="css/Education/Packets/mediaQuery_Packets_base_600px-minus_to_1400px-plus.css">-->
+	<!--<link rel="stylesheet" type="text/css" href="css/Education/Training/VideosIcData/mediaQuery_Videos_IcData_base_plus_600px-minus_to_1400px-plus.css">
+	<link rel="stylesheet" type="text/css" href="css/Education/Packets/mediaQuery_Packets_base_600px-minus_to_1400px-plus.css">
 	<link rel="stylesheet" type="text/css" href="css/Education/Training/Introduction/Codes_base_plus_600px-minus_to_1400px-plus.css">
 	<link rel="stylesheet" type="text/css" href="css/Education/Training/Introduction/TruthTables_base_plus_600px-minus_to_1400px-plus.css">
 	<link rel="stylesheet" type="text/css" href="css/Education/Training/Introduction/GatesIcs_base_plus_600px-minus_to_1400px-plus.css">
 	<link rel="stylesheet" type="text/css" href="css/Education/Training/Introduction/Design_base_plus_600px-minus_to_1400px-plus.css">
 
 	
-	<link rel="stylesheet" type="text/css" href="css/Education/Training/Introduction/Intro_Architecture_base_plus_600px-minus_to_1400px-plus.css">
+	<link rel="stylesheet" type="text/css" href="css/Education/Training/Introduction/Intro_Architecture_base_plus_600px-minus_to_1400px-plus.css">-->
 
 
-	<script src="js/EduHtmlManager.js"></script>
-	<script src="js/EduNavManager.js"></script>
+	<script src="js/HtmlManager.js"></script>
     
     <script src="js/TimingManager.js"></script>
     <script src="js/ProbeConnectionManager.js"></script>
@@ -38,6 +37,7 @@
     <script src="js/ButtonManager.js"></script>
     <script src="js/ScreenManager.js"></script>
     <script src="js/DisplayValueManager.js"></script>
+    <script src="js/SelectionOptionsManager.js"></script>
 	<!--<script src="js/NavHandler.js"></script>-->
  
     <script>
@@ -45,105 +45,120 @@
     
 
 	<style>
-    .edu-contents{
-        height: 84vh;
-        width:93vw;
-        position: relative;
-        background-image: url("media/imgs/low-noise-darker.png");
-        background-size: cover;
-        color:  black;
-        overflow: auto;
-        padding: 1rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    #training-menu-label-id{
-        margin-bottom: -0.2rem;
-    }
-    .image-size{
-        height: 2rem;
-    }
-
-    .hide-answer{
-        opacity: 0;
-    }
-    .show-answer{
-        opacity: 1;
-    }
-        /*.project-container{
-            display: grid;
-            grid-template-columns: 70vw 21vw 0;
-            grid-template-columns: 0 21vw 70vw;
-            gap: 10px;
-            background-color: #2196F3;
-            padding: 1rem;
-            width: 97vw;
-            height: 90vh;
-            overflow: hidden;
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            opacity: 1;
+            background-image: url("media/imgs/low-noise-darker.png");
+            background-size: cover;
+            color: black;
+            font-weight: bold;
         }
-            #about-multimeter-id{
-                grid-area: 1 / 1 / 6 / 2;
-                background-color: whitesmoke;
-                display: none;
+            .edu-contents{
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 90vh; /*calc(100vh - 6rem);*/
+                width: 99vw;
+                color:  black;
+                overflow:hidden;
+                padding: 5px;
+                margin: 5px;
+            /* transition: opacity 4s; */
+                border: 3px solid red;
+                /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
             }
-            #multimeter-svg-id{
-                grid-area: 1 / 2 / 6 / 3;
-                background-color: blue;
-            }
-            #testing-container-id{
-                grid-area: 1 / 3 / 6 / 7;
-                background-color: lightsalmon;
-            }*/
-            .training-menu-container{
+                    .transition-hide{
+                        transition: opacity 0.5s;
+                    }
+                    .transition-show{
+                        transition: opacity 3s;
+                    }
+
+                    .opacity-zero{
+                        opacity: 0;
+                    }
+                    .opacity-one{
+                        opacity: 1;
+                    }
+
+                #training-menu-label-id{
+                    margin-bottom: -0.2rem;
+                }
+                .image-size{
+                    height: 2rem;
+                }
+
+            .menu-container{
+                position: relative;
+                z-index: 100;
                 display: flex;
                 justify-content: space-around;
-                width: 95vw;
+                width: 97vw;
+                /*color: white;
+                border: 3px solid white;*/
+                padding: 5px;
             }
+                .menu-nav{
+                    width: 35vw;
+                   /* border: 3px solid red;*/
+                    padding: 5px;
+                }
+                    .menu-label{
+                        font-size: 2rem;
+                        display: block;
+                        text-align: center;
+                        /*color: yellow;*/
+                    }
+                    .menu-ul{
+                        font-size: 1.7rem;
+                        display: flex;
+                        justify-content: space-around;
+                        width: 35vw;
+                       /* border: 3px solid violet;*/
+                        padding: 5px;
+                    }
+                        .menu-ul:hover{
+                            cursor: pointer;
+                        }
 	
 	</style>
 	
 </head>
 <body onload="eduInit()">
-    <nav class="nav-container">
-        <div class="nav-training-testing-container">
-            <nav id="training-menu-container-id" class="menu-container training-menu-container">
-                <label id="training-menu-label-id" class="menu-label-lev-1" 
-                        onclick="EduHtmlManager.request('html/Education/Training/TrainingDropDown.html', 'edu-contents-id','')" >Training
-                </label>
-                <label id="labs-menu-label-id" class="menu-label-lev-1" 
-                        onclick="EduHtmlManager.request('html/Education/Exercises/ExercisesDropDown.html', 'edu-contents-id')" >Exercises
-                </label>
-            </nav>
-        </div>
-        
+    <nav class="menu-container">
+        <nav class="training-nav menu-nav">
+            <label class="training-label menu-label">Training</label>
+            <ul class="training-ul menu-ul">                                                
+                <li onclick="HtmlManager.request('html/MultiMeter.html','edu-article','training')">Multi Meter</li>
+                <li onclick="HtmlManager.request('html/Oscilloscope.html','edu-article','training')">Oscilloscope</li>
+            </ul>
+        </nav>
+        <nav class="exercises-nav menu-nav">
+            <label class="exericses-label menu-label">Exercises</label>
+            <ul class="exercises-ul menu-ul" type="1">                                                
+                <li onclick="HtmlManager.request('html/MultiMeter.html','edu-article','exercises')">Multi Meter</li>
+                <li onclick="HtmlManager.request('html/Oscilloscope.html','edu-article','exercises')">Oscilloscope</li>
+            </ul>
+        </nav>
     </nav>
 
-    <div id="edu-contents-id" class="edu-contents transition-0-1">
+    <div id="edu-contents-id" class="edu-contents transition-show opacity-one ">
     </div>
-    <div id="edu-article-id" class="edu-article">
-        <!--<div class="close-html" onclick="EduHtmlManager.close()">X</div>-->
+    <!--<div id="edu-article-id" class="edu-article">
         <div id="ic-data-contents-id" class="ic-data-contents">
             <label>Data Sheet for:</label>
         </div>
-    </div>
+    </div>-->
         
 
     <script>
-		
     	function eduInit(){
 			//console.log("In onload='eduInit()' education.html");
-    		//NavHandler.init();
-			//console.log("after NavHandler.init()");
-			EduNavManager.init();
-			//console.log("after EduNavManager.init()");
-			EduHtmlManager.init();
-			//console.log("after EduHtmlManager.init()");
+			HtmlManager.init();
+			//console.log("in eduInit() and after HtmlManager.init()");
     	}
-
-		function showTable(){
-        	let tableEle = document.getElementById("truth-table-3-bit-id");
-            tableEle.classList.remove("hide-table");
-		}
- 
     </script>
 </body>
 </html>

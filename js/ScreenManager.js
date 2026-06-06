@@ -342,6 +342,6 @@ let ScreenManager = {
             this.batterySymbol = document.getElementById("mm-battery-symbol-id");
             //console.log("just finished setting this.batterySymbol = doc....");
 
-            console.log("Finished ScreenManager.init()"); 
+            //console.log("Finished ScreenManager.init()"); 
         }
     }

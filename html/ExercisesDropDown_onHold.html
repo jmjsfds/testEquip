@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+          /* CSS for  Training Sheets Base (CONTENTS) */
+         .tr-ul{
+            width: 100%;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        .tr-mod-header{
+            font-size: 3rem;
+        }
+        .tr-common-container{
+            border: 2px solid orchid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .tr-common-container ul li{
+                padding-bottom: 0.4em;
+                cursor: pointer;
+            }
+
+    
+    /*End CSS for IC Datasheets Base (CONTENTS) */
+    </style>
+<body>
+    <div class="training-sheets-nav-container">
+        <div class="tr-common-container tr-test-equipment-container">
+            <label class="tr-mod-header"><u>Test Equipment</u>:</label>
+            <ul class="tr-ul" type="1">                                                
+                <li onclick="HtmlManager.request('html/MultiMeter.html','edu-article','exercises')">Multi Meter</li>
+                <li onclick="HtmlManager.request('html/Oscilloscope.html','edu-article')">Oscilloscope</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

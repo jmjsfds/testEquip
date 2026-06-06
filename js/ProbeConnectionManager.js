@@ -23,6 +23,18 @@
 
         bothPluginConnected: false,
 
+        warningLabel: {},
+
+       // warningLabel: {},
+            /*if((ProbeConnectionManager.presentAmpConnection == "high") && (selectorLabel != "tenAmp")){
+                this.warningLabel.classList.remove("hidden-element");
+            } 
+            if((ProbeConnectionManager.presentAmpConnection == "low") && (selectorLabel == "tenAmp")){
+                this.warningLabel.classList.remove("hidden-element");
+            }*/ 
+           
+           // this.warningLabel = document.getElementById("warning-label-id");
+           // this.warningLabel.classList.add("hidden-element");
         //Methods
 
         PluginManager: function(plugin){
@@ -31,6 +43,7 @@
                 this.init();
                 this.initiated = "true";
             };
+            this.warningLabel.classList.add("hidden-element");
             switch (plugin){
                 case "comPlugin":
                     if(!this.blackPluginConnection){
@@ -52,10 +65,11 @@
                     }
                     break;
                 case "lowAmpPlugin":
+                    console.log("KnobSelectorManager.presentKnobSelectorLabel =  " + KnobSelectorManager.presentKnobSelectorLabel);
                     if(KnobSelectorManager.presentKnobSelectorLabel == "tenAmp"){
                         this.warningLabel.classList.remove("hidden-element");
                     }else{
-                    this.warningLabel.classList.add("hidden-element"); 
+                        this.warningLabel.classList.add("hidden-element"); 
                     }
                     this.redPlugin.setAttribute("transform","translate(835,70) rotate(90) scale(0.3)");
 
@@ -98,11 +112,11 @@
         },
 
         init: function(){
-            //console.log("in ProbeConnectionManager.init()");
+           // console.log("in ProbeConnectionManager.init()");
             this.warningLabel = document.getElementById("warning-label-id");
 
             // Plugin Click Areas
-            //console.log("Beginning 'Plugin click' elements");
+           // console.log("Beginning 'Plugin click' elements");
             this.comPluginClick = document.getElementById("mm-com-plugin-click-area-id");
             this.comPluginClick.addEventListener("click",function(){ProbeConnectionManager.PluginManager("comPlugin")});
             this.lowAmpPluginClick= document.getElementById("mm-mamp-plugin-click-area-id");

@@ -136,6 +136,6 @@ let DisplayValueManager = {
             this.periodThree = document.getElementById("mm-period-3-id");
 
             this.minusSign = document.getElementById("mm-minus-sign-id");
-            console.log("Finished ScreenManager.init()"); 
+            //console.log("Finished ScreenManager.init()"); 
         }
     }

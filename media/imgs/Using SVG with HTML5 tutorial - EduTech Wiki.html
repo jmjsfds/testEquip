@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial -->
+<html class="client-js ve-available" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Using SVG with HTML5 tutorial - EduTech Wiki</title>
+<script type="text/javascript" async="" src="./Using SVG with HTML5 tutorial - EduTech Wiki_files/js"></script><script async="" src="./Using SVG with HTML5 tutorial - EduTech Wiki_files/analytics.js.download"></script><script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )mediawiki_135mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c50c4cacffa3cbe66e275c2b","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Using_SVG_with_HTML5_tutorial","wgTitle":"Using SVG with HTML5 tutorial","wgCurRevisionId":59500,"wgRevisionId":59500,"wgArticleId":7086,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated source tags","Web technology tutorials","SVG"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Using_SVG_with_HTML5_tutorial","wgRelevantArticleId":7086,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"sdgDownArrowImage":"/mediawiki/extensions/SemanticDrilldown/skins/down-arrow.png","sdgRightArrowImage":"/mediawiki/extensions/SemanticDrilldown/skins/right-arrow.png","wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":false,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsDelayReload":false,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/mediawiki/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgCiteReferencePreviewsActive":true,"srfFilteredConfig":null,"egMapsScriptPath":"/mediawiki/extensions/Maps/","egMapsDebugJS":false,"egMapsAvailableServices":["leaflet","googlemaps3"],"egMapsLeafletLayersApiKeys":{"MapBox":"","MapQuestOpen":"","Thunderforest":"","GeoportailFrance":""},"wgEditSubmitButtonLabelPublish":false};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.srf.styles":"ready"};RLPAGEMODULES=["ext.pygments.view","ext.smw.styles","smw.entityexaminer","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.smw.purge"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="stylesheet" href="./Using SVG with HTML5 tutorial - EduTech Wiki_files/load.php">
+<script async="" src="./Using SVG with HTML5 tutorial - EduTech Wiki_files/load(1).php"></script>
+<style>#mw-indicator-mw-helplink {display:none;}</style>
+<style>
+.mw-editfont-monospace{font-family:monospace,monospace}.mw-editfont-sans-serif{font-family:sans-serif}.mw-editfont-serif{font-family:serif} .mw-editfont-monospace,.mw-editfont-sans-serif,.mw-editfont-serif{  font-size:13px; -moz-tab-size:4;tab-size:4; }.mw-editfont-monospace.oo-ui-textInputWidget,.mw-editfont-sans-serif.oo-ui-textInputWidget,.mw-editfont-serif.oo-ui-textInputWidget{font-size:inherit}.mw-editfont-monospace.oo-ui-textInputWidget > .oo-ui-inputWidget-input,.mw-editfont-sans-serif.oo-ui-textInputWidget > .oo-ui-inputWidget-input,.mw-editfont-serif.oo-ui-textInputWidget > .oo-ui-inputWidget-input{  font-size:13px}.mw-editfont-monospace.oo-ui-textInputWidget > input.oo-ui-inputWidget-input,.mw-editfont-sans-serif.oo-ui-textInputWidget > input.oo-ui-inputWidget-input,.mw-editfont-serif.oo-ui-textInputWidget > input.oo-ui-inputWidget-input{min-height:32px}
+.ve-init-mw-progressBarWidget{height:1em;overflow:hidden;margin:0 25%}.ve-init-mw-progressBarWidget-bar{height:1em;width:0} .ve-init-mw-progressBarWidget{background-color:#fff;box-sizing:border-box;height:0.875em;border:1px solid #36c;border-radius:0.875em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}.ve-init-mw-progressBarWidget-bar{background-color:#36c;height:0.875em}
+.float-right{float:right;margin-left:10px;clear:right}.float-left{float:left;margin-right:10px;clear:left}.clear-both{clear:both}.clientnojs{display:none}.client-nojs .clientnojs{display:block}.client-nojs .smw-schema-placeholder-message{display:none}.smw-json-data{display:none}.client-nojs .smw-json-data{display:block}.client-nojs .smw-overlay-spinner{display:none}.smw-placeholder{list-style:none;background-color:#f5f5f5;border-radius:4px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143} .smw-message--hidden{display:none !important}.client-nojs .smw-placeholder::after{content:"JavaScript is disabled or could not be detected!";top:80%;text-align:center;color:red}.smw-personal-jobqueue-watchlist:hover,.smw-personal-jobqueue-watchlist:focus,.smw-personal-jobqueue-watchlist:active{text-decoration:none;color:#0645ad}.smw-personal-table{width:100%;font-size:90%} .smwttcontent{display:none}span.smwbuiltin{font-style:italic}.item-count{display:inline-block;padding:2px 5px;font-size:12px;font-weight:600;line-height:1;background-color:rgba(27,31,35,0.04);border-radius:4px;color:#bbb;margin-left:10px}.item-count.active{background-color:rgba(27,31,35,0.08);color:#444d56} .smwpre{font-family:monospace;padding:1em;border:1px dashed #2f6fab;color:black;background-color:#f9f9f9;line-height:1.1em;margin-bottom:0.5em;margin-top:0.5em;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;word-break:break-word;margin-right:5px}.smwpre-no-margin{margin:0px;margin-bottom:0.5em;margin-top:0.5em}.smw-debug-box{border:5px dotted #ffcc00;background:#FFF0BD;padding:15px;margin-bottom:10px}.smw-debug-box-header{font-family:sans-serif;padding-bottom:15px;padding-top:10px;font-weight:bolder;font-size:16px;border-bottom:1px dotted #ffcc00;margin-bottom:15px} #smwfootbr{clear:both} span.smwsortkey{display:none} a.sortheader:hover{text-decoration:none} div.smwtimeline{border:1px solid #aaa;background-color:#f9f9f9;  }span.smwtlevent,span.smwtlband,span.smwtlsize,span.smwtlposition{display:none;speak:none}span.smwtlcomment{font-style:italic;padding:5px}span.smw-chain-marker{margin-left:0.2em}.smwtable-striped tbody > tr:nth-child(even){background-color:#f5f5f5}.smwtable-striped tbody > tr:nth-child(odd){background-color:#fff}.smwtable-striped tbody > tr:hover{background-color:#eee}.smwtable-clean{width:auto;max-width:100%;margin-bottom:20px;background-color:transparent;border-spacing:0px}.smwtable-clean tr{border-top:1px solid #dddddd}.smwtable-clean th{text-align:left}.smwtable-clean td,.smwtable-clean th{padding:0}.smwtable-clean tr > th{padding:8px !important;line-height:1.42857143;vertical-align:top;border-top:1px solid #dddddd;border-collapse:collapse;border-spacing:0;text-align:center;vertical-align:middle}.smwtable-clean tr > td{padding:8px !important;line-height:1.42857143;vertical-align:top;border-top:1px solid #dddddd;border-collapse:collapse;border-spacing:0}.smwtable-clean tbody > tr:nth-child(even){background-color:#f5f5f5}.smwtable-clean tr > th.headerSort{padding-right:21px !important} .smwtable-clean.broadtable{width:100%}div.smwhr hr{background-color:#ddd;color:#ddd} span.smwwarning{color:#888;font-style:italic;font-size:90%}.smw-protection-indicator .smw-edit-protection{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-edit-protection.svg?78a2c);background-size:25px 20px;background-repeat:no-repeat;display:inline-block;padding:20px 0 0px 26px;top:5px;position:relative} span.smwsearch a,span.smwbrowse a{background-position:right center;background-repeat:no-repeat;padding-right:18px;color:#ccc;text-decoration:none;margin-right:4px}span.smwsearch a:hover,span.smwbrowse a:hover{padding-right:20px;color:#888;text-decoration:none;margin-right:2px}span.smwsearch a{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-search-subtle.svg?dbdd3)}span.smwsearch a:hover{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-search.svg?c9999)}span.smwbrowse a{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-browse-subtle.svg?903af)}span.smwbrowse a:hover{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-browse.svg?be8b7)}.concept-documenation{border-top:1px dotted #aaa} .smw-spinner .text{padding-left:2.1em;font-size:12px;vertical-align:middle} .smw-spinner.left.mw-small-spinner{background-position:left;vertical-align:middle;display:inline-block;padding:0px !important} .smw-spinner.center.mw-small-spinner{vertical-align:middle;display:inline-block;padding:0px !important} table.smw-ask-query .smw-ask-query-condition{width:100%}table.smw-ask-query .smw-ask-query-printout{width:100%}hr.smw-form-horizontalrule{margin-bottom:10px;background-color:#ddd}.smw-horizontalrule{margin-bottom:10px;border-bottom:1px solid #ddd}.smw-form-select,.smw-form-input{padding:1px 1px}.smw-form-checkbox{vertical-align:middle;cursor:pointer}label.smw-form-checkbox{vertical-align:middle;cursor:pointer}.smw-editpage-help{background-color:#f0f0f0;border:1px solid silver; padding:0.5em 1em 0.5em 1em;margin-bottom:1em}.smw-column-header{font-weight:bold;font-size:1.17em;line-height:1.6;margin-top:0.5em;margin-bottom:0;padding-bottom:0;color:black;overflow:hidden}.smw-column-header:first-of-type{margin-top:0em}.smw-column{float:left;word-wrap:break-word;box-decoration-break:clone;-webkit-box-decoration-break:clone}.smw-column-responsive{-webkit-columns:3 20em;-moz-columns:3 20em;columns:3 20em;-webkit-column-gap:1em;-moz-column-gap:1em;column-gap:1em}.smw-column-twofold-responsive{-webkit-columns:2 20em;-moz-columns:2 20em;columns:2 20em;-webkit-column-gap:1em;-moz-column-gap:1em;column-gap:1em}.smw-column-twofold-responsive li:first-child{margin-top:-3px}.smw-column[dir="rtl"]{float:right}.smw-column-responsive[dir="rtl"],.smw-column-twofold-responsive[dir="rtl"]{float:right}.smw-columnlist-container .smw-column-responsive{margin-bottom:-1em}.smw-note{padding:8px 15px;list-style:none;background-color:#f5f5f5;border-radius:4px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143}.smw-svg-icon{display:inline-flex;align-self:center;position:relative;height:1em;width:1em}.smw-svg-icon svg{height:1em;width:1em}.smw-svg-icon.svg-baseline svg{bottom:-0.125em;position:absolute}.smw-icon-info{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-info.svg?e4fc8) no-repeat left center;padding:0 0 5px 25px}.smw-icon-pen{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-pen.svg?72b2b);background-repeat:no-repeat;padding:0 0 0 25px;background-position:center}.smw-icon-bookmark{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-bookmark.svg?ab2c8);background-repeat:no-repeat;padding:0 0 0 20px;background-position:center}.smw-icon-compact{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-compact.svg?9b653);background-repeat:no-repeat;padding:0 0 0 15px;background-position:center} .smwprops,.smwpropname,.smwtype_uri{word-break:break-word;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;box-decoration-break:clone;-webkit-box-decoration-break:clone} .smw-subobject-entity{font-style:italic} .autocomplete-suggestions{background:white;border:1px solid rgb(221,221,221);border-radius:3px;box-shadow:rgba(0,0,0,0.1) 0px 0px 5px;min-width:120px;color:rgb(111,128,146);float:right;padding-top:2px;margin-right:-15px;font-size:16px;font-weight:normal;z-index:11110 !important;overflow-y:auto;overflow-x:hidden}.autocomplete-arrow.mw-ui-input{background-position-y:4px}[dir='rtl'] .autocomplete-suggestions{margin-right:0px}.autocomplete-suggestion{display:block;padding:5px 10px;border-bottom:1px solid #ddd;cursor:pointer}.autocomplete-selected{background:#f0f0f0}.autocomplete-suggestions strong{font-weight:normal;color:#3399ff}.autocomplete-group{padding:2px 5px}.autocomplete-group strong{display:block;border-bottom:1px solid #000}.autocomplete-loading{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-autocomplete-loading.gif?87ebb) no-repeat left center;padding-right:30px;vertical-align:middle;background-position:right 10px center} .autocomplete-arrow-light{background-image:linear-gradient(45deg,transparent 50%,gray 50%),linear-gradient(135deg,gray 50%,transparent 50%),linear-gradient(to right,#ffffff,#ffff);background-position:calc(100% - 17px) calc(1em + 2px),calc(100% - 12px) calc(1em + 2px),calc(100% - 2.5em) 0.5em;background-size:5px 5px,5px 5px,1px 1.5em;background-repeat:no-repeat}.autocomplete-arrow{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-arrow-down.svg?82344);background-repeat:no-repeat;background-position-x:calc(100% - 6px);background-position-y:5px}.autocomplete-arrow.mw-ui-input{background-position-y:4px}[dir='rtl'] .autocomplete-arrow{background-position-x:6px}.skin-vector input#smw-property-input.autocomplete-suggestions{height:1.15em;padding:2px 2px}.skin-chameleon input#smw-property-input.autocomplete-suggestions{height:30px;padding:2px 2px}.skin-foreground input#smw-property-input.autocomplete-suggestions{height:32px;padding:2px 0px 0px 8px}.skin-chameleon .autocomplete-suggestion,.skin-foreground .autocomplete-suggestion{padding:2px 5px;white-space:nowrap;overflow:hidden;font-size:0.9em}.smw-breadcrumb-link{color:#7d7d7d;font-size:84%;line-height:1.2em;margin:0.4em 0 0.6em 0;width:auto}.smw-breadcrumb-arrow-right{border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:5px solid #aaa;display:inline-block;position:relative;margin-left:0px;margin-right:4px}.smw-ask-action-btn,.smw-action-btn{display:inline-block;padding:3px 6px;margin-bottom:0;font-size:12px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}.smw-action-btn-min200{min-width:200px}.smw-ask-action-btn-lgrey,a.smw-ask-action-btn-lgrey:visited,.smw-action-btn-lgrey,.smw-action-btn-lgrey:visited{color:#222;background-color:#eee;border-color:#ddd;text-decoration:none}a.smw-ask-action-btn-lgrey:hover,.smw-action-btn-lgrey:hover{color:#222;background-color:#ddd;border-color:#ddd;text-decoration:none}.smw-ask-action-btn-lblue,a.smw-ask-action-btn-lblue:visited{color:#fff;background-color:#5bc0de;border-color:#46b8da;text-decoration:none}a.smw-ask-action-btn-lblue:hover{color:#fff;background-color:#31b0d5;border-color:#269abc;text-decoration:none}.smw-ask-action-btn-dblue,a.smw-ask-action-btn-dblue:visited{color:#fff;background-color:#337ab7;border-color:#2e6da4;text-decoration:none}.smw-ask-action-btn-dblue:hover,.smw-ask-action-btn-dblue:focus,a.smw-ask-action-btn-dblue:hover,a.smw-ask-action-btn-dblue:focus{color:#fff;background-image:none;background-color:#286090;border-color:#204d74;text-decoration:none}.smw-concept-page-indicator a.external.text,.smw-page-indicator a.external.text{background-image:none;padding-right:0}.smw-page-indicator{display:inline-block;font-weight:normal;line-height:1.25;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:0.5rem 1rem; border-radius:0.25rem;-webkit-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;padding:0.25rem 0.5rem; border-radius:0.2rem;color:#292b2c; border-color:#ddd}.smw-protection-indicator{display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; border-radius:0.25rem;-webkit-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out; border-radius:0.2rem;color:#292b2c;border-color:transparent}.smw-protection-indicator.with-border{border-color:#ddd}.smw-page-indicator.usage-count.moderate{background-color:#f2d29b;border:1px solid #f2d29b;color:#aa4c2c}.smw-page-indicator.usage-count.high{background-color:#ff887f;border:1px solid #ffB79e;color:#800000}.smw-page-indicator-rdflink{line-height:24px;margin-right:10px}.smw-page-indicator-rdflink a{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-rdf.svg?ab3ba) center left no-repeat;padding-left:28px;display:inline-block;height:24px;line-height:24px}.smw-reference-indicator{vertical-align:super;margin-left:2px;font-size:10px}.smw-reference-indicator::before{content:''}.smw-reference-indicator::after{content:'≡'}.smw-admin-circle-orange{width:14px;height:14px;background:orange;position:absolute;display:block;border-radius:50%;display:inline-block;margin-right:20px;margin-top:3px}.is-disabled{opacity:.5;position:relative;pointer-events:none}.is-disabled::after{position:absolute;top:0;left:0;width:100%;height:100%;content:' '}.smw-break-word{overflow-wrap:break-word;word-wrap:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}.smw-break-word a{-ms-word-break:break-all;word-break:break-all;word-break:break-word}.smw-flex-center{display:flex;align-items:center;justify-content:center}.smw-absolute{position:absolute;top:0;left:0;width:100%;height:100%} .smw-margin-small{margin-top:10px;margin-bottom:10px}.smw-margin-extra{margin-top:10px;margin-bottom:10px;padding:100px}.smw-loading-image-dots{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-loading-dots.gif?d2a9c) no-repeat left center;padding:5px 0 5px 35px;vertical-align:middle}.smw-overlay-spinner.mini{height:15px;width:15px;border-left:3px solid rgba(0,174,239,.15);border-right:3px solid rgba(0,174,239,.15);border-bottom:3px solid rgba(0,174,239,.15);border-top:3px solid rgba(0,174,239,.8)}.smw-overlay-spinner.small{height:20px;width:20px}.smw-overlay-spinner.medium{height:40px;width:40px}.smw-overlay-spinner.large{height:60px;width:60px}.smw-overlay-spinner.flex{left:unset;top:unset}.smw-overlay-spinner.flex-all{left:unset;top:unset;position:unset}.smw-overlay-spinner{position:absolute;left:47%;top:30%;height:60px;width:60px;margin:0px auto;-webkit-animation:rotation 1.0s infinite linear;-moz-animation:rotation 1.0s infinite linear;-o-animation:rotation 1.0s infinite linear;animation:rotation 1.0s infinite linear;border-left:6px solid rgba(0,174,239,.15);border-right:6px solid rgba(0,174,239,.15);border-bottom:6px solid rgba(0,174,239,.15);border-top:6px solid rgba(0,174,239,.8);border-radius:100%}@-webkit-keyframes rotation{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(359deg)}}@-moz-keyframes rotation{from{-moz-transform:rotate(0deg)}to{-moz-transform:rotate(359deg)}}@-o-keyframes rotation{from{-o-transform:rotate(0deg)}to{-o-transform:rotate(359deg)}}@keyframes rotation{from{transform:rotate(0deg)}to{transform:rotate(359deg)}} .content table.broadtable,.smw-ask-result table.broadtable{width:100% !important} @media screen and (max-width:800px){} .mw-json .value,.mw-json-single-value{word-break:break-word}.ns-112.action-submit .error{color:#721c24;padding:10px;margin:0.5em 0;border-radius:1px;background-color:#f2dede;border:0px solid;padding:.8em 1em;background:#f2dede;margin:0.5rem 0;border-left:5px solid #ce4844;margin-bottom:15px}.ns-112.action-submit .error a.external{background:none !important;padding:0 !important}.ns-112.action-submit .error ul{margin:0 0 0 25px;font-size:14px}.ns-112.action-submit .error ul li:first-child{margin-top:30px;display:block;margin-left:-20px;margin-bottom:5px}.ns-112.action-submit .error ul li:not(:first-child){margin-left:10px}.ns-112.action-submit .error:before{content:"Error";font-weight:bold;padding:0px 5px 0px 5px;  color:#721c24;font-weight:600;float:left;border-radius:3px;margin-bottom:10px;width:100%} .smw-dropdown{position:relative;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px}.smw-dropdown > a,.smw-dropdown > button{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;background-color:white;border:1px solid #ccc;padding:6px 20px 6px 10px;border-radius:4px;display:inline-block;color:black;text-decoration:none}.smw-dropdown > a:before,.smw-dropdown > button:before{position:absolute;right:12px;top:12px;content:'';border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid black}.smw-dropdown input[type=checkbox]{position:absolute;display:block;top:0px;left:0px;width:100%;height:100%;margin:0px;opacity:0}.smw-dropdown input[type=checkbox]:checked{position:fixed;z-index:+0;top:0px;left:0px;right:0px;bottom:0px}.smw-dropdown .smw-dropdown-menu{position:absolute;top:31px;border:1px solid #ccc;border-radius:3px;left:0px;list-style:none;padding:4px 0px !important;display:none;background-color:white;box-shadow:0 3px 6px rgba(0,0,0,.175);margin:0 0 0 0 !important;z-index:10}.smw-dropdown input[type=checkbox]:checked + .smw-dropdown-menu{display:block}.smw-dropdown .smw-dropdown-menu li{display:block;padding:4px 20px;white-space:nowrap;min-width:100px;margin-bottom:0}.smw-dropdown .smw-dropdown-menu li:hover{background-color:#f5f5f5;cursor:pointer}.smw-dropdown .smw-dropdown-menu li a{text-decoration:none;display:block;color:black }.smw-dropdown .smw-dropdown-menu .divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5;font-size:1px;padding:0}.smw-dropdown-menu::before{top:-16px;right:9px;left:auto;border:8px solid transparent;border-bottom-color:rgba(27,31,35,0.15)}.smw-dropdown-menu::before{top:-16px;right:7px;left:auto;border:8px solid transparent;border-bottom-color:rgba(27,31,35,0.15);position:absolute;display:inline-block;content:''}.smw-dropdown-menu::after{position:absolute;display:inline-block;content:'';top:-14px;right:8px;left:auto;border:7px solid transparent;border-bottom-color:#fff} .smw-table{display:table;width:100%;box-sizing:border-box}.smw-table-row{display:table-row}.smw-table-header{background-color:#eee;display:table-header-group}.smw-table-cell,.smw-table-head{border:1px solid #999;display:table-cell;padding:3px 10px}.smw-table-header{background-color:#eee;display:table-header-group;font-weight:bold}.smw-table-footer{background-color:#eee;display:table-footer-group;font-weight:bold}.smw-table-body{display:table-row-group}.smw-table-sort-asc:after{content:'▲';float:right;color:#999;font-size:10px;padding-top:3px}.smw-table-sort-desc:after{content:'▼';float:right;color:#999;font-size:10px;padding-top:3px} @media screen and (max-width:800px){.smw-table-cell{display:flex;flex-direction:row;flex-wrap:wrap}.smw-table-header .smw-table-cell{text-overflow:ellipsis;white-space:nowrap;width:100% !important;justify-content:space-between;padding:3px 0px 3px 0px;margin-left:10px}.smw-table-row,.smw-table-header{flex:1 1 150px}.smw-table-sort-asc:after,.smw-table-sort-desc:after{clear:both;padding-left:10px;margin-right:20px}}     .smw-tabs{margin-top:10px;clear:both}@media (max-width:calc(640px - 1px)){.smw-tabs{display:flex;flex-direction:column}}.smw-tabs section,.smw-tabs .subtab-content{display:none;padding:0;border-top:1px solid var(--border-color-base,#a2a9b1)}.smw-tabs label.nav-label{display:inline-block;color:var(--color-base,#202122);padding:4px 12px;font-size:1rem;font-weight:700;line-height:1.5714285;white-space:nowrap;user-select:none;transition-property:background-color,color,border-color,box-shadow;transition-duration:100ms}@media (max-width:calc(640px - 1px)){.smw-tabs label.nav-label{box-shadow:inset 0 -1px 0 0 var(--border-color-subtle,#c8ccd1)}}.smw-tabs label.nav-label .smw-tab-icon{display:inline-block;min-width:16px;min-height:16px;opacity:1;vertical-align:text-top;margin-right:4px}.smw-tabs label.nav-label::before{margin-right:4px;font-weight:normal}.smw-tabs label.nav-label[for*='1']::before,.smw-tabs label.nav-label[for*='2']::before,.smw-tabs label.nav-label[for*='3']::before,.smw-tabs label.nav-label[for*='4']::before{content:''}.smw-tabs label.nav-label:hover{color:var(--color-progressive--hover,#4b77d6);cursor:pointer;box-shadow:inset 0 -2px 0 0 var(--box-shadow-color-progressive-selected--hover,#4b77d6)}.smw-tabs label.nav-label:hover .smw-tab-icon{opacity:0.8}.smw-tabs label.nav-label:active{color:var(--color-progressive--active,#233566);box-shadow:inset 0 -2px 0 0 var(--box-shadow-color-progressive-selected--active,#233566)}.smw-tabs label.nav-label:active .smw-tab-icon{opacity:var(--opacity-icon-base--selected,1)}.smw-tabs input.nav-tab{display:none}.smw-tabs input.nav-tab:checked + label.nav-label{color:var(--color-progressive,#36c);box-shadow:inset 0 -2px 0 0 var(--box-shadow-color-progressive-selected,#36c)}.smw-tabs input.nav-tab:checked + label.nav-label.cached{box-shadow:inset 0 -2px 0 0 orange}.smw-tabs input.nav-tab:checked + label.nav-label .smw-tab-icon{opacity:var(--opacity-icon-base--selected,1)} #tab-setup:checked ~ #tab-content-setup,#tab2:checked ~ #content2,#tab3:checked ~ #content3,#tab4:checked ~ #content4{display:block} .smw-tabset > input[type="radio"]{position:absolute;left:-200vw}.smw-tabset > input[type="checkbox"]{display:none}.smw-tabset .tab-panel{display:none}.smw-tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,.smw-tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),.smw-tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),.smw-tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),.smw-tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),.smw-tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6){display:block}.smw-tabset > label{position:relative;display:inline-block;padding:15px 15px 25px;border:1px solid transparent;border-bottom:0;cursor:pointer;font-weight:300;color:#8d8d8d;margin-bottom:0px}.smw-tabset > label::after{content:"";position:absolute;left:15px;bottom:10px;width:22px;height:4px;background:#8d8d8d}.smw-tabset > input:focus + label,.smw-tabset > input:checked + label{color:#06c}.smw-tabset > input:focus + label::after,.smw-tabset > input:checked + label::after{background:#06c}.smw-tabset > input:focus + label.smw-indicator-severity-error::after,.smw-tabset > input:checked + label.smw-indicator-severity-error::after{background:#d33}.smw-tabset > input:focus + label.smw-indicator-severity-warning::after,.smw-tabset > input:checked + label.smw-indicator-severity-warning::after{background:#ffa500}.smw-tabset > label:hover{color:#444}.smw-tabset > label:hover::after{background:#444}.smw-tabset > input:checked + label{border-color:#ccc;border-bottom:1px solid #fff;margin-bottom:-1px;border-top:2px solid #06c}.smw-tabset > input:checked + label.smw-indicator-severity-error{border-top:2px solid #d33;color:#d33}.smw-tabset > input:checked + label.smw-indicator-severity-warning{border-top:2px solid #ffa500;color:#ffa500}.tab-panel{padding:30px 0;border-top:1px solid #ccc}.smw-issue-panel > label{padding:2px 5px 5px}.smw-issue-panel > input + label{margin-left:5px}.smw-issue-panel > label::after{left:5px;bottom:3px;width:12px;height:2px;background:#8d8d8d}.smw-issue-panel .tab-panel{padding:0 10px 10px 10px;overflow-y:auto;overflow-x:hidden;max-height:280px}.smw-issue-panel .tab-panel:after2{content:"";display:block;height:10px;width:100%} .smw-icon-indicator-placeholder{height:22px;width:22px;background-color:#eee;border-radius:50%;display:inline-block;margin-top:2px;margin-right:3px;vertical-align:middle;line-height:24px}.smw-indicator-vertical-bar-loader,.smw-indicator-vertical-bar-loader:before,.smw-indicator-vertical-bar-loader:after{background:#c0c0c0;-webkit-animation:load1 1s infinite ease-in-out;animation:load1 1s infinite ease-in-out;width:1em;height:4em}.smw-indicator-vertical-bar-loader{color:#c0c0c0;text-indent:-9999em; position:relative;font-size:3px;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation-delay:-0.16s;animation-delay:-0.16s;margin-right:10px;margin-top:10px}.smw-indicator-vertical-bar-loader:before,.smw-indicator-vertical-bar-loader:after{position:absolute;top:0;content:''}.smw-indicator-vertical-bar-loader:before{left:-2.2em;-webkit-animation-delay:-0.32s;animation-delay:-0.32s}.smw-indicator-vertical-bar-loader:after{left:2.2em}@-webkit-keyframes load1{0%,80%,100%{box-shadow:0 0;height:4em}40%{box-shadow:0 -2em;height:5em}}@keyframes load1{0%,80%,100%{box-shadow:0 0;height:4em}40%{box-shadow:0 -2em;height:5em}}.smw-icon-indicator-replication-error{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-error-replication.svg?99e4a) center left no-repeat;padding-left:20px;display:inline-block;height:20px;margin-right:5px;vertical-align:middle;line-height:24px;margin-top:2px}.smw-icon-indicator-constraint-error{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-error-constraint.svg?3c80a) center left no-repeat;padding-left:20px;display:inline-block;height:20px;margin-right:5px;vertical-align:middle;line-height:24px;margin-top:2px}.smw-icon-constraint-violation{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-constraint-violation.svg?8e401) no-repeat left center;padding:28px 0 0px 28px;vertical-align:middle;display:inline-block}.smw-icon-es-engine{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-elasticsearch-engine.svg?16171) no-repeat left center;padding:28px 0 0px 28px;vertical-align:middle;display:inline-block}.smw-icon-entity-examiner-panel-large{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-entity-examiner-panel-large.svg?2d541) no-repeat left center;margin-top:5px;padding:20px 0 0px 30px;vertical-align:middle;display:inline-block}.smw-icon-entity-examiner-panel{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-entity-examiner-panel.svg?99d33) no-repeat left center;padding:20px 0 0px 25px;display:inline-block;top:5px;position:relative}.smw-icon-entity-examiner-panel-error{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-entity-examiner-panel-error.svg?cee21) no-repeat left center;padding:20px 0 0px 25px;display:inline-block;top:5px;position:relative}.smw-icon-entity-examiner-panel-warning{background:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-entity-examiner-panel.svg?99d33) no-repeat left center;padding:20px 0 0px 25px;display:inline-block;top:5px;position:relative}.smw-issue-label{border-radius:2px;box-shadow:inset 0 -1px 0 rgba(27,31,35,.12);font-size:12px;font-weight:600;height:20px;line-height:15px;padding:.15em 4px}.smw-rule-constraint-violation ul.smw-list-rule{margin:0}.smw-rule-constraint-violation ul.smw-list-rule li{margin:0;margin-bottom:0.2em}.smw-list-rule{list-style-image:none;list-style-type:none;margin:0.2em 0 0 0.6em}.smw-list-rule-title{border-bottom:0px solid #ddd;border-collapse:collapse;color:#000} .smw-indicator-accordion{overflow:hidden}.smw-indicator-accordion input{position:absolute;opacity:0;z-index:-1}.smw-indicator-accordion-tab{width:100%;color:white;overflow:hidden}.smw-indicator-accordion-tab ul{margin-top:0px !important}.smw-indicator-accordion-tab-label{display:flex;justify-content:space-between;padding:0.5em 0.5em 0.5em 0.8em;background:#eaecf0;color:#222222; cursor:pointer; border-bottom:1px solid #fff;margin-bottom:0px}.plain .smw-indicator-accordion-tab-label{background:transparent; }.smw-indicator-accordion-tab-label:hover{background:#333;color:#fff}.smw-indicator-accordion-tab-label::after{content:"\276F";width:20px;height:1em;text-align:center;transition:all 0.35s ease,color 0s }.smw-indicator-accordion-tab:last-child .smw-indicator-accordion-tab-label{border-bottom:0px solid #fff}.smw-indicator-accordion-tab-content{max-height:0;padding:0 0.8em;color:#2c3e50;transition:all .35s}.smw-indicator-accordion-tab-close{display:flex;justify-content:flex-end;padding:1em;font-size:0.75em;background:#2c3e50;cursor:pointer}.smw-indicator-accordion-tab .smw-indicator-accordion-tab-label{border-top:1px solid #ebebeb;border-bottom:0px solid #fff}.smw-indicator-accordion-tab-close:hover{background:#333}input:checked + .smw-indicator-accordion-tab-label{background:#333;color:#fff}.plain input:checked + .smw-indicator-accordion-tab-label{border-bottom:0px}input:checked + .smw-indicator-accordion-tab-label::after{color:#fff;width:20px;margin-top:2px;-webkit-transform:rotate(90deg);transform:rotate(90deg)}input:checked ~ .smw-indicator-accordion-tab-content{max-height:100vh;padding:0.8em}.plain input:checked ~ .smw-indicator-accordion-tab-content{ }.skin-chameleon .mw-indicator-smw-entity-examiner{margin-top:25px}.skin-chameleon .smw-indicator-vertical-bar-loader{margin-top:40px} .smw-jsonview-button-group-right{float:right;margin-left:10px;margin-top:0px;margin-right:0px;clear:right;display:inline-flex}.smw-jsonview-button-group-left{float:left;margin-left:10px;margin-top:0px;margin-right:0px;clear:left;display:inline-flex;height:28px;text-align:center}.smw-jsonview-button-group-left input{margin:4px;padding:1px;padding-left:3px;border:1px solid #ddd;border-radius:2px}.smw-jsonview-search-label{margin:auto}.smw-jsonview-button{cursor:pointer;width:40px;height:28px;background-color:#337ab7;border:none;color:white;padding:0 14px;text-align:center;text-decoration:none;display:inline-block;font-size:20px;font-family:monospace;-webkit-transition-duration:0.4s;transition-duration:0.4s}.smw-jsonview-button:first-child{border-radius:2px 0 0 2px;border-right:1px solid #fff}.smw-jsonview-button:last-child{border-radius:0 2px 2px 0}.smw-jsonview-button:hover{background-color:#008CBA;color:white}.smw-jsonview-button:focus{outline:0}.jsonview{font-size:12px}.jsonview ul{margin-bottom:0px !important}.jsonview .collapsible{list-style:unset}.jsonview ul{list-style-type:none;margin:0 0 0 1px;border-left:1px dotted #ccc;padding-left:2em}.smw-jsonview-clipboard{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-clipboard.svg?a06b2);background-repeat:no-repeat;height:12px;width:16px;display:inline-block;padding-top:1px;margin-top:1px}.smw-json-container ul,.json-document ul{list-style-type:none;list-style-image:none}.smw-jsonview-menu{display:block;margin-top:10px;height:28px;background-color:#f6f6f6;border-left:1px solid #eaecf0;border-top:1px solid #eaecf0;border-right:1px solid #eaecf0;position:-webkit-sticky; position:sticky;top:0;z-index:2}.smw-jsonview-menu + pre{background-color:#fff;margin-top:0px}.smw-jsonview-menu .smw-jsonview-button{border-radius:0px;color:#72777d;background-color:#f6f6f6}.smw-jsonview-menu .smw-jsonview-button:hover{background-color:#ddd}.smw-jsonview-menu .smw-jsonview-button:first-child{border-right:1px solid #f6f6f6} .smw-ui-input-filter input{padding:.25em .55em !important}input#smw-property-input.autocomplete-suggestions{height:1.15em;padding:2px}
+@media screen {
+	.toctoggle{-webkit-user-select:none;-moz-user-select:none;user-select:none;font-size:94%}}
+.mw-highlight-copy--bound button{position:absolute;top:-1em;right:-0.9em;box-sizing:border-box;padding:5px 7px;border-radius:2px;background:var(--background-color-base,#fff);color:var(--color-progressive,#36c);border:1px solid var(--border-color-muted,#dadde3)}.mw-highlight-copy--bound button:hover{cursor:pointer;color:var(--color-progressive--hover,#4b77d6);background:var(--background-color-interactive-subtle,#f8f9fa);border-color:var(--border-color-progressive--hover,#4b77d6)}.mw-highlight-copy--bound button:active{color:var(--color-progressive--active,#233566);background:var(--background-color-interactive,#eaecf0);border-color:var(--border-color-progressive--active,#233566)}
+#mw-teleport-target{position:absolute;z-index:450}
+.smw-indicator-compare-list{font-size:12px;margin-top:5px}.smw-indicator-compare-list-row{display:flex;align-items:flex-start;flex-wrap:wrap;height:100%}.smw-indicator-compare-list-row span{width:50%}</style><style>
+.ve-init-mw-tempWikitextEditorWidget{border:0;padding:0;color:inherit;line-height:1.5em;width:100%;-moz-tab-size:4;tab-size:4;  }.ve-init-mw-tempWikitextEditorWidget:focus{outline:0;padding:0}.ve-init-mw-tempWikitextEditorWidget::selection{background:rgba(109,169,247,0.5); }</style><style>
+.ve-active .ve-init-mw-desktopArticleTarget-targetContainer #siteNotice,.ve-active .mw-indicators,.ve-active #t-print,.ve-active #t-permalink,.ve-active #p-coll-print_export,.ve-active #t-cite,.ve-active .ve-init-mw-desktopArticleTarget-editableContent,.ve-active .ve-init-mw-tempWikitextEditorWidget{display:none}.ve-deactivating .ve-ui-surface{display:none}.ve-activating{ }.ve-activating .ve-ui-surface{height:0;padding:0 !important; overflow:hidden} .ve-loading .ve-init-mw-desktopArticleTarget-targetContainer > :not(.ve-init-mw-desktopArticleTarget-toolbarPlaceholder):not(.ve-init-mw-desktopArticleTarget),.ve-loading .ve-init-mw-desktopArticleTarget-originalContent,.ve-activated:not(.ve-loading) .ve-init-mw-desktopArticleTarget-uneditableContent{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;opacity:0.5}.ve-activated .ve-init-mw-desktopArticleTarget-targetContainer #firstHeading{ -webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;pointer-events:auto;cursor:text}.ve-activated .ve-init-mw-desktopArticleTarget-targetContainer #firstHeading a{ pointer-events:none}.ve-activated .ve-init-mw-desktopArticleTarget-originalContent #catlinks{cursor:pointer}.ve-activated .ve-init-mw-desktopArticleTarget-originalContent #catlinks:hover{ background:#e9f2fd}.ve-activated .ve-init-mw-desktopArticleTarget-originalContent #catlinks a{opacity:1} .ve-init-mw-desktopArticleTarget-loading-overlay{z-index:2;position:absolute;width:100%;top:1em}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder{overflow:hidden;transition:height 250ms ease;height:0;padding-bottom:2px; }.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{transform:translateY(-100%);transition:transform 250ms ease}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-open .ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{transform:translateY(0)}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating{transition:none}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating .ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{position:fixed;top:0;z-index:1;background:var(--background-color-base,#fff)} .oo-ui-element-hidden{display:none !important; } .mw-editsection::before{content:'\200B'}.mw-editsection a{white-space:nowrap} .ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{height:42px;border-bottom:1px solid #c8ccd1;box-shadow:0 1px 1px 0 rgba(0,0,0,0.1)}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating,.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-open{height:42px} .ve-init-mw-desktopArticleTarget-toolbar,.ve-init-mw-desktopArticleTarget-toolbarPlaceholder{font-size:0.875em; margin:-1.14em -1.14em 1.14em -1.14em; }@media screen and (min-width:982px){.ve-init-mw-desktopArticleTarget-toolbar,.ve-init-mw-desktopArticleTarget-toolbarPlaceholder{ margin:-1.43em -1.71em 1.43em -1.71em}}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating{margin-top:0;margin-bottom:0} .ve-activated .vector-menu-tabs .selected{box-shadow:inset 0 -1px 0 #e1f1fc}</style><style>
+.smwtticon{padding:12px 12px 0 0;white-space:nowrap;margin-left:2px;margin-right:2px;vertical-align:-0.8px;display:inline-block;background-position:left bottom;background-repeat:no-repeat;background-size:12px 12px; }h2 .smwtticon{vertical-align:2px}big .smwtticon{vertical-align:0px}.smwtticon.info{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-tooltip-info.png?d3a42)}.smwtticon.question{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-tooltip-question.png?73592)}.smwtticon.service{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-tooltip-question.png?73592)}.smwtticon.warning{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-tooltip-warning.png?254ab)}.smwtticon.error{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-tooltip-error.png?69c33)}.smwtticon.note{background-image:url(/mediawiki/extensions/SemanticMediaWiki/res/smw/assets/smw-icon-tooltip-question.png?73592)} .smwttcontent{display:none}</style><style>
+.tippy-box[data-theme~=light-border]{background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,8,16,.15);color:#333;box-shadow:0 4px 14px -2px rgba(0,8,16,.08)}.tippy-box[data-theme~=light-border]>.tippy-backdrop{background-color:#fff}.tippy-box[data-theme~=light-border]>.tippy-arrow:after,.tippy-box[data-theme~=light-border]>.tippy-svg-arrow:after{content:"";position:absolute;z-index:-1}.tippy-box[data-theme~=light-border]>.tippy-arrow:after{border-color:transparent;border-style:solid}.tippy-box[data-theme~=light-border][data-placement^=top]>.tippy-arrow:before{border-top-color:#fff}.tippy-box[data-theme~=light-border][data-placement^=top]>.tippy-arrow:after{border-top-color:rgba(0,8,16,.2);border-width:7px 7px 0;top:17px;left:1px}.tippy-box[data-theme~=light-border][data-placement^=top]>.tippy-svg-arrow>svg{top:16px}.tippy-box[data-theme~=light-border][data-placement^=top]>.tippy-svg-arrow:after{top:17px}.tippy-box[data-theme~=light-border][data-placement^=bottom]>.tippy-arrow:before{border-bottom-color:#fff;bottom:16px}.tippy-box[data-theme~=light-border][data-placement^=bottom]>.tippy-arrow:after{border-bottom-color:rgba(0,8,16,.2);border-width:0 7px 7px;bottom:17px;left:1px}.tippy-box[data-theme~=light-border][data-placement^=bottom]>.tippy-svg-arrow>svg{bottom:16px}.tippy-box[data-theme~=light-border][data-placement^=bottom]>.tippy-svg-arrow:after{bottom:17px}.tippy-box[data-theme~=light-border][data-placement^=left]>.tippy-arrow:before{border-left-color:#fff}.tippy-box[data-theme~=light-border][data-placement^=left]>.tippy-arrow:after{border-left-color:rgba(0,8,16,.2);border-width:7px 0 7px 7px;left:17px;top:1px}.tippy-box[data-theme~=light-border][data-placement^=left]>.tippy-svg-arrow>svg{left:11px}.tippy-box[data-theme~=light-border][data-placement^=left]>.tippy-svg-arrow:after{left:12px}.tippy-box[data-theme~=light-border][data-placement^=right]>.tippy-arrow:before{border-right-color:#fff;right:16px}.tippy-box[data-theme~=light-border][data-placement^=right]>.tippy-arrow:after{border-width:7px 7px 7px 0;right:17px;top:1px;border-right-color:rgba(0,8,16,.2)}.tippy-box[data-theme~=light-border][data-placement^=right]>.tippy-svg-arrow>svg{right:11px}.tippy-box[data-theme~=light-border][data-placement^=right]>.tippy-svg-arrow:after{right:12px}.tippy-box[data-theme~=light-border]>.tippy-svg-arrow{fill:#fff}.tippy-box[data-theme~=light-border]>.tippy-svg-arrow:after{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCA2czEuNzk2LS4wMTMgNC42Ny0zLjYxNUM1Ljg1MS45IDYuOTMuMDA2IDggMGMxLjA3LS4wMDYgMi4xNDguODg3IDMuMzQzIDIuMzg1QzE0LjIzMyA2LjAwNSAxNiA2IDE2IDZIMHoiIGZpbGw9InJnYmEoMCwgOCwgMTYsIDAuMikiLz48L3N2Zz4=);background-size:16px 6px;width:16px;height:6px}.tippy-box[data-animation=scale][data-placement^=top]{transform-origin:bottom}.tippy-box[data-animation=scale][data-placement^=bottom]{transform-origin:top}.tippy-box[data-animation=scale][data-placement^=left]{transform-origin:right}.tippy-box[data-animation=scale][data-placement^=right]{transform-origin:left}.tippy-box[data-animation=scale][data-state=hidden]{transform:scale(.5);opacity:0}     .tippy-box[data-theme~='light-border']{padding:0;color:var(--color-base,#202122);background-color:var(--background-color-base,#fff);border-color:var(--border-color-muted,#dadde3)}.tippy-box[data-theme~='light-border'].square-border,.tippy-box[data-theme~='light-border'].square-border-light,.tippy-box[data-theme~='light-border'].square-border-transparent-arrow{border-radius:0}.tippy-box[data-theme~='light-border'][data-placement^=top] .tippy-arrow::before,.tippy-box[data-theme~='light-border'][data-placement^=top] .tippy-arrow::after{border-top-color:var(--background-color-neutral-subtle,#f8f9fa)}.tippy-box[data-theme~='light-border'][data-placement^=top].square-border-transparent-arrow .tippy-arrow::before,.tippy-box[data-theme~='light-border'][data-placement^=top].square-border-light .tippy-arrow::before,.tippy-box[data-theme~='light-border'][data-placement^=top].square-border-transparent-arrow .tippy-arrow::after,.tippy-box[data-theme~='light-border'][data-placement^=top].square-border-light .tippy-arrow::after{border-top-color:var(--background-color-base,#fff)}.tippy-box[data-theme~='light-border'][data-placement^=bottom] .tippy-arrow::before,.tippy-box[data-theme~='light-border'][data-placement^=bottom] .tippy-arrow::after{border-bottom-color:var(--background-color-neutral-subtle,#f8f9fa)}.tippy-box[data-theme~='light-border'][data-placement^=bottom].square-border-transparent-arrow .tippy-arrow::before,.tippy-box[data-theme~='light-border'][data-placement^=bottom].square-border-light .tippy-arrow::before,.tippy-box[data-theme~='light-border'][data-placement^=bottom].square-border-transparent-arrow .tippy-arrow::after,.tippy-box[data-theme~='light-border'][data-placement^=bottom].square-border-light .tippy-arrow::after{border-bottom-color:var(--background-color-base,#fff)}.tippy-content{ padding:0}.tippy-header,.tippy-top,.tippy-content-container,.tippy-bottom{padding-inline:12px}.tippy-header{padding-block-start:8px;padding-block-end:4px;background-color:var(--background-color-neutral-subtle,#f8f9fa);border-bottom:1px solid var(--border-color-muted,#dadde3);border-top-left-radius:calc(0.3em - 1px);border-top-right-radius:calc(0.3em - 1px)}.square-border-light .tippy-header{background-color:var(--background-color-base,#fff)}.tippy-header.accordion-popup{font-weight:600}.tippy-header.accordion-popup.plain{background-color:transparent}.tippy-top{padding-block-start:8px;padding-block-end:0;font-size:0.75rem}.tippy-top.accordion-popup{text-align:justify;padding:8px}.tippy-bottom{padding-block:8px;border-top:1px solid var(--border-color-muted,#dadde3);border-bottom-left-radius:calc(0.3em - 1px);border-bottom-right-radius:calc(0.3em - 1px)}.tippy-bottom.wide-popup{padding-block-end:1rem}.tippy-content-container{padding-block:8px;word-break:break-word; max-height:250px;overflow-y:auto}.tippy-content-container ul{padding-inline-start:10px;margin:0.3em 0.3em 0.3em 0.5em;font-size:0.75rem}.tippy-content-container code{word-break:break-all}.tippy-content-container.wide-popup{max-height:300px}.tippy-content-container.accordion-popup{padding:0;overflow-y:hidden;overflow-x:hidden;max-height:300px}.tippy-content-overlay{height:40px;width:260px;margin-top:10px}.tippy-cancel{width:auto;height:auto;float:right;font-size:20px;font-weight:bold;line-height:18px;color:var(--color-emphasized,#101418);opacity:1;margin-left:10px;cursor:pointer}.tippy-cancel::after{content:'×'}.tippy-cancel:hover{opacity:0.8}.tippy-warning-circle{float:right;height:10px;width:10px;background-color:var(--color-icon-warning,#ab7f2a);display:inline-block;margin-top:3.5px;margin-left:15px;border-radius:50%}.tippy-error-circle{float:right;height:10px;width:10px;background-color:var(--color-icon-error,#f54739);display:inline-block;margin-top:3.5px;margin-left:15px;border-radius:50%}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./Using SVG with HTML5 tutorial - EduTech Wiki_files/load(2).php">
+<meta name="generator" content="MediaWiki 1.43.6">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="alternate" type="application/rdf+xml" title="Using SVG with HTML5 tutorial" href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Special:ExportRDF&amp;xmlmime=rdf">
+<link rel="icon" href="https://edutechwiki.unige.ch/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://edutechwiki.unige.ch/mediawiki/rest.php/v1/search" title="EduTech Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://edutechwiki.unige.ch/mediawiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="EduTech Wiki Atom feed" href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Using_SVG_with_HTML5_tutorial rootpage-Using_SVG_with_HTML5_tutorial skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body ve-init-mw-desktopArticleTarget-targetContainer" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators" aria-expanded="false">
+	<div id="mw-indicator-smw-entity-examiner" class="mw-indicator"></div>
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Using SVG with HTML5 tutorial</span></h1>
+	<div id="bodyContent" class="vector-body" aria-expanded="false">
+		<div id="siteSub" class="noprint">The educational technology and digital learning wiki</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="noprint"><div class="Banner_tutorial"><strong><a href="https://edutechwiki.unige.ch/en/Web_technology_tutorials" class="mw-redirect" title="Web technology tutorials">Web technology tutorials</a></strong> series<br> Intermediate</div></div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" aria-label="Hide the table of contents"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Learning_and_reusing_SVG"><span class="tocnumber">2</span> <span class="toctext">Learning and reusing SVG</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Learning_SVG"><span class="tocnumber">2.1</span> <span class="toctext">Learning SVG</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Cleaning_up_SVG"><span class="tocnumber">2.2</span> <span class="toctext">Cleaning up SVG</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#How_can_I_include_SVG_in_HTML5"><span class="tocnumber">3</span> <span class="toctext">How can I include SVG in HTML5</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Inlining_SVG_in_HTML_5"><span class="tocnumber">3.1</span> <span class="toctext">Inlining SVG in HTML 5</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Embeding_SVG_in_HTML_5_with_the_img_tag"><span class="tocnumber">3.2</span> <span class="toctext">Embeding SVG in HTML 5 with the img tag</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Embeding_SVG_in_HTML_5_with_the_object_tag"><span class="tocnumber">3.3</span> <span class="toctext">Embeding SVG in HTML 5 with the object tag</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Embeding_SVG_in_HTML_5_with_the_iframe_tag"><span class="tocnumber">3.4</span> <span class="toctext">Embeding SVG in HTML 5 with the iframe tag</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Using_SVG_as_background_image_in_HTML_5"><span class="tocnumber">3.5</span> <span class="toctext">Using SVG as background image in HTML 5</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Including_SVG_through_the_SVG_image_element"><span class="tocnumber">3.6</span> <span class="toctext">Including SVG through the SVG image element</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Adapting_the_size_and_position_of_an_SVG_graphic"><span class="tocnumber">4</span> <span class="toctext">Adapting the size and position of an SVG graphic</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Using_the_SVG_transform_attribute_to_change_the_size_of_a_graphic"><span class="tocnumber">4.1</span> <span class="toctext">Using the SVG transform attribute to change the size of a graphic</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Using_the_SVG_image_tag_to_import_and_adapt_an_SVG_graphic"><span class="tocnumber">4.2</span> <span class="toctext">Using the SVG image tag to import and adapt an SVG graphic</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#The_simple_solution"><span class="tocnumber">4.2.1</span> <span class="toctext">The simple solution</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Import_the_graphic_with_its_original_size_and_scale_the_image"><span class="tocnumber">4.2.2</span> <span class="toctext">Import the graphic with its original size and scale the image</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Importing_with_original_size_and_create_a_viewBox"><span class="tocnumber">4.2.3</span> <span class="toctext">Importing with original size and create a viewBox</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Creating_text_that_floats_around_SVG_images"><span class="tocnumber">4.3</span> <span class="toctext">Creating text that floats around SVG images</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Links"><span class="tocnumber">5</span> <span class="toctext">Links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>According to <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">Wikipedia</a> (retrieved April 1 2012), <span style="background-color:#eeeeee" class="citation">“Scalable Vector Graphics (SVG) is a family of specifications of an XML-based file format for two-dimensional vector graphics, both static and dynamic (i.e. interactive or animated). The SVG specification is an open standard that has been under development by the World Wide Web Consortium (W3C) since 1999. SVG images and their behaviors are defined in XML text files. This means that they can be searched, indexed, scripted and, if required, compressed. As XML files, SVG images can be created and edited with any text editor, but it is often more convenient to create them with drawing programs such as Inkscape. All major modern web browsers have at least some degree of support and render SVG markup directly, including Mozilla Firefox, Internet Explorer 9, Google Chrome, Opera and Safari. Earlier versions of Microsoft Internet Explorer (IE) do not support SVG natively.”</span>.
+</p><p><a href="https://edutechwiki.unige.ch/en/SVG" title="SVG">SVG</a> is part of the HTML 5 draft specification, i.e. SVG tags are part of the language and can be inline. We have seen it working since Chrome 9 and 10, Firefox 4, Opera 11 and Internet Explorer 9 (feb 2011). Support of SVG is still not complete, but rapidly improving. All major browser brands (except IE9) now offer very good support - <a href="https://edutechwiki.unige.ch/en/User:Daniel_K._Schneider" title="User:Daniel K. Schneider">Daniel K. Schneider</a> 19:47, 1 April 2012 (CEST)
+</p><p>If you want to know whether your browser can handle SVG and HTML5, look at this 
+See the <a rel="nofollow" class="external text" href="http://caniuse.com/svg-html5">When can I use Inline SVG in HTML5?</a> compatibility table at caniuse.com.
+</p><p>Further reading:
+</p>
+<ul><li><a href="https://edutechwiki.unige.ch/en/Using_Inkscape_for_web_animation" title="Using Inkscape for web animation">Using Inkscape for web animation</a>. This article includes some additional tips on using Inskcape and repurposing complex drawings found on openclipart.org</li></ul>
+<p>See also:
+</p>
+<ul><li><a href="https://edutechwiki.unige.ch/en/SVG" title="SVG">SVG</a> (very short overview article)</li>
+<li><a href="https://edutechwiki.unige.ch/en/SVG_links" title="SVG links">SVG links</a> (nothing but mostly good links)</li>
+<li><a href="https://edutechwiki.unige.ch/en/Static_SVG_tutorial" title="Static SVG tutorial">Static SVG tutorial</a></li>
+<li><a href="https://edutechwiki.unige.ch/en/SVG/SMIL_animation_tutorial" class="mw-redirect" title="SVG/SMIL animation tutorial">SVG/SMIL animation tutorial</a></li>
+<li><a href="https://edutechwiki.unige.ch/en/Interactive_SVG-SMIL_animation_tutorial" title="Interactive SVG-SMIL animation tutorial">Interactive SVG-SMIL animation tutorial</a></li>
+<li><a href="https://edutechwiki.unige.ch/en/XSLT_to_generate_SVG_tutorial" title="XSLT to generate SVG tutorial">XSLT to generate SVG tutorial</a></li></ul>
+<h2><span class="mw-headline" id="Learning_and_reusing_SVG">Learning and reusing SVG</span></h2>
+<h3><span class="mw-headline" id="Learning_SVG">Learning SVG</span></h3>
+<p>The <a href="https://edutechwiki.unige.ch/en/SVG_links" title="SVG links">SVG links</a> article includes a number of good links. Otherwise, start from the <a href="https://edutechwiki.unige.ch/en/Static_SVG_tutorial" title="Static SVG tutorial">Static SVG tutorial</a>.
+</p><p>If you want to dive in, use:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://svg-edit.googlecode.com/svn/trunk/editor/svg-editor.html">SVG-edit</a> (online editor at googlecode)</li></ul>
+<p>Respect the syntax of the SVG fragment:
+</p><p>Minimal example (not recommended):
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;circle</span><span class="w"> </span><span class="na">id=</span><span class="s">"greencircle"</span><span class="w"> </span><span class="na">cx=</span><span class="s">"30"</span><span class="w"> </span><span class="na">cy=</span><span class="s">"30"</span><span class="w"> </span><span class="na">r=</span><span class="s">"30"</span><span class="w"> </span><span class="na">fill=</span><span class="s">"green"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>Unfinished example that defines a SVG canevas size. By default width and height are pixels. You also could use cm's, mm's etc.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">height=</span><span class="s">"200"</span><span class="w"> </span><span class="na">with=</span><span class="s">"600"</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- SVG tags go in here, between a few lines and several hundreds .... --&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>Unfinished example enabling links (needed for animations/interactive pages!)
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">height=</span><span class="s">"6cm"</span><span class="w"> </span><span class="na">width=</span><span class="s">"10cm"</span><span class="nt">&gt;</span><span class="w"> </span>
+<span class="w">   </span>xmlns="http://www.w3.org/2000/svg"<span class="w"> </span>xmlns:xlink="http://www.w3.org/1999/xlink"<span class="w"> </span>&gt;
+<span class="w">   </span><span class="cm">&lt;!-- SVG tags go in here, between a few lines and several hundreds .... --&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>If you want to draw a border, use standard HTML CSS properties, e.g. like this:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">style=</span><span class="s">"border-style:solid;border-width:1px;"</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"120"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="cm">&lt;!-- SVG tags go in here, between a few lines and several hundred .... --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Cleaning_up_SVG">Cleaning up SVG</span></h3>
+<p>... is difficult. You may try to import a file into an SVG editor and save again. So far, no editor can handle HTML5 with embedded SVG.
+</p><p>If your SVG file doesn't display because of syntax errors, try the W3C validation service. It will tell you what is wrong in which lines:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://validator.w3.org/">http://validator.w3.org/</a></li>
+<li>You also may submit an HTML5 file with embedded SVG. Make sure to include the right doctype definition on top, ie. &lt;!doctype html&gt;</li></ul>
+<p><b>Coping with Inkscape drawings</b>
+</p><p>Using drawings made with Inkscape very often require extra work since fairly weird coordinates may have been used. <a rel="nofollow" class="external text" href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web.html">Chapter 23. SVG and the Web</a> chapter of the official manual provides some tips. In particular, read <a rel="nofollow" class="external text" href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">Inkscape for the Web</a>. The most important tip is to <b>Save as Optimize SVG</b>. This operation may set a viewBox if none is present and will set the width and height to 100%. This allows to display the full picture even if you make it small.
+</p><p>Suggested workflow (adapt to your needs) for making a typical Inkscape document web ready:
+</p>
+<ol><li><b>Fit the document size to the picture size:</b> Menu File-&gt;Document Properties. In the Custom size panel, open <b>Resize page to content</b>, then click <b>Resize page to drawing or selection</b>.</li>
+<li>Remove unused DEF's: File-&gt;Vacuum Defs.</li>
+<li><b>Optimize SVG'<i>: File -&gt; Save as... -&gt; Optimized SVG</i></b><i>. Tick "Enable viewboxing</i> in the save dialog. This operation will do several things, in particular, insert correct viewBox, width and height attributes.</li>
+<li><b>Remove non-standard SVG/Inkscape XML</b>: File -&gt; Save as... -&gt; plain SVG (Since this operation will remove layers and other Inkscape specific information, keep a copy of the old file if necessary). As of Jan 2014, this can trigger a display error as shown in <a href="https://edutechwiki.unige.ch/en/Using_Inkscape_for_web_animation" title="Using Inkscape for web animation">Using Inkscape for web animation</a>. Reopen the saved file and the blackness may be gone ....</li></ol>
+<p>Again, consider keeping a copy of the original drawing. This procedure mail fail, in particular when drawings were made with non standard SVG&nbsp;! You also can try to permute order, i.e. save as plain SVG first before you optimize.
+</p><p><b>Openclipart.org drawings</b>
+</p><p>Most of these drawings were probably made with Inkscape and "posted as is" and you may have to clean up a bit as explained above. However, most drawings will work just fine. In addition, some SVG drawings at <a rel="nofollow" class="external free" href="http://openclipart.org/">http://openclipart.org</a> import just fine, e.g. the <a rel="nofollow" class="external text" href="http://openclipart.org/detail/150253/palm-tree-by-newt">coconut tree</a> do not include proprietary extensions. Notice that these are not illegal, the web browser just can and will ignore these.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="w">  </span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">xmlns:rdf=</span><span class="s">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+<span class="w">       </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+<span class="w">       </span><span class="na">xmlns:cc=</span><span class="s">"http://creativecommons.org/ns#"</span>
+<span class="w">       </span><span class="na">xmlns:dc=</span><span class="s">"http://purl.org/dc/elements/1.1/"</span><span class="w"> </span>
+<span class="w">       </span><span class="na">xmlns:svg=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">id=</span><span class="s">"svg2"</span><span class="w"> </span>
+<span class="w">       </span><span class="na">viewBox=</span><span class="s">"0 0 744.09 1052.4"</span><span class="w"> </span><span class="na">version=</span><span class="s">"1.1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>This file doesn't include any proprietary Inkscape extensions. It just includes some extra vocabularies that is used to include various meta information (description, copyright, etc.). Below a file that shows both the original and a cleanup version. There isn't much difference, since we didn't remove extra space around the drawing, it appears a bit smaller.
+</p><p>Have a look:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://tecfa.unige.ch/guides/svg/ex/html5/inkscape-import/html5-import-with-img.html">http://tecfa.unige.ch/guides/svg/ex/html5/inkscape-import/html5-import-with-img.html</a></li></ul>
+<p>Below is another example:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://tecfa.unige.ch/guides/svg/ex/html5/inkscape-import/html5-import-with-img2.html">http://tecfa.unige.ch/guides/svg/ex/html5/inkscape-import/html5-import-with-img2.html</a></li></ul>
+<h2><span class="mw-headline" id="How_can_I_include_SVG_in_HTML5">How can I include SVG in HTML5</span></h2>
+<p>There are several ways of including SVG in HTML5. So-called inlining is most often preferred. However, inlining complex graphics makes hand-coding HTML a pain since the file can grow quite a lot.
+</p><p>In this chapter we just will show how to embed SVG images that are the right size. Basically, any sort of "inclusion" mechanism will work:
+</p>
+<ul><li>Copy/paste SVG code within HTML code (inlining)</li>
+<li>Using the HTML <i>img</i> tag</li>
+<li>Using the HTML <i>object</i> tag</li>
+<li>Using the HTML <i>iframe</i> tag</li>
+<li>Using CSS (background images)</li>
+<li>Including SVG within SVG using the <i>image</i> tag.</li></ul>
+<p>Further below we shall explain how to adapt the size of embedded SVG images.
+</p>
+<h3><span class="mw-headline" id="Inlining_SVG_in_HTML_5">Inlining SVG in HTML 5</span></h3>
+<p>Do <b>not</b> forget the namespace declaration(s) in the top-level svg element. At least: <code>xmlns="<a rel="nofollow" class="external free" href="http://www.w3.org/2000/svg">http://www.w3.org/2000/svg</a>"</code>
+</p><p>Live example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/circle.html">circle.html</a> (look at the source)</li></ul>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="nt">&lt;/h1&gt;</span>
+
+A<span class="w"> </span>nice<span class="w"> </span>green<span class="w"> </span>circle:
+<span class="w">    </span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"200"</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;circle</span><span class="w"> </span><span class="na">id=</span><span class="s">"greencircle"</span><span class="w"> </span><span class="na">cx=</span><span class="s">"30"</span><span class="w"> </span><span class="na">cy=</span><span class="s">"30"</span><span class="w"> </span><span class="na">r=</span><span class="s">"30"</span><span class="w"> </span><span class="na">fill=</span><span class="s">"green"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/svg&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;hr&gt;</span>
+<span class="w">    </span><span class="nt">&lt;address&gt;</span>Created<span class="w"> </span>by<span class="w"> </span>DKS.<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>code<span class="nt">&lt;/address&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>Live example of an animated SVG:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/circle-crawling.html">circle-crawling.html</a> (look at the source)</li></ul>
+<p>Notice:
+</p>
+<ul><li>SVG also can import SVG through using its "images" tag. However, this is only supposed to work with static SVG. This methods is introduced in the <a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial#Adapting_the_size_and_position_of_an_SVG_graphic">next chapter</a></li></ul>
+<h3><span class="mw-headline" id="Embeding_SVG_in_HTML_5_with_the_img_tag">Embeding SVG in HTML 5 with the img tag</span></h3>
+<p>This only works with <b>static SVG</b>. Use the <code>object</code> element or the <i>SVG</i> image element if your SVG includes animations and/or interactive elements.
+</p><p>Live example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/html5-with-img-src.html">html5-with-img-src.html</a></li></ul>
+<p>Below are the most important elements of this example:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>(embed<span class="w"> </span>with<span class="w"> </span>img<span class="w"> </span>src)<span class="nt">&lt;/h1&gt;</span>
+
+<span class="w">   </span><span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>nice<span class="w"> </span>green<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>img<span class="w"> </span>element:
+<span class="w">   </span><span class="nt">&lt;img</span><span class="w"> </span><span class="na">src=</span><span class="s">"green-circle.svg"</span><span class="w"> </span><span class="na">height=</span><span class="s">"64"</span><span class="w"> </span><span class="na">alt=</span><span class="s">"Nice green circle"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Embeding_SVG_in_HTML_5_with_the_object_tag">Embeding SVG in HTML 5 with the object tag</span></h3>
+<p>Live example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/html5-with-object.html">html5-with-object.html</a></li></ul>
+<p>Below are the most important elements of this example:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>(embed<span class="w"> </span>with<span class="w"> </span>object)<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>nice<span class="w"> </span>green<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>HTML<span class="w"> </span>"object"<span class="w"> </span>tag:
+<span class="nt">&lt;object</span><span class="w"> </span><span class="na">type=</span><span class="s">"image/svg+xml"</span><span class="w"> </span><span class="na">data=</span><span class="s">"green-circle.svg"</span><span class="w"> </span>
+<span class="w">	</span><span class="na">width=</span><span class="s">"64"</span><span class="w"> </span><span class="na">height=</span><span class="s">"64"</span><span class="w"> </span><span class="na">border=</span><span class="s">"1"</span><span class="nt">&gt;&lt;/object&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Embeding_SVG_in_HTML_5_with_the_iframe_tag">Embeding SVG in HTML 5 with the iframe tag</span></h3>
+<p>Live example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/html5-with-iframe.html">html5-with-iframe.html</a></li></ul>
+<p>Below are the most important elements of this example:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>(embed<span class="w"> </span>with<span class="w"> </span>iframe)<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>nice<span class="w"> </span>green<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>HTML<span class="w"> </span>"iframe"<span class="w"> </span>tag:
+<span class="nt">&lt;iframe</span><span class="w"> </span><span class="na">src=</span><span class="s">"green-circle.svg"</span><span class="w"> </span>
+<span class="w">	</span><span class="na">width=</span><span class="s">"64"</span><span class="w"> </span><span class="na">height=</span><span class="s">"64"</span><span class="w"> </span><span class="na">style=</span><span class="s">"border:1;"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+Tips:
+<span class="nt">&lt;iframe</span><span class="w"> </span><span class="na">src=</span><span class="s">"green-circle.svg"</span><span class="w"> </span><span class="na">style=</span><span class="s">"float:left;margin-right:1cm;"</span><span class="w"> </span>
+<span class="w">	</span><span class="na">width=</span><span class="s">"64"</span><span class="w"> </span><span class="na">height=</span><span class="s">"40"</span><span class="w"> </span><span class="na">style=</span><span class="s">"border:1;"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Using_SVG_as_background_image_in_HTML_5">Using SVG as background image in HTML 5</span></h3>
+<p>Below are the most important elements of this example:
+Live example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/html5-with-css-background.html">html5-with-css-background.html</a></li></ul>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;style</span><span class="w"> </span><span class="na">type=</span><span class="s">"text/CSS"</span><span class="nt">&gt;</span>
+<span class="w">      </span>body<span class="w"> </span>{
+<span class="w">      </span>background-image:<span class="w"> </span>none,<span class="w"> </span>url('green-circle.svg');
+<span class="w">      </span>background-position:<span class="w"> </span>50%<span class="w"> </span>50%;
+<span class="w">      </span>background-repeat:<span class="w"> </span>no-repeat;
+<span class="w">      </span>}
+<span class="w">    </span><span class="nt">&lt;/style&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>(embed<span class="w"> </span>with<span class="w"> </span>CSS<span class="w"> </span>background)<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>nice<span class="w"> </span>green<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>CSS<span class="w"> </span>Background.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Tips:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+<span class="nt">&lt;li&gt;</span>SVG<span class="w"> </span>included<span class="w"> </span>as<span class="w"> </span>CSS<span class="w"> </span>can't<span class="w"> </span>be<span class="w"> </span>scripted<span class="w"> </span>and<span class="w"> </span>positioning<span class="w"> </span>is<span class="w"> </span>hard.<span class="w"> </span>Therefore<span class="w"> </span>only<span class="w"> </span>use<span class="w"> </span>this<span class="w"> </span>method<span class="w"> </span>for<span class="w"> </span>background<span class="w"> </span>illustrations.<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Including_SVG_through_the_SVG_image_element">Including SVG through the SVG image element</span></h3>
+<p>Make sure that the included SVG defines its size in terms of percentages or that you set a viewBox.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>-<span class="w"> </span>embed<span class="w"> </span>svg<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>SVG<span class="w"> </span>image<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>huge<span class="w"> </span>red<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>svg<span class="w"> </span>"image"<span class="w"> </span>tag:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w">  </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div>
+<ul><li>Life example: <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/import-with-svg-image.html">import-with-svg-image.html</a></li></ul>
+<h2><span class="mw-headline" id="Adapting_the_size_and_position_of_an_SVG_graphic">Adapting the size and position of an SVG graphic</span></h2>
+<p>There exist various way of doing this. Our preferred method for static SVG images is to fix the original SVG graphic with a viewbox and size attributes and then import with the HTML <b>img</b> tag. The original SVG should look like this, i.e. include a viewBox that uses the original width and size of the drawing (to be adjusted to your drawing of course), and width and height set to 100%.
+</p><p>Fixing the original SVG code (see below how to do this with Inkscape)
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span>
+<span class="w">   </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+<span class="w">   </span><span class="na">version=</span><span class="s">"1.1"</span>
+<span class="w">   </span><span class="na">width=</span><span class="s">"100%"</span>
+<span class="w">   </span><span class="na">height=</span><span class="s">"100%"</span>
+<span class="w">   </span><span class="na">viewBox=</span><span class="s">"0 0 684 648"</span><span class="nt">&gt;</span>
+</pre></div>
+<p>You then can simply set a height in your HTML code, e.g.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;img</span><span class="w"> </span><span class="na">src=</span><span class="s">"coconut.svg"</span><span class="w"> </span><span class="na">height=</span><span class="s">"100"</span><span class="w"> </span><span class="na">alt=</span><span class="s">"Nice coconut tree"</span><span class="nt">/&gt;</span>
+</pre></div>
+<p>Life example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/inkscape-import/html5-import-with-img.html">html5-import-with-img.html</a></li></ul>
+<ul><li>Our second preferred method is to import the SVG graphic with its original size and then wrap it inside a scale transform as explained in more detail further down. Another method that also works very well is to fix the original SVG drawing as explained in the section about Inkscape and then just use the simple HTML <i>image</i> element.</li></ul>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"sir"</span><span class="w"> </span><span class="na">height=</span><span class="s">"116"</span><span class="w"> </span><span class="na">width=</span><span class="s">"106"</span>
+<span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;g</span><span class="w"> </span><span class="na">transform=</span><span class="s">"scale(0.1)"</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"1140"</span><span class="w"> </span><span class="na">width=</span><span class="s">"1040"</span><span class="w">  </span><span class="na">xlink:href=</span><span class="s">"like_a_sir_original.svg"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Using_the_SVG_transform_attribute_to_change_the_size_of_a_graphic">Using the SVG transform attribute to change the size of a graphic</span></h3>
+<p>For starters, we suggest editing the SVG file and adding the following "transformation" code:
+</p><p>Right after the opening svg tag add this:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="w">  </span><span class="nt">&lt;g</span><span class="w"> </span><span class="na">transform=</span><span class="s">"scale(0.1)"</span><span class="nt">&gt;</span>
+</pre></div>
+<p>Right before the closing svg tag add this:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="w">  </span><span class="nt">&lt;/g&gt;</span>
+</pre></div>
+<p>You can use this method within your SVG graphic in order to adapt the size of various parts. Just wrap them inside a <i>g transform="scale(...)"</i>. 
+</p><p><b>Success rate</b>: This method is guaranteed to work since it relies on basic SVG technology that is now over 10 years old. However, this is not the most elegant solution since it requires editing the SVG file. See the next solution.
+</p><p>Simple live example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/circle-scale.html">circle-scale.html</a> that you should compare with <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/circle.html">circle.html</a></li></ul>
+<p>The simple SVG file we are going to import in the following examples is <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/huge-red-circle.svg">huge-red-circle.svg</a>. It looks like this:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;svg</span><span class="w"> </span><span class="na">height=</span><span class="s">"600"</span><span class="w"> </span><span class="na">width=</span><span class="s">"600"</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;circle</span><span class="w"> </span><span class="na">cx=</span><span class="s">"50%"</span><span class="w"> </span><span class="na">cy=</span><span class="s">"50%"</span><span class="w"> </span><span class="na">r=</span><span class="s">"50%"</span><span class="w"> </span><span class="na">fill=</span><span class="s">"red"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Using_the_SVG_image_tag_to_import_and_adapt_an_SVG_graphic">Using the SVG image tag to import and adapt an SVG graphic</span></h3>
+<p>The next methods are fairly elegant, easy to understand and should work in all browsers. There are three variants. For now, I suggest to use variant B - DKS.
+</p>
+<h4><span class="mw-headline" id="The_simple_solution">The simple solution</span></h4>
+<p>Let's recall how to use the SVG image tag:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>-<span class="w"> </span>embed<span class="w"> </span>svg<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>SVG<span class="w"> </span>image<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>huge<span class="w"> </span>red<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>svg<span class="w"> </span>"image"<span class="w"> </span>tag:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w">  </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div>
+<ul><li>Life example: <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/import-with-svg-image.html">import-with-svg-image.html</a></li></ul>
+<p>All you typically have to do is:
+</p>
+<ul><li>Figure out the proportions of the original SVG (look at the svg root element of the SVG file)</li>
+<li>Define the height and width of the image with respect to your scaling needs.</li></ul>
+<p>In our example, the imported graphic's dimensions were 600 x 600 px. In order to get a circle 10 times smaller, we just dived x/10 and y/10. 
+</p>
+<ul><li>If you can't see the picture, import the picture in its original size and set the canvevas size to the same dimensions. E.g. if the original canevas is 1000x400:</li></ul>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"1000.7"</span><span class="w"> </span><span class="na">width=</span><span class="s">"400"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"1000.7"</span><span class="w"> </span><span class="na">width=</span><span class="s">"400"</span><span class="w">  </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>Now that you know that the picture and your code is ok, you may try to understand why you may not see a picture. Indeed, <span style="color:red">this simple method is <b>not</b> guaranteed to work with every SVG file</span>. In particular it will not when the imported image is "badly" positioned. See the next solution, using a scale transform of the imported SVG, if don't want to learn how to fix that kind of problem in the imported SVG code. Let's illustrate this with an example. The <a rel="nofollow" class="external text" href="http://openclipart.org/detail/168634/like-a-sir-by-tavin">like a Sir</a> picture is positioned in negative y space as you can see in the following screenshot and code excerpt:
+</p>
+<figure class="mw-halign-none" typeof="mw:File/Frame"><a href="https://edutechwiki.unige.ch/en/File:Inkscape-svg-position.png" class="mw-file-description"><img src="./Using SVG with HTML5 tutorial - EduTech Wiki_files/Inkscape-svg-position.png" decoding="async" width="487" height="493" class="mw-file-element"></a><figcaption>SVG picture in negative space</figcaption></figure>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;g</span><span class="w"> </span><span class="na">inkscape:label=</span><span class="s">"Ebene 1"</span><span class="w"> </span><span class="na">inkscape:groupmode=</span><span class="s">"layer"</span><span class="w"> </span><span class="na">id=</span><span class="s">"layer1"</span><span class="w"> </span><span class="na">transform=</span><span class="s">"translate(445.66942,-924.04028)"</span><span class="nt">&gt;</span>
+</pre></div>
+<p>Solutions:
+</p>
+<ul><li>Open the SVG file with Inkscape and fix it. This way you also could get rid of all the extension tags (save as "plain SVG"). However, this may not be easy. The graphic is likely to be in a wrong position, because the author created paths with SVG path data that do not fit the "usual" x=0/y=0 coordinate system. Something one never should do ....</li>
+<li>Use one of the methods below. That is: <b>import the picutre</b> with its original size, then scale it either with a scale transform (easier) or by adjusting the ViewBox.</li></ul>
+<p>Of course, you can move pictures The following shows how to reposition a "normal" image.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"62"</span><span class="w"> </span><span class="na">width=</span><span class="s">"62"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"1"</span><span class="w"> </span><span class="na">y=</span><span class="s">"1"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w">  </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Import_the_graphic_with_its_original_size_and_scale_the_image">Import the graphic with its original size and scale the image</span></h4>
+<p>Below is another variant that seems is more robust with respect to drawings that use strange coordinates. We import the original huge circle with its original size, but we then scale transform it.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>-<span class="w"> </span>embed<span class="w"> </span>svg<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>SVG<span class="w"> </span>image<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>huge<span class="w"> </span>red<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>svg<span class="w"> </span>"image"<span class="w"> </span>tag<span class="w"> </span>plus<span class="w"> </span>a<span class="w"> </span>scale<span class="w"> </span>transform:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;g</span><span class="w"> </span><span class="na">transform=</span><span class="s">"scale(0.1)"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"600"</span><span class="w"> </span><span class="na">width=</span><span class="s">"600"</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>Pay attention to the following tips:
+</p>
+<ul><li>Height and width of the image tag <b>must</b> correspond (roughly) to the size of the imported SVG. Look at its SVG root tag. If weight and height are missing in the SVG file add it yourself, if possible</li>
+<li>Height and width of the svg root tag should somehow fit the scaled image. E.g. if you import a 100x200 and make it twice as big, then svg root dimensions should be at least 200x400.</li></ul>
+<ul><li>Life example: <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/import-with-svg-image2.html">import-with-svg-image2.html</a></li></ul>
+<ul><li>Life example2: <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/like_a_sir.html">like_a_sir.html</a></li></ul>
+<h4><span class="mw-headline" id="Importing_with_original_size_and_create_a_viewBox">Importing with original size and create a viewBox</span></h4>
+<p>This solution also offers a way to rescale. viewBox attributes can do more, but we won't cover that.
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>-<span class="w"> </span>embed<span class="w"> </span>svg<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>SVG<span class="w"> </span>image<span class="w"> </span>and<span class="w"> </span>viewBox<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>huge<span class="w"> </span>red<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>svg<span class="w"> </span>"image"<span class="w"> </span>tag<span class="w"> </span>plus<span class="w"> </span>a<span class="w"> </span>change<span class="w"> </span>of<span class="w"> </span>user<span class="w"> </span>coordinates<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>a<span class="w"> </span>viewBox<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;svg</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"60"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">viewBox=</span><span class="s">"0 0 600 600"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"600"</span><span class="w"> </span><span class="na">width=</span><span class="s">"600"</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<ul><li>Life example: <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/import-with-svg-image3.html">import-with-svg-image3.html</a></li></ul>
+<p><b>Playing with viewBox</b>
+</p><p>Possibilities are endless, but viewBox is hard to understand ...
+</p><p>The following code shows how to stretch and reposition (move the viewport up)
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="w">  </span><span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>demo<span class="nt">&lt;/title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;meta</span><span class="w"> </span><span class="na">http-equiv=</span><span class="s">"Content-Type"</span><span class="w"> </span><span class="na">content=</span><span class="s">"text/html;charset=utf-8"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/head&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>HTML5<span class="w"> </span>SVG<span class="w"> </span>Demo<span class="w"> </span>-<span class="w"> </span>embed<span class="w"> </span>svg<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span>SVG<span class="w"> </span>image<span class="w"> </span>and<span class="w"> </span>distort<span class="w"> </span>with<span class="w"> </span>viewBox<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="w"> </span>A<span class="w"> </span>huge<span class="w"> </span>red<span class="w"> </span>circle<span class="w"> </span>that<span class="w"> </span>was<span class="w"> </span>embeded<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>svg<span class="w"> </span>"image"<span class="w"> </span>tag<span class="w"> </span>plus<span class="w"> </span>a<span class="w"> </span>change<span class="w"> </span>of<span class="w"> </span>user<span class="w"> </span>coordinates<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>a<span class="w"> </span>viewBox<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;svg</span><span class="w"> </span><span class="na">style=</span><span class="s">"border-style:solid;border-width:1px;"</span><span class="w"> </span><span class="na">id=</span><span class="s">"circle"</span><span class="w"> </span><span class="na">height=</span><span class="s">"60"</span><span class="w"> </span><span class="na">width=</span><span class="s">"120"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">viewBox=</span><span class="s">"0 -300 600 1200"</span><span class="w"> </span><span class="na">preserveAspectRatio=</span><span class="s">"none"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;image</span><span class="w"> </span><span class="na">x=</span><span class="s">"0"</span><span class="w"> </span><span class="na">y=</span><span class="s">"0"</span><span class="w"> </span><span class="na">height=</span><span class="s">"600"</span><span class="w"> </span><span class="na">width=</span><span class="s">"600"</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">"huge-red-circle.svg"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<ul><li>Life example: <a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/svg-import/import-with-svg-image4.html">import-with-svg-image4.html</a></li></ul>
+<h3><span class="mw-headline" id="Creating_text_that_floats_around_SVG_images">Creating text that floats around SVG images</span></h3>
+<p>You can use ordinary HTML CSS properties to style the svg element. The following SVG graphic will float to the right:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">style=</span><span class="s">"float:right"</span><span class="w"> </span><span class="na">width=</span><span class="s">"81"</span><span class="w"> </span><span class="na">height=</span><span class="s">"127"</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+<span class="w"> </span><span class="cm">&lt;!-- Created with SVG-edit - <a class="code-link" href="http://svg-edit.googlecode.com/">http://svg-edit.googlecode.com/</a> --&gt;</span>
+<span class="w"> </span><span class="nt">&lt;g&gt;</span>
+<span class="w">  </span><span class="nt">&lt;title&gt;</span>Simple<span class="w"> </span>tree<span class="nt">&lt;/title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;rect</span><span class="w"> </span><span class="na">fill=</span><span class="s">"#7f3f00"</span><span class="w"> </span><span class="na">stroke=</span><span class="s">"#000000"</span><span class="w"> </span><span class="na">stroke-width=</span><span class="s">"0"</span><span class="w"> </span><span class="na">x=</span><span class="s">"32.26172"</span><span class="w"> </span><span class="na">y=</span><span class="s">"50.26172"</span><span class="w"> </span><span class="na">width=</span><span class="s">"17"</span><span class="w"> </span><span class="na">height=</span><span class="s">"77"</span><span class="w"> </span><span class="na">id=</span><span class="s">"svg_3"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;circle</span><span class="w"> </span><span class="na">fill=</span><span class="s">"#007f3f"</span><span class="w"> </span><span class="na">stroke=</span><span class="s">"#000000"</span><span class="w"> </span><span class="na">stroke-width=</span><span class="s">"0"</span><span class="w"> </span><span class="na">cx=</span><span class="s">"40.26172"</span><span class="w"> </span><span class="na">cy=</span><span class="s">"40.26172"</span><span class="w"> </span><span class="na">r=</span><span class="s">"40.26172"</span><span class="w"> </span><span class="na">id=</span><span class="s">"svg_1"</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>The following code would make an image float to the left and add a small margin:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">width=</span><span class="s">"43"</span><span class="w"> </span><span class="na">height=</span><span class="s">"65"</span><span class="w"> </span><span class="na">style=</span><span class="s">"float:left;margin:5px;"</span><span class="w"> </span>
+<span class="w">    </span><span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+....
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+<p>Live example that includes some long SVG code (look at the source):
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://tecfa.unige.ch/guides/svg/ex/html5/text-with-pics/text-with-pics.html">text-with-pics.html</a></li>
+<li>To do: Create a version that uses the SVG image tag for importing.</li></ul>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<dl><dt>Specifications (very technical reading&nbsp;!)</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://www.w3.org/TR/SVG/struct.html#ImageElement">The image element</a> (part of the <a rel="nofollow" class="external text" href="http://www.w3.org/TR/SVG/Overview.html">Scalable Vector Graphics (SVG) 1.1</a> (Second Edition), W3C Recommendation 16 August 2011</li></ul>
+<ul><li><a rel="nofollow" class="external text" href="http://dev.w3.org/html5/spec/single-page.html">HTML5 A vocabulary and associated APIs for HTML and XHTML</a>, W3C Working Draft 29 March 2012. Have a look at the chapter on <a rel="nofollow" class="external text" href="http://dev.w3.org/html5/spec/single-page.html#embedded-content-1">Embedded content</a></li></ul>
+<dl><dt>ViewBox</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute">7.7 The ‘viewBox’ attribute</a> (SVG 1.1 Specification)</li>
+<li><a rel="nofollow" class="external text" href="http://tutorials.jenkov.com/svg/svg-viewport-view-box.html">SVG Viewport and View Box</a></li></ul>
+<!-- 
+NewPP limit report
+Complications: [show‐toc]
+[SMW] In‐text annotation parser time: 0.001 seconds
+-->
+
+<!-- Saved in parser cache with key mediawiki_135:pcache:idhash:7086-0!canonical and timestamp 20260223231941 and revision id 59500. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;oldid=59500">https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;oldid=59500</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://edutechwiki.unige.ch/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Category:Pages_using_deprecated_source_tags&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages using deprecated source tags (page does not exist)">Pages using deprecated source tags</a></li><li><a href="https://edutechwiki.unige.ch/en/Category:Web_technology_tutorials" title="Category:Web technology tutorials">Web technology tutorials</a></li><li><a href="https://edutechwiki.unige.ch/en/Category:SVG" title="Category:SVG">SVG</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-login" class="mw-list-item"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Special:UserLogin&amp;returnto=Using+SVG+with+HTML5+tutorial" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o"><span>Log in</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:RequestAccount" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Request account</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial" title="View the content page [alt-shift-c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Talk:Using_SVG_with_HTML5_tutorial&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [alt-shift-t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label">
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-menu-checkbox" aria-labelledby="p-variants-label">
+	<label id="p-variants-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label">
+	<h3 id="p-views-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected mw-list-item collapsible"><a href="https://edutechwiki.unige.ch/en/Using_SVG_with_HTML5_tutorial"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item collapsible"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item collapsible"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label" title="More options">
+	<input type="checkbox" id="p-cactions-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-cactions" class="vector-menu-checkbox" aria-labelledby="p-cactions-label">
+	<label id="p-cactions-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-purge" class="mw-list-item"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;action=purge"><span>Refresh</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3>Slow Search</h3>
+	<form action="https://edutechwiki.unige.ch/mediawiki/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch" class="vector-search-box-inner" data-search-loc="header-navigation">
+			<input class="vector-search-box-input" type="search" name="search" placeholder="Search EduTech Wiki" aria-label="Search EduTech Wiki" autocapitalize="sentences" title="Search EduTech Wiki [alt-shift-f]" accesskey="f" id="searchInput">
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton" class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton" class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="https://edutechwiki.unige.ch/en/Main_Page" title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-Navigation_and_help" class="mw-portlet mw-portlet-Navigation_and_help vector-menu-portal portal vector-menu" aria-labelledby="p-Navigation_and_help-label">
+	<h3 id="p-Navigation_and_help-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Navigation and help</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Mainpage" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Main_Page"><span>Main Page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-about" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/EduTech_Wiki:About"><span>About</span></a></li><li id="n-randompage" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x"><span>Random page</span></a></li><li id="n-Help" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help</span></a></li><li id="n-Editing-rules" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Help:Editing_rules"><span>Editing rules</span></a></li><li id="n-Blog:DKS" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Blog:DKS"><span>Blog:DKS</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Via_Google" class="mw-portlet mw-portlet-Via_Google emptyPortlet vector-menu-portal portal vector-menu" aria-labelledby="p-Via_Google-label">
+	<h3 id="p-Via_Google-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Via Google</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-categorytree-portlet" class="mw-portlet mw-portlet-categorytree-portlet emptyPortlet vector-menu-portal portal vector-menu" aria-labelledby="p-categorytree-portlet-label">
+	<h3 id="p-categorytree-portlet-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Categories</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export emptyPortlet vector-menu-portal portal vector-menu" aria-labelledby="p-coll-print_export-label">
+	<h3 id="p-coll-print_export-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">coll-print_export</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:WhatLinksHere/Using_SVG_with_HTML5_tutorial" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:RecentChangesLinked/Using_SVG_with_HTML5_tutorial" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;oldid=59500" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Using_SVG_with_HTML5_tutorial&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="https://edutechwiki.unige.ch/mediawiki/index.php?title=Special:CiteThisPage&amp;page=Using_SVG_with_HTML5_tutorial&amp;id=59500&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-smwbrowselink" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:Browse/:Using-5FSVG-5Fwith-5FHTML5-5Ftutorial" rel="search"><span>Browse properties</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-Big_brother" class="mw-portlet mw-portlet-Big_brother vector-menu-portal portal vector-menu" aria-labelledby="p-Big_brother-label">
+	<h3 id="p-Big_brother-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Big brother</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-New-Pages" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:NewPages"><span>New Pages</span></a></li><li id="n-contributionscores" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:ContributionScores"><span>Contribution scores</span></a></li><li id="n-Popular-Pages" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:Popularpages"><span>Popular Pages</span></a></li><li id="n-Who-is-online-?" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:WhosOnline"><span>Who is online ?</span></a></li><li id="n-Version" class="mw-list-item"><a href="https://edutechwiki.unige.ch/en/Special:Version"><span>Version</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer">
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> Page last modified 16:41, 22 August 2016.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://edutechwiki.unige.ch/en/EduTech_Wiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="https://edutechwiki.unige.ch/en/EduTech_Wiki:About">About EduTech Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="https://edutechwiki.unige.ch/en/EduTech_Wiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="./Using SVG with HTML5 tutorial - EduTech Wiki_files/poweredby_mediawiki.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></li>
+	<li id="footer-poweredbysmwico"><a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="./Using SVG with HTML5 tutorial - EduTech Wiki_files/logo_footer.svg" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1895,"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7586057-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<div id="mw-teleport-target" class="vector-body"></div></body><!-- Cached/compressed 20260223231943 --></html>
