@@ -1,169 +1,146 @@
+   
+    .project-container{
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background-image: url("media/imgs/low-noise-darker.png");
+        background-size: cover;
+        width: 99vw;
+        height: 99vh;
+        border: 4px solid blueviolet;
+        padding: 0.5rem;
+    }
 
-            .multi-meter-container{
+        #warning-label-id{
+            position: absolute;
+            top: 1rem;
+            right: 5vw;
+            min-width: 27rem;
+            padding: 0.5rem;
+            background-color: lightblue;
+            border: 3px dashed red;
+            z-index: 100;
+        }
+            #warning-label-id h1{
+                display: block;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: bold;
+                color: red;
+            }
+            #warning-label-id label{
+                display: block;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: black;
+            }
+
+            .multimeter-svg{
+                position: relative;
             }
                 #mm-svg-id{
                     width: 95%;
-                    /*border: 2px solid blue;*/
+                    border: 2px solid blue;
                 }
-                   
-                    #warning-label-id{
-                        position: absolute;
-                        top: 1rem;
-                        right: 5vw;
-                        min-width: 27rem;
-                        padding: 0.5rem;
-                        background-color: lightblue;
-                        border: 3px dashed red;
-                        z-index: 100;
+
+                    #mm-mamp-plugin-click-area-id:hover,
+                    #mm-ten-amp-plugin-click-area-id:hover,
+                    #mm-com-plugin-click-area-id:hover,
+                    #mm-select-button-click-area-id:hover,
+                    #mm-light-button-click-area-id:hover,
+                    #mm-range-button-click-area-id:hover,
+                    #mm-hold-button-click-area-id:hover,
+                    #mm-max-min-button-click-area-id:hover,
+                    #mm-light-button-id:hover,
+                    #mm-sel-label-red-id:hover,
+                    #mm-sel-label-white-id:hover,
+                    #mm-sel-push-button-id:hover,
+                    #mm-off-click-area-id:hover,
+                    #mm-micro-amp-click-area-id:hover,
+                    #mm-milli-amp-click-area-id:hover,
+                    #mm-ten-amp-click-area-id:hover,
+                    #mm-volts-click-area-id:hover,
+                    #mm-hertz-click-area-id:hover,
+                    #mm-ohms-click-area-id:hover,
+                    #mm-cap-diode-click-area-id:hover,
+                    #mm-temp-click-area-id:hover{
+                        cursor: pointer;
                     }
-                        #warning-label-id h1{
-                            display: block;
-                            text-align: center;
-                            font-size: 2rem;
-                            font-weight: bold;
-                            color: red;
+                        .fill-opacity{
+                            opacity: 0;
                         }
-                        #warning-label-id label{
-                            display: block;
-                            text-align: center;
-                            font-size: 1.6rem;
-                            font-weight: bold;
-                            color: black;
+                        .hidden-selector,
+                        .hidden-element{
+                            display: none;
+                            visibility: hidden;
+                        }
+                        .selector-label{
+                            border: 2px solid red;
+                            background-color: gray;
+                            font-size: 5rem;
+                        }
+                        
+                        .red-bckgrnd{
+                            fill: red;
+                        }
+                        .orange-bckgrnd{
+                            fill: orange;
+                        }
+                        .gray-bckgrnd{
+                            fill: #a0a0a0;
+                        }
+                        .white-bckgrnd{
+                            fill: #ffffff;
+                        }
+                        .options-item{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 80%;
+                            margin: 0.5rem;
                         }
 
-                #mm-mamp-plugin-click-area-id:hover,
-                #mm-ten-amp-plugin-click-area-id:hover,
-                #mm-com-plugin-click-area-id:hover,
-                #mm-select-button-click-area-id:hover,
-                #mm-light-button-click-area-id:hover,
-                #mm-range-button-click-area-id:hover,
-                #mm-hold-button-click-area-id:hover,
-                #mm-max-min-button-click-area-id:hover,
-                #mm-light-button-id:hover,
-                #mm-sel-label-red-id:hover,
-                #mm-sel-label-white-id:hover,
-                #mm-sel-push-button-id:hover,
-                #mm-off-click-area-id:hover,
-                #mm-micro-amp-click-area-id:hover,
-                #mm-milli-amp-click-area-id:hover,
-                #mm-ten-amp-click-area-id:hover,
-                #mm-volts-click-area-id:hover,
-                #mm-hertz-click-area-id:hover,
-                #mm-ohms-click-area-id:hover,
-                #mm-cap-diode-click-area-id:hover,
-                #mm-temp-click-area-id:hover{
-                    cursor: pointer;
-                }
-                .fill-opacity{
-                    opacity: 0;
-                }
-                .hidden-selector,
-                .hidden-element{
-                    display: none;
-                    visibility: hidden;
-                }
-                .selector-label{
-                    border: 2px solid red;
-                    background-color: gray;
-                    font-size: 5rem;
-                }
-                .red-bckgrnd{
-                    fill: red;
-                }
-                .orange-bckgrnd{
-                    fill: orange;
-                }
-                .gray-bckgrnd{
-                    fill: #a0a0a0;
-                }
-                .white-bckgrnd{
-                    fill: #ffffff;
-                }
-                .options-item{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 80%;
-                    margin: 0.5rem;
-                }
+            /*.blackPluginConnect{
+                transform:translate(255,-588); 
+                transform: rotate(90);
+                transform: scale(0.3); 
+            }*/
+            .off-knob-rotate{
+                transform: rotate(-22.736714,1080.4217,816.88307);
+            }
+            .volts-knob-rotate{
+                transform: rotate(0,0,0);
+            }
+            .hz-duty-knob-rotate{
+                transform: rotate(20.022602,1080.4217,816.88307);
+            }
+            .ohms-knob-rotate{
+                transform: rotate(42.132596,1080.4217,816.88307);
+            }
+            .cap-diode-knob-rotate{
+                transform: rotate(66.979975,1080.4217,816.88306);
+            }
+            .ten-amp-knob-rotate{
+                transform: rotate(-48.791962,1080.4217,816.88307);
+            }
+            .milli-amp-knob-rotate{
+                transform: rotate(-66.943538,1080.4217,816.88303);
+            }
+            .micro-amp-knob-rotate{
+                transform: rotate(-89.322089,1080.4217,816.88303);
+            }
+            .temp-knob-rotate{
+                transform: rotate(-112.01095,1080.4217,816.88303);
+            }
+        
 
-        .project-container{
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 1rem;
-            width: 97vw;
-            height: 95vh;
-            overflow: hidden;
-            /*border: 2px solid black;
-            background-color: red;*/
-        }
-            .testing-container{
-                /*position: relative;*/
-                border: 2px solid violet;
-            }
-                .testing-options-container{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: 2px solid red;
-                    margin: 2px;
-                    width: 100%; 
-                    height: 50vh;
-                }
+     
+    
 
-                .probes-container{
-                    width: 58vw; 
-                    height: 40vh;
-                    display: flex;
-                    justify-content: space-around;
-                    margin: 5px;
-                    border: 2px solid green;
-                }
-                    #red-probe-id{
-                        position: absolute;
-                        top: 1rem;
-                        right: 5vw;
-                        width: auto;
-                        height: 50vh;
-                        border: 2px solid red;
-                    }
-                    #black-probe-id{
-                        position: absolute;
-                        top: 1rem;
-                        right: 20vw;
-                        width: auto;
-                        height: 50vh;
-                        border: 2px solid black;
-                    }
+      
 
-        .project-container{
-            display: grid;
-            grid-template-columns: 25vw 20vw 53vw;
-            /*grid-template-rows: 110vh;*/
-            gap: 5px;
-        }
-            #multimeter-operation-id{
-                grid-area: 1 / 1 / 1 / 1;
-                /*background-color: whitesmoke;*/
-                display: block;
-            }
-            #multimeter-svg-id{
-                position: relative;
-                grid-area: 1 / 2 / 1 / 2;
-               /* background-color: blue;*/
-            }
-            #testing-container-id{
-                grid-area: 1 / 3 / 1 / 3;
-               /* background-color: lightsalmon;*/
-                display: block;
-            }
-               /* .testing-options-container{
-                }
-                    .testing-options-container article{
-                    }*/
-            #multimeter-introduction-id{
-                display: none;
-            }
-
+       
+            
