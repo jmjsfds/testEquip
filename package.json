@@ -13,9 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/jmjsfds/testEquip-main/issues"
   },
-  "homepage": "https://github.com/jmjsfds/testEquip-main#readme"
+  "homepage": "https://github.com/jmjsfds/testEquip-main#readme",
+  "dependencies": {
+    "gsap": "^3.15.0"
+  }
 }
