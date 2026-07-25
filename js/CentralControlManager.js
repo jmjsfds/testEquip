@@ -7,8 +7,9 @@
     let CentralControlManager = {
         //Properties
             initialized: false,
-            oldKnobSelection: "",
+            oldKnobSelection: "off",
             newKnobSelection: "off",
+            multimeterOn: false,
 
             ampConnection: "",
             
@@ -28,6 +29,7 @@
             presentSelColor: "orange", //  varies between 0 and 1.    0: "orange",  1: "red"
             rangeCount: 0,
 
+            connector: {},
         // Methods
 
         change: function(itemChanged,changedValue){
@@ -48,6 +50,7 @@
                         ScreenManager.reset();
                         TestingComponentsManager.reset();
                         TimingManager.reset();
+                        this.warningLabel.classList.add("hidden-element");
                     }else{
                         console.log("starting batteryTimer");
                         this.batteryTimer
@@ -61,6 +64,7 @@
                     }
                     break;
                 case "ampConnection":
+                    console.log("in CentralControlManager.change(ampConnection)");
                     this.ampConnection = changedValue;
                     this.warningManager();
                     break;
@@ -154,7 +158,10 @@
 
         warningManager: function(){
             console.log("in warning Manager");
-            if(((this.ampConnection == "high") && (this.knobSelection != "tenAmp")) || ((this.ampConnection == "low") && (this.knobSelection == "tenAmp"))){
+            console.log("this.ampConnection == " + this.ampConnection);
+            console.log("this.newKnobSelection " + this.newKnobSelection);
+            if(this.newKnobSelection == "off"){return}
+            if(((this.ampConnection == "high") && (this.newKnobSelection != "tenAmp")) || ((this.ampConnection == "low") && (this.newKnobSelection == "tenAmp"))){
                 this.warningLabel.classList.remove("hidden-element");
             }else{
                 this.warningLabel.classList.add("hidden-element");
@@ -197,5 +204,6 @@
 
             //this.ohmsArticle = document.getElementById("mm-ohms-article-id");
            //console.log("leaving CentralControlManager.init()");
+           this.connector = document.getElementById("trg-6-id");
         }
     }

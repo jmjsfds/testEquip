@@ -1,0 +1,21 @@
+{
+  "name": "2)_testequip",
+  "version": "1.0.0",
+  "description": "This project has one intent only: to give future engineering students the opportunity to learn how to use Multimeters and Oscilloscopes!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmjsfds/testEquip-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jmjsfds/testEquip-main/issues"
+  },
+  "homepage": "https://github.com/jmjsfds/testEquip-main#readme"
+}

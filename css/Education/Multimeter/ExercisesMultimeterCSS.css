@@ -4,7 +4,7 @@
         top: 0;
         left: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         background-image: url("media/imgs/low-noise-darker.png");
         background-size: cover;
         width: 99vw;
@@ -26,24 +26,30 @@
             #warning-label-id h1{
                 display: block;
                 text-align: center;
-                font-size: 2rem;
+                font-size: 4rem;
                 font-weight: bold;
                 color: red;
             }
             #warning-label-id label{
                 display: block;
                 text-align: center;
-                font-size: 1.6rem;
+                font-size: 3.8rem;
                 font-weight: bold;
                 color: black;
             }
 
             .multimeter-svg{
                 position: relative;
+                margin-top: 2rem;
+                width: 25vw;
+                border: 15px solid blue;
             }
                 #mm-svg-id{
-                    width: 95%;
-                    border: 2px solid blue;
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    /*width: 50vw;*/
+                    border: 15px solid greenyellow;
                 }
 
                     #mm-mamp-plugin-click-area-id:hover,
@@ -77,11 +83,6 @@
                             display: none;
                             visibility: hidden;
                         }
-                        .selector-label{
-                            border: 2px solid red;
-                            background-color: gray;
-                            font-size: 5rem;
-                        }
                         
                         .red-bckgrnd{
                             fill: red;
@@ -95,46 +96,49 @@
                         .white-bckgrnd{
                             fill: #ffffff;
                         }
-                        .options-item{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 80%;
-                            margin: 0.5rem;
-                        }
+            .testing-area{
+                position: relative;
+                height: 95vh;
+                width: 70vw;
+                margin: 2px;
+                border: 3px solid red;
+            }
+                .info-area{
+                    width: 100%;
+                    height: 10vh;
+                    border: 4px solid black;
+                    margin: 1rem;
+                }
+                .breadboard-area{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 70vw;
+                    height: 50vh;
+                    border: 4px dashed black;
+                    margin: 1rem;
+                }
+                    .breadboard-svg{
+                        /*transform: scale(2.7);*/
+                        width: 100%;
+                    }
+                .probe-area{
+                    width: 100%;
+                    height: 350vh;
+                    border: 4px solid black;
+                    margin: 1rem;
+                }
+                    .probe-area svg{
+                        width: 5vw;
+                    }
+                .main-connector:hover{
+                    cursor: pointer;
+                }
+                    /*#trg-6-id:hover{
+                        cursor: pointer;
+                    }*/
+                        
 
-            /*.blackPluginConnect{
-                transform:translate(255,-588); 
-                transform: rotate(90);
-                transform: scale(0.3); 
-            }*/
-            .off-knob-rotate{
-                transform: rotate(-22.736714,1080.4217,816.88307);
-            }
-            .volts-knob-rotate{
-                transform: rotate(0,0,0);
-            }
-            .hz-duty-knob-rotate{
-                transform: rotate(20.022602,1080.4217,816.88307);
-            }
-            .ohms-knob-rotate{
-                transform: rotate(42.132596,1080.4217,816.88307);
-            }
-            .cap-diode-knob-rotate{
-                transform: rotate(66.979975,1080.4217,816.88306);
-            }
-            .ten-amp-knob-rotate{
-                transform: rotate(-48.791962,1080.4217,816.88307);
-            }
-            .milli-amp-knob-rotate{
-                transform: rotate(-66.943538,1080.4217,816.88303);
-            }
-            .micro-amp-knob-rotate{
-                transform: rotate(-89.322089,1080.4217,816.88303);
-            }
-            .temp-knob-rotate{
-                transform: rotate(-112.01095,1080.4217,816.88303);
-            }
         
 
      
