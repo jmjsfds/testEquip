@@ -17686,9 +17686,21 @@
 
     <script>
     	function indexInit(){
-			//console.log("In indexInit()");
+			  console.log("In indexInit()");
          CentralControlManager.init();
       }
+    </script>
+
+    <script>
+      console.log("importing gsap");
+      import { gsap } from "gsap";
+      import { Draggable } from "gsap/Draggable";
+      document.getElementById("selector-knob-id").setAttribute("cursor","grab");
+      gsap.registerPlugin(Draggable);
+      Draggable.create('selector-knob-id', {
+	      type: 'rotation',
+	      inertia: true
+      });
     </script>
 </body>
 </html>
