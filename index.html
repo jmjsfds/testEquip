@@ -12,6 +12,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/Education/Multimeter/ExercisesMultimeterCSS.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Draggable.min.js"></script>  
     
     <script src="js/ButtonManager.js"></script>
     <script src="js/CentralControlManager.js"></script>
@@ -17692,14 +17694,10 @@
     </script>
 
     <script>
-      console.log("importing gsap");
-      import { gsap } from "gsap";
-      import { Draggable } from "gsap/Draggable";
-      document.getElementById("selector-knob-id").setAttribute("cursor","grab");
       gsap.registerPlugin(Draggable);
-      Draggable.create('selector-knob-id', {
-	      type: 'rotation',
-	      inertia: true
+      gsap.set("#selector-knob-id", { transformOrigin: "center center" });
+      Draggable.create("#selector-knob-id", {
+        type: "rotation"
       });
     </script>
 </body>
