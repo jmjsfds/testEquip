@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GSAP Draggable Rotation Snap</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+  }
+  .dial {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #555 0%, #333 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    user-select: none;
+    cursor: grab;
+  }
+</style>
+</head>
+<body>
+
+<div class="dial">Rotate</div>
+
+<!-- GSAP + Draggable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/InertiaPlugin.min.js"></script> -->
+<script>  
+  const step = 22.5;
+    gsap.registerPlugin(Draggable);
+    //gsap.registerPlugin(InertiaPlugin)
+  Draggable.create(".dial", {
+    type: "rotation",
+    inertia: false, // Disables momentum/throwing completely
+    liveSnap: function(endValue) {
+        // Snaps the rotation value in real-time to the nearest 22.5-degree step
+        console.log("endvalue = ", endValue);
+        console.log("Snapped value: = ", Math.round(endValue / step) * step);
+        return Math.round(endValue / step) * step;
+    },
+    //inertia: true, // requires InertiaPlugin if you want momentum
+    /*snap: function(endValue) {
+        console.log("endvalue = ", endValue);
+        console.log("Snapped value:", Math.round(endValue / 15) * 15);
+      // Snap to nearest 15 degrees
+      return Math.round(endValue / 15) * 15;
+    },*/
+    onDrag: function() {
+      console.log("Current rotation:", this.rotation);
+    },
+    onRelease: function() {
+      console.log("Snapped rotation:", this.rotation);
+    }
+  });
+
+</script>
+
+</body>
+</html>
