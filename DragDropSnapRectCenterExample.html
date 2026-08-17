@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GSAP Draggable Rotation Snap</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+  }
+  .dial {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #555 0%, #333 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    user-select: none;
+    cursor: grab;
+  }
+    .target-container{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 97vw;
+      height:80px;
+      border: 2px solid blue;
+    }
+      .drop-target{
+        width: 50px;
+        height: 50px;
+        border: 2px solid red;
+      }
+    #draggable-item{
+      writing-mode: vertical-lr;
+      width: 5px;
+      height: 300px;
+      border: 2px solid green;
+    }
+</style>
+</head>
+<body>
+<div id="draggable-item">DraggableItem</div>
+
+<div class="target-container">
+  <div class="drop-target">Rect #1</div>
+  <div class="drop-target">Rect #2</div>
+  <div class="drop-target">Rect #3</div>
+  <div class="drop-target">Rect #4</div>
+</div>
+
+
+<!-- GSAP + Draggable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/InertiaPlugin.min.js"></script> -->
+<script>  
+ 
+gsap.registerPlugin(Draggable);
+
+const item = document.querySelector("#draggable-item");
+const targets = document.querySelectorAll(".drop-target");
+
+Draggable.create(item, {
+  type: "x,y",
+  onRelease: function() {
+    let matchedTarget = null;
+   
+    // Check if the item overlaps any target
+    targets.forEach(target => {
+      if (Draggable.hitTest(this.target, target)) {
+        matchedTarget = target;
+      }
+    });
+
+    if (matchedTarget) {
+      // Get the bounding boxes of both elements
+      const itemRect = this.target.getBoundingClientRect();
+      const targetRect = matchedTarget.getBoundingClientRect();
+     
+      // Calculate the difference to move the item to the center
+      const dx = (targetRect.left + targetRect.width / 2) - (itemRect.left + itemRect.width / 2);
+      const dy = (targetRect.top + targetRect.height / 2) - (itemRect.top + itemRect.height / 2);
+
+      // Animate to the center position smoothly
+      gsap.to(this.target, {
+        x: `+=${dx}`,
+        y: `+=${dy}`,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    } else {
+      // Optional: Return to origin if not dropped on a target
+      gsap.to(this.target, { x: 0, y: 0, duration: 0.3 });
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>

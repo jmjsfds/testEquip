@@ -22,7 +22,7 @@ let DisplayValueManager = {
 
         // Methods
             changeDisplayValue: function(newKnobSelection, selColor){
-                console.log("newKnobSelection = " + newKnobSelection);
+                console.log("DisplayValueManager.changeDisplayValue where newKnobSelection = " + newKnobSelection);
                 //Value Display depends upon: 1)TestingValue(ie 'true' or 'false') 2) KnobSelected, 3)SEL Button status(ie 'orange' of 'red')
                 switch (newKnobSelection){
                     case "temp":
@@ -111,7 +111,7 @@ let DisplayValueManager = {
                             
                         }
                         break;
-                    default: console.log(newKnobSelection + "is Not an allowable KnobSelector");
+                    default: console.log(newKnobSelection + " is Not an allowable KnobSelector");
                 }
             },
 

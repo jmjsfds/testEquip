@@ -31,18 +31,18 @@
                 case "comPlugin":
                     if(this.blackPluginConnected){
                         console.log("disconnecting this.blackPlugin");
-                        this.blackPlugin.setAttribute("transform","translate(255,-284) rotate(90) scale(0.3)");
+                        this.blackPlugin.setAttribute("transform","translate(-255,24) rotate(0) scale(0.1)");
                         this.blackPluginConnected = false;
                     }else{
                         console.log("connecting this.blackPlugin");
-                        this.blackPlugin.setAttribute("transform","translate(650,-284) rotate(90) scale(0.3)");
+                        this.blackPlugin.setAttribute("transform","translate(-109,820) scale(0.1)");
                         this.blackPluginConnected = true;
                     }
                     break;
                 case "lowAmpPlugin":
                     CentralControlManager.change("ampConnection","low");
                     this.redPluginConnected = true;
-                    this.redPlugin.setAttribute("transform","translate(835,70) rotate(90) scale(0.3)");
+                    this.redPlugin.setAttribute("transform","translate(10.5,760) scale(0.1)");
 
                     if(this.blackPluginConnected){
                         this.bothPluginsConnected = "true";
@@ -52,7 +52,7 @@
                 case "highAmpPlugin":
                     CentralControlManager.change("ampConnection","high");
                     this.redPluginConnected = true;
-                    this.redPlugin.setAttribute("transform","translate(835,-640) rotate(90) scale(0.3)");
+                    this.redPlugin.setAttribute("transform","translate(-230,760) scale(0.1)");
                  
                     if(this.blackPluginConnected){
                         this.pluginConnections = "true";
@@ -62,8 +62,8 @@
                     break;
                 case "off":
                     console.log("logging off: resetting red & black plugins to original position");
-                    this.redPlugin.setAttribute("transform","translate(255,70) rotate(90) scale(0.3)");
-                    this.blackPlugin.setAttribute("transform","translate(255,-288) rotate(90) scale(0.3)");
+                    this.redPlugin.setAttribute("transform","translate(-15,1045) scale(0.1)");
+                    this.blackPlugin.setAttribute("transform","translate(-200,1045) scale(0.1)");
                     break;
                 default: console.log(plugin + " is Not an allowable PlugIn");
             }

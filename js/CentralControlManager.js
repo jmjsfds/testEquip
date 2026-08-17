@@ -7,8 +7,6 @@
     let CentralControlManager = {
         //Properties
             initialized: false,
-            oldKnobSelection: "off",
-            newKnobSelection: "off",
             multimeterOn: false,
 
             ampConnection: "",
@@ -37,8 +35,9 @@
             console.log("changedValue = " + changedValue);
             switch (itemChanged){
                 case "knob":
-                    this.oldKnobSelection = this.newKnobSelection;
-                    this.newKnobSelection = changedValue; 
+                    KnobSelectorManager.oldKnobSelection = KnobSelectorManager.newKnobSelection;
+                    KnobSelectorManager.newKnobSelection = changedValue;
+                    console.log("in CentralControlManager.change where changedValue = " + changedValue);
                     this.warningManager();
                     if(changedValue == "off"){
                         console.log("resetting everything");
@@ -56,11 +55,15 @@
                         this.batteryTimer
                         console.log("going to ScreenManager.auxillarySymbolsManager()");
                         ScreenManager.auxillarySymbolsManager();
-                        if(this.oldKnobSelection != "off"){
-                            ScreenManager.prefixUnitManager(this.oldKnobSelection, "hide");
+                        console.log("just after ScreenManager.auxillarySymbolsManager where KnobSelectorManager.oldKnobSelection = " + KnobSelectorManager.oldKnobSelection);
+                        if(KnobSelectorManager.oldKnobSelection != "off"){
+                            console.log("just before ScreenManager.prefixUnitManager(KnobSelectorManager.oldKnobSelection, 'hide'");
+                            console.log("KnobSelectorManager.oldKnobSelection = " + KnobSelectorManager.oldKnobSelection);
+                            ScreenManager.prefixUnitManager(KnobSelectorManager.oldKnobSelection, "hide");
                         }
-                        ScreenManager.prefixUnitManager(this.newKnobSelection, "show");
-                        DisplayValueManager.changeDisplayValue(this.newKnobSelection, this.presentSelColor);
+                        console.log("just before ScreenManager.prefixUnitManager(KnobSelectorManager.newKnobSelection, 'show'");
+                        ScreenManager.prefixUnitManager(KnobSelectorManager.newKnobSelection, "show");
+                        DisplayValueManager.changeDisplayValue(KnobSelectorManager.newKnobSelection, this.presentSelColor);
                     }
                     break;
                 case "ampConnection":
@@ -75,12 +78,12 @@
                         case "sel":
                             console.log("in CentralControlManager.change('button','sel'");
                             ScreenManager.auxillarySymbolsManager();
-                            if(this.oldKnobSelection != "off"){
-                                console.log("this.oldKnobSelection = " + this.oldKnobSelection);
-                                ScreenManager.prefixUnitManager(this.oldKnobSelection, "hide");
+                            if(KnobSelectorManager.oldKnobSelection != "off"){
+                                console.log("KnobSelectorManager.oldKnobSelection = " + KnobSelectorManager.oldKnobSelection);
+                                ScreenManager.prefixUnitManager(KnobSelectorManager.oldKnobSelection, "hide");
                             }
-                            ScreenManager.prefixUnitManager(this.newKnobSelection, "show");
-                            DisplayValueManager.changeDisplayValue(this.newKnobSelection,this.presentSelColor);
+                            ScreenManager.prefixUnitManager(KnobSelectorManager.newKnobSelection, "show");
+                            DisplayValueManager.changeDisplayValue(KnobSelectorManager.newKnobSelection,this.presentSelColor);
                             break;
                         case "hold":
                             ScreenManager.holdSymbol.classList.toggle("hidden-element");
@@ -159,11 +162,12 @@
         warningManager: function(){
             console.log("in warning Manager");
             console.log("this.ampConnection == " + this.ampConnection);
-            console.log("this.newKnobSelection " + this.newKnobSelection);
-            if(this.newKnobSelection == "off"){return}
-            if(((this.ampConnection == "high") && (this.newKnobSelection != "tenAmp")) || ((this.ampConnection == "low") && (this.newKnobSelection == "tenAmp"))){
+            console.log("KnobSelectorManager.newKnobSelection " + KnobSelectorManager.newKnobSelection);
+            if(KnobSelectorManager.newKnobSelection == "off"){return}
+            if(((this.ampConnection == "high") && (KnobSelectorManager.newKnobSelection != "tenAmp")) || ((this.ampConnection == "low") && (KnobSelectorManager.newKnobSelection == "tenAmp"))){
                 this.warningLabel.classList.remove("hidden-element");
             }else{
+                console.log("hiding warning Label");
                 this.warningLabel.classList.add("hidden-element");
             }
         },

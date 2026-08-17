@@ -29,18 +29,18 @@
     
 
 	<style>
-        body{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            opacity: 1;
-            background-image: url("media/imgs/low-noise-darker.png");
-            background-size: cover;
-            color: black;
-            font-weight: bold;
-            overflow: hidden;
-        }
-       
+       body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    opacity: 1;
+    background-image: url("media/imgs/low-noise-darker.png");
+    background-size: cover;
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+}
+
         #mm-measured-thousands-value-id{
             font-size: 1rem;
         }
@@ -55,7 +55,8 @@
             transform: translate(255,-325);
         }
         .connect-black-plugin{
-            x: 5000;
+            /*x: 5000;*/
+            transform: scale(0.2) translate(50,200);
         }
         .connect-low-red-plugin{
             x: 5000;
@@ -71,13 +72,43 @@
             }
       .multimeter-svg{
         width: 30vw;
-      }.testing-section{
+        overflow: hidden;
+      }
+      .testing-section{
         width: 70vw;
       }
             #breadboard-probes-svg-id{
               margin: 0 5rem;
               border: 4px solid red;
             }
+        .plugin-group{
+          display: flex;
+          justify-content: space-around;
+
+        }
+    .target-container{
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 97vw;
+      height:80px;
+      border: 2px solid blue;
+      z-index: 100;
+    }
+      .drop-target{
+        width: 50px;
+        height: 50px;
+        border: 2px solid red;
+      }
+    #draggable-item{
+      position: relative;
+      writing-mode: vertical-lr;
+      width: 15px;
+      height: 300px;
+      background-color:  green;
+      z-index: 110;
+    }
    </style>
 	
 </head>
@@ -88,8 +119,12 @@
                <h1>Warning!</h1>
                <label>Incorrect "red-plugin" Connection</label>
          </div>
-<svg
-   id="mm-svg-id"
+
+
+<!--<div id="draggable-item">DraggableItem</div>-->
+
+
+<svg id="mm-svg-id"
    width="100%"
    height="100%"
    version="1.1"
@@ -102,7 +137,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><!--viewBox="0 0 528 1530"-->
+   <sodipodi:namedview
    id="namedview15"
    pagecolor="#ffffff"
    bordercolor="#000000"
@@ -670,34 +706,29 @@
    y="-409.34119">COM</tspan> 
                      </text>
                   </g>
-                  <g
-   id="mm-plugin-click-area-id"
-   transform="matrix(2.9628426,0,0,2.9628426,-2.1124259,815.59911)"
-   style="display:inline">
-                     <rect
-   style="display:inline;fill:#0000ff;opacity:0;fill-rule:evenodd;stroke-width:0.370337"
-   id="mm-com-plugin-click-area-id"
-   width="41.273899"
-   height="43.112854"
-   x="-19.186859"
-   y="-104.28028"
-   transform="rotate(90)" />
-                     <rect
-   style="display:inline;fill:#0000ff;opacity:0;fill-rule:evenodd;stroke-width:0.370337"
-   id="mm-mamp-plugin-click-area-id"
-   width="41.273899"
-   height="43.112854"
-   x="100.12204"
-   y="-167.31137"
-   transform="rotate(90)" />
-                     <rect
-   style="display:inline;fill:#0000ff;opacity:0; fill-rule:evenodd;stroke-width:0.370337"
-   id="mm-ten-amp-plugin-click-area-id"
-   width="41.273899"
-   height="43.112854"
-   x="-139.61192"
-   y="-167.31136"
-   transform="rotate(90)" />
+                  <g id="mm-plugin-click-area-id" style="display:inline" transform="matrix(2.9628426,0,0,2.9628426,-2.1124259,815.59911)">
+                    <rect id="mm-com-plugin-click-area-id" style="display:inline;fill:#0000ff;opacity:0;fill-rule:evenodd;stroke-width:0.370337"
+                      width="41.273899"
+                      height="43.112854"
+                      x="-19.186859"
+                      y="-104.28028"
+                      class="mm-com-plugin-area"
+                      transform="rotate(90)" />
+                    <rect id="mm-mamp-plugin-click-area-id"
+                      style="display:inline;fill:#0000ff;opacity:0;fill-rule:evenodd;stroke-width:0.370337"
+                      width="41.273899"
+                      height="43.112854"
+                      x="100.12204"
+                      y="-167.31137"
+                      class="mm-volt-plugin-area"
+                      transform="rotate(90)" />
+                    <rect id="mm-ten-amp-plugin-click-area-id" style="display:inline;fill:#0000ff;opacity:0; fill-rule:evenodd;stroke-width:0.370337"
+                      width="41.273899"
+                      height="43.112854"
+                      x="-139.61192"
+                      y="-167.31136"
+                      class="mm-volt-plugin-area"
+                      transform="rotate(90)" />
                   </g>
                </g>
                <g
@@ -2113,10 +2144,42 @@
    x="1172.4095"
    y="-2672.1843">H</tspan>  
                      </text>
+          </g>
+        </g>
+      </g>
+                <g id="plugin-group-id" class="plugin-group-on-hold">
+                  <g id="red-plugin-id" style="display:inline;stroke-width:15.11811024;stroke-dasharray:none" transform="translate(-15,1045) rotate(0) scale(0.1)">
+                     <rect id="red-cord-id"
+                        style="display:inline;fill:#be1a00;fill-opacity:1;fill-rule:evenodd;stroke-width:15.11811024;stroke-dasharray:none;stroke:#000000;stroke-opacity:1"
+                        width="97.765091"
+                        height="8000"
+                        x="3655.3845"
+                        y="2904.2021" />
+                     <path id="red-stem-id"
+                        style="fill:#be1a00;fill-opacity:1;stroke:#000000;stroke-width:15.11811024;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+                        d="m 3499.0039,1716.2864 c -3.7113,138.5841 33.4141,648.6391 33.4141,648.6391 h 81.9252 v 51.9767 h -72.0248 l 4.9492,138.6034 h 67.0756 v 56.928 h -62.1258 l 3.7123,127.4645 h 58.4135 v 47.1397 h -58.4135 c 0,0 -6.1686,121.1615 60.6406,119.9267 44.2149,0.01 149.2195,0 181,0 66.8092,1.2348 60.6387,-119.9267 60.6387,-119.9267 h -62.1624 v -47.1397 h 62.1624 l 4.9492,-127.4645 h -67.1116 v -56.928 h 70.8245 l 4.9512,-138.6034 h -75.7757 v -51.9767 h 85.6761 c 0,0 37.1234,-510.0552 33.4121,-648.6393 0,0 -414.65,-2.8722 -416.1309,0 z" />
+                     <path id="red-thumb-pad-id"
+                        style="display:inline;fill:#be1a00;fill-opacity:1;stroke:#000000;stroke-width:15.11811024;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;filter:url(#filter34)"
+                        d="m 3481.1798,1683.8051 c 1.3815,201.6943 449.6449,208.4824 454.7843,8.045 1.8563,-72.3957 2.3606,-356.3419 1.8633,-421.3829 -1.8205,-238.0721 -454.7885,-240.6247 -454.7885,-9.2795 0,82.9239 -1.8591,422.6174 -1.8591,422.6174 z"/>
                   </g>
-
- 
-        </g></g>
+                  <g id="black-plugin-id" style="display:inline" transform="translate(-200,1045) rotate(0) scale(0.1)">
+                     <rect
+                        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-opacity:1;stroke-width:4;stroke-dasharray:none"
+                        id="black-cord-id"
+                        width="97.765091"
+                        height="8000"
+                        x="3655.3845"
+                        y="2904.2021" />
+                     <path
+                        id="black-stem-id"
+                        style="display:inline;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                        d="m 3499.0039,1716.2864 c -3.7113,138.5841 33.4141,648.6391 33.4141,648.6391 h 81.9252 v 51.9767 h -72.0248 l 4.9492,138.6034 h 67.0756 v 56.928 h -62.1258 l 3.7123,127.4645 h 58.4135 v 47.1397 h -58.4135 c 0,0 -6.1686,121.1615 60.6406,119.9267 3.4279,0.5848 177.4051,0.092 181,0 66.8092,1.2348 60.6387,-119.9267 60.6387,-119.9267 h -62.1624 v -47.1397 h 62.1624 l 4.9492,-127.4645 h -67.1116 v -56.928 h 70.8245 l 4.9512,-138.6034 h -75.7757 v -51.9767 h 85.6761 c 0,0 37.1234,-510.0552 33.4121,-648.6393 0,0 -414.65,-2.8722 -416.1309,0 z" />
+                     <path
+                        style="display:inline;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;filter:url(#filter34);stroke-opacity:1"
+                        d="m 3481.1798,1683.8051 c 1.3815,201.6943 449.6449,208.4824 454.7843,8.045 1.8563,-72.3957 2.3606,-356.3419 1.8633,-421.3829 -1.8205,-238.0721 -454.7885,-240.6247 -454.7885,-9.2795 0,82.9239 -1.8591,422.6174 -1.8591,422.6174 z"
+                        id="black-thumb-pad-id" />
+                  </g>
+                </g>
    </svg>
 
       </section>
@@ -2258,56 +2321,45 @@
                                         <g
    id="bg46-bg50-id"
    inkscape:label="BG46-BG50">
-                                            <g
-   id="bg50-id"
-   transform="translate(-254)"
-   class="main-connector">
-                                                <rect
-   style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
-   id="trg-1_center"
-   width="27.383078"
-   height="25.042099"
-   x="370.45511"
-   y="34.465992"
-   rx="1.204854"
-   ry="0.66093105" />
-                                                <rect
-   style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-   id="rect15"
-   width="12.839038"
-   height="12.839038"
-   x="377.72714"
-   y="40.567524"
-   rx="1.204854"
-   ry="0.66093105" />
-                                            </g>
-                                            <g
-   id="bg49-id"
-   transform="translate(-217.5)"
-   class="main-connector">
-                                                <rect
-   style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
-   id="rect9"
-   width="27.383078"
-   height="25.042099"
-   x="370.45511"
-   y="34.465992"
-   rx="1.204854"
-   ry="0.66093105" />
-                                                <rect
-   style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-   id="rect10"
-   width="12.839038"
-   height="12.839038"
-   x="377.72714"
-   y="40.567524"
-   rx="1.204854"
-   ry="0.66093105" />
-                                            </g>
-                                            <g
-   id="bg48-id"
-   transform="translate(-181)"
-   class="main-connector">
+      <g id="bg50-id" transform="translate(-254)" class="pin">
+        <rect
+          style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
+          id="trg-1_center"
+          width="27.383078"
+          height="25.042099"
+          x="370.45511"
+          y="34.465992"
+          rx="1.204854"
+          ry="0.66093105" />
+        <rect id="rect15" style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+          width="12.839038"
+          height="12.839038"
+          x="377.72714"
+          y="40.567524"
+          rx="1.204854"
+          ry="0.66093105" />
+      </g>
+      <g id="bg49-id" transform="translate(-217.5)" class="pin">
+        <rect
+          style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
+          id="rect9"
+          width="27.383078"
+          height="25.042099"
+          x="370.45511"
+          y="34.465992"
+          rx="1.204854"
+          ry="0.66093105" />
+        <rect
+          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+          id="rect10"
+          width="12.839038"
+          height="12.839038"
+          x="377.72714"
+          y="40.567524"
+          rx="1.204854"
+          ry="0.66093105" />
+      </g>
+      <g id="bg48-id" transform="translate(-181)" class="pin">
                                     <rect
    style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
    id="rect11"
@@ -2329,7 +2381,7 @@
                                 <g
    id="bg47-id"
    transform="translate(-144.5)"
-   class="main-connector">
+   class="pin">
                                     <rect
    style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
    id="rect13"
@@ -2352,7 +2404,7 @@
                                 <g
    id="bg46-id"
    transform="translate(-108)"
-   class="main-connector">
+   class="pin">
                                     <rect
    style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
    id="rect16"
@@ -2379,7 +2431,7 @@
                             <g
    id="bg45-id"
    transform="translate(-254)"
-   class="main-connector">
+   class="pin">
                             <rect
    style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
    id="rect28"
@@ -3222,7 +3274,7 @@
      id="bv46-bv50-id"
      inkscape:label="BV46-BV50"><g
        id="bv50-id"
-       transform="translate(-254)"><rect
+       transform="translate(-254)" class="pin"><rect
          style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
          id="rect118"
          width="27.383078"
@@ -5184,7 +5236,7 @@
    inkscape:label="TV46-TV50">
                  <g
    id="tv50-id"
-   transform="translate(-254)">
+   transform="translate(-254)" class="pin">
                     <rect
    style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
    id="rect328"
@@ -6131,8 +6183,7 @@
    id="main-connections-id"
    style="display:inline"
    inkscape:label="Main Connections">
-                <g
-   id="row-j-id"
+                <g id="row-j-id"
    style="display:inline"
    transform="translate(-72,534)"
    inkscape:label="Row J">
@@ -16903,7 +16954,7 @@
      y="40.567524"
      rx="1.204854"
      ry="0.66093105" /></g><g
-   id="1-id"
+   id="b1-id"
    transform="translate(-181)"><rect
    style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
    id="rect1583"
@@ -16933,6 +16984,7 @@
    inkscape:label="A61-A63"><g
      id="a63-id"
      transform="translate(-254)"
+     class="pin"
      inkscape:label="A63"><rect
        style="display:inline;fill:#afae14;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-dasharray:none"
        id="rect1586"
@@ -18530,8 +18582,9 @@
    id="text1764"><tspan
    id="tspan1764"
    x="327.14618"
-   y="638.30072">55</tspan>                                </text>
-                                <text
+   y="638.30072">55</tspan>                                
+  </text>
+  <text
    xml:space="preserve"
    style="font-weight:bold;font-size:40px;line-height:0;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;fill-opacity:1;stroke:#963c0a;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    x="147.14618"
@@ -18539,77 +18592,57 @@
    id="text1765"><tspan
    id="tspan1765"
    x="147.14618"
-   y="638.30072">60</tspan>                                </text>
+   y="638.30072">60</tspan>                                
+  </text>
                             </g>
                         </g>
                     </g>
                 </g>
 
- 
-                <g id="probes-id" transform="translate(19.677155,15.822528)" style="display:inline" inkscape:label="Probes">
-                    <g id="red-probe-id"
-   transform="translate(800,-15)"
-   style="display:inline"
-   inkscape:label="Red Probe">
-                        <g
-   id="red-body-id"
-   style="display:inline"
-   transform="matrix(0.2,0,0,0.2,668.95285,862.4012)"
-   inkscape:label="Red Body">
-                            <path
-   id="path9"
-   style="display:inline;fill:#ae1a00;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 663.42911,107.57408 c -30.44986,0.0494 -84.08551,-1.56699 -85.87891,33.83789 l -35.23437,695.54687 -83.23242,51.50391 -47.40235,814.96095 43.19336,37.5195 c 0,0 -133.04809,12.3873 -168.16406,13.9063 -67.33923,2.9129 -71.12183,132.8741 -10.29297,133.5058 36.0005,0.3737 155.70313,9.7364 155.70313,9.7364 l -0.15625,107.8808 35.12695,11.5723 -3.50586,44.1699 -68.01758,13.0762 0.16602,74.6484 68.24218,6.6895 1.78711,30.4785 -71.32812,16.9336 2.48047,82.2656 67.04101,9.6777 0.67383,16.1231 -66.02539,25.7715 2.59766,81.8164 65.48828,12.1093 1.77734,17.334 -72.7539,22.6856 4.02343,83.584 65.48828,12.1093 0.3418,11.8164 -66.45508,29.4141 3.8086,82.5977 64.26757,13.2031 0.78125,10.0488 -65.89843,29.082 -0.0586,81.1622 51.9043,21.3964 -0.98633,3.9746 -51.88476,27.4122 0.49804,78.955 43.29102,20.1856 -0.32227,6.9531 -41.39648,22.9981 1.05469,89.8828 43.51562,19.2968 -6.82617,1437.0606 c 3.4728,0.016 59.40177,-0.01 130.51758,-0.029 -1.53247,0.598 -2.5293,1.5806 -2.5293,2.6953 v 7813.7108 c 0,1.831 2.68795,3.301 6.02539,3.301 h 175.9961 c 3.33744,0 6.02539,-1.47 6.02539,-3.301 V 4555.1229 c 0,-1.136 -1.03457,-2.1303 -2.61719,-2.7246 71.40459,0 127.76554,0.027 131.62109,0.1074 l -6.82617,-1438.4668 43.50586,-19.2871 1.04492,-89.8437 -41.37695,-22.9883 -0.32227,-6.9531 43.28125,-20.1661 0.48828,-78.916 -51.85546,-27.4121 -0.9961,-3.9746 51.89453,-21.3769 -0.0586,-81.1231 -65.87891,-29.0723 0.78125,-10.039 64.24805,-13.2031 3.79883,-82.5586 -66.42578,-29.4043 0.34179,-11.8067 65.45899,-12.0996 4.02344,-83.5547 -72.71485,-22.6758 1.77735,-17.3242 65.45898,-12.0996 2.58789,-81.7871 -65.98633,-25.7617 0.67383,-16.1133 67.00195,-9.668 2.48047,-82.2265 -71.29883,-16.9336 1.78711,-30.459 68.22266,-6.6895 0.15625,-74.6191 -67.98828,-13.0664 -3.50586,-44.1504 35.10742,-11.5625 -0.14648,-107.8418 c 0,0 119.65046,-9.3531 155.63476,-9.7266 60.8015,-0.6315 57.0159,-130.5356 -10.293,-133.4472 -35.1002,-1.5183 -168.09567,-13.8965 -168.09567,-13.8965 l 43.18359,-37.5 -47.3828,-814.59961 -83.19336,-51.48438 -35.21484,-695.22461 c -1.63257,-32.22994 -52.95115,-34.53991 -85.84961,-33.82812 z" />
-                        </g>
-                        <path
-   style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.88976;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="M 662.07158,-50.490341 616.24134,123.38971 c -5.4061,20.51079 86.498,30.17155 97.87943,0.95079 2.16337,0.0485 -52.04919,-174.830841 -52.04919,-174.830841 z"
-   id="red-tip-id"
-   transform="matrix(0.2,0,0,0.2,668.9529,862.4012)"
-   inkscape:label="Red Tip" />
-                    </g>
-                    <g id="black-probe-id"
-   transform="translate(-20,-16)"
-   style="display:inline"
-   inkscape:label="Black Probe">
-                        <g
-   id="black-body-id"
-   style="display:inline"
-   transform="matrix(0.2,0,0,0.2,668.95285,862.4012)"
-   inkscape:label="Black Body">                 
-                            <path
-   id="black-probe-handle-id"
-   style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 663.42911,107.57408 c -30.44986,0.0494 -84.08551,-1.56699 -85.87891,33.83789 l -35.23437,695.54687 -83.23242,51.50391 -47.40235,814.96095 43.19336,37.5195 c 0,0 -133.04809,12.3873 -168.16406,13.9063 -67.33923,2.9129 -71.12183,132.8741 -10.29297,133.5058 36.0005,0.3737 155.70313,9.7364 155.70313,9.7364 l -0.15625,107.8808 35.12695,11.5723 -3.50586,44.1699 -68.01758,13.0762 0.16602,74.6484 68.24218,6.6895 1.78711,30.4785 -71.32812,16.9336 2.48047,82.2656 67.04101,9.6777 0.67383,16.1231 -66.02539,25.7715 2.59766,81.8164 65.48828,12.1093 1.77734,17.334 -72.7539,22.6856 4.02343,83.584 65.48828,12.1093 0.3418,11.8164 -66.45508,29.4141 3.8086,82.5977 64.26757,13.2031 0.78125,10.0488 -65.89843,29.082 -0.0586,81.1622 51.9043,21.3964 -0.98633,3.9746 -51.88476,27.4122 0.49804,78.955 43.29102,20.1856 -0.32227,6.9531 -41.39648,22.9981 1.05469,89.8828 43.51562,19.2968 -6.82617,1437.0606 c 3.49528,0.016 60.13199,-0.01 131.9043,-0.029 -1.53283,0.5979 -2.5293,1.5805 -2.5293,2.6953 v 7813.7108 c 0,1.831 2.68795,3.301 6.02539,3.301 h 175.98633 c 3.33744,0 6.02539,-1.47 6.02539,-3.301 V 4555.1229 c 0,-1.136 -1.03475,-2.1303 -2.61719,-2.7246 70.74853,-9e-4 126.4135,0.027 130.24414,0.1074 l -6.82617,-1438.4668 43.50586,-19.2871 1.04492,-89.8437 -41.37695,-22.9883 -0.32227,-6.9531 43.28125,-20.1661 0.48828,-78.916 -51.85546,-27.4121 -0.9961,-3.9746 51.89453,-21.3769 -0.0586,-81.1231 -65.87891,-29.0723 0.78125,-10.039 64.24805,-13.2031 3.79883,-82.5586 -66.42578,-29.4043 0.34179,-11.8067 65.45899,-12.0996 4.02344,-83.5547 -72.71485,-22.6758 1.77735,-17.3242 65.45898,-12.0996 2.58789,-81.7871 -65.98633,-25.7617 0.67383,-16.1133 67.00195,-9.668 2.48047,-82.2265 -71.29883,-16.9336 1.78711,-30.459 68.22266,-6.6895 0.15625,-74.6191 -67.98828,-13.0664 -3.50586,-44.1504 35.10742,-11.5625 -0.14648,-107.8418 c 0,0 119.65046,-9.3531 155.63476,-9.7266 60.8015,-0.6315 57.0159,-130.5356 -10.293,-133.4472 -35.1002,-1.5183 -168.09567,-13.8965 -168.09567,-13.8965 l 43.18359,-37.5 -47.3828,-814.59961 -83.19336,-51.48438 -35.21484,-695.22461 c -1.63257,-32.22994 -52.95115,-34.53991 -85.84961,-33.82812 z" />
-                        </g>
-                        <g
-   id="black-tip-id"
-   style="display:inline"
-   transform="matrix(0.2,0,0,0.2,668.95285,862.4012)"
-   inkscape:label="Black Tip">
-                            <path
-   style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.88976;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="M 662.07158,-50.490341 616.24134,123.38971 c -5.4061,20.51079 86.498,30.17155 97.87943,0.95079 2.16337,0.0485 -52.04919,-174.830841 -52.04919,-174.830841 z"
-   id="path1" />
-                            <path
-   id="path3"
-   style="display:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 577.54688,141.41406 -35.23047,695.54102 -83.22852,51.50976 -47.4082,814.95896 43.19922,37.5176 c 0,0 -133.05005,12.3892 -168.16602,13.9082 -67.33923,2.9129 -71.12378,132.8781 -10.29492,133.5098 36.0005,0.3737 155.70312,9.7285 155.70312,9.7285 l -0.15234,107.8848 35.12109,11.5722 -3.5039,44.1719 -68.01367,13.0742 0.1582,74.6465 68.24609,6.6914 1.78516,30.4766 -71.32227,16.9394 2.48047,82.2656 67.0332,9.6739 0.67383,16.1211 -66.01757,25.7715 2.59179,81.8222 65.48828,12.1055 1.77735,17.3359 -72.75391,22.6817 4.02734,83.5898 65.49024,12.1035 0.33789,11.8164 -66.45703,29.4141 3.80664,82.5957 64.27539,13.209 0.7793,10.0488 -65.9043,29.084 -0.0586,81.1602 51.91211,21.3906 -0.99024,3.9746 -51.88281,27.418 0.49219,78.9531 43.29882,20.1816 -0.32812,6.9571 -41.39258,22.9941 1.04883,89.8848 43.51953,19.2949 -6.82227,1437.0605 c 9.7646,0.046 434.21168,-0.1789 445.03321,0.048 l -6.82032,-1438.4598 43.5,-19.289 1.05079,-89.8438 -41.37696,-22.9844 -0.32617,-6.9531 43.2793,-20.1719 0.49219,-78.916 -51.85938,-27.4062 -0.99023,-3.9746 51.88867,-21.379 -0.0586,-81.125 -65.875,-29.0703 0.7793,-10.0449 64.24609,-13.2031 3.80469,-82.5586 -66.42773,-29.4004 0.33984,-11.8105 65.45899,-12.0997 4.02734,-83.5507 -72.72266,-22.6739 1.77735,-17.3261 65.45898,-12.0996 2.58985,-81.7872 -65.98633,-25.7578 0.67187,-16.1152 67.00391,-9.6699 2.47851,-82.2285 -71.29101,-16.9317 1.78516,-30.4609 68.21679,-6.6914 0.15625,-74.6114 -67.98047,-13.0683 -3.50586,-44.1524 35.10743,-11.5664 -0.15235,-107.8359 c 0,0 119.64854,-9.3511 155.63284,-9.7246 60.8015,-0.6315 57.0198,-130.5376 -10.2891,-133.4492 -35.1002,-1.5183 -168.09179,-13.9024 -168.09179,-13.9024 l 43.17969,-37.5 -47.38672,-814.59372 -83.18945,-51.48633 -35.2168,-695.22656 c -1.63257,-32.22994 -52.94919,-34.53881 -85.84765,-33.82702 -30.44986,0.0494 -84.08941,-1.56419 -85.88281,33.84069 z" />
-                        </g>
-                    </g>
+            <g id="probes-id" transform="scale(0.5) translate(19.677155,760)" style="display:inline" inkscape:label="Probes">
+              <g id="red-probe-id" transform="translate(800,100)" style="display:inline" inkscape:label="Red Probe">
+                  <g id="red-body-id" style="display:inline" transform="matrix(0.2,0,0,0.2,668.95285,862.4012)" inkscape:label="Red Body">
+                    <path id="path9"
+                      style="display:inline;fill:#ae1a00;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                      d="m 663.42911,107.57408 c -30.44986,0.0494 -84.08551,-1.56699 -85.87891,33.83789 l -35.23437,695.54687 -83.23242,51.50391 -47.40235,814.96095 43.19336,37.5195 c 0,0 -133.04809,12.3873 -168.16406,13.9063 -67.33923,2.9129 -71.12183,132.8741 -10.29297,133.5058 36.0005,0.3737 155.70313,9.7364 155.70313,9.7364 l -0.15625,107.8808 35.12695,11.5723 -3.50586,44.1699 -68.01758,13.0762 0.16602,74.6484 68.24218,6.6895 1.78711,30.4785 -71.32812,16.9336 2.48047,82.2656 67.04101,9.6777 0.67383,16.1231 -66.02539,25.7715 2.59766,81.8164 65.48828,12.1093 1.77734,17.334 -72.7539,22.6856 4.02343,83.584 65.48828,12.1093 0.3418,11.8164 -66.45508,29.4141 3.8086,82.5977 64.26757,13.2031 0.78125,10.0488 -65.89843,29.082 -0.0586,81.1622 51.9043,21.3964 -0.98633,3.9746 -51.88476,27.4122 0.49804,78.955 43.29102,20.1856 -0.32227,6.9531 -41.39648,22.9981 1.05469,89.8828 43.51562,19.2968 -6.82617,1437.0606 c 3.4728,0.016 59.40177,-0.01 130.51758,-0.029 -1.53247,0.598 -2.5293,1.5806 -2.5293,2.6953 v 7813.7108 c 0,1.831 2.68795,3.301 6.02539,3.301 h 175.9961 c 3.33744,0 6.02539,-1.47 6.02539,-3.301 V 4555.1229 c 0,-1.136 -1.03457,-2.1303 -2.61719,-2.7246 71.40459,0 127.76554,0.027 131.62109,0.1074 l -6.82617,-1438.4668 43.50586,-19.2871 1.04492,-89.8437 -41.37695,-22.9883 -0.32227,-6.9531 43.28125,-20.1661 0.48828,-78.916 -51.85546,-27.4121 -0.9961,-3.9746 51.89453,-21.3769 -0.0586,-81.1231 -65.87891,-29.0723 0.78125,-10.039 64.24805,-13.2031 3.79883,-82.5586 -66.42578,-29.4043 0.34179,-11.8067 65.45899,-12.0996 4.02344,-83.5547 -72.71485,-22.6758 1.77735,-17.3242 65.45898,-12.0996 2.58789,-81.7871 -65.98633,-25.7617 0.67383,-16.1133 67.00195,-9.668 2.48047,-82.2265 -71.29883,-16.9336 1.78711,-30.459 68.22266,-6.6895 0.15625,-74.6191 -67.98828,-13.0664 -3.50586,-44.1504 35.10742,-11.5625 -0.14648,-107.8418 c 0,0 119.65046,-9.3531 155.63476,-9.7266 60.8015,-0.6315 57.0159,-130.5356 -10.293,-133.4472 -35.1002,-1.5183 -168.09567,-13.8965 -168.09567,-13.8965 l 43.18359,-37.5 -47.3828,-814.59961 -83.19336,-51.48438 -35.21484,-695.22461 c -1.63257,-32.22994 -52.95115,-34.53991 -85.84961,-33.82812 z" />
+                  </g>
+                  <path
+                    style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.88976;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                    d="M 662.07158,-50.490341 616.24134,123.38971 c -5.4061,20.51079 86.498,30.17155 97.87943,0.95079 2.16337,0.0485 -52.04919,-174.830841 -52.04919,-174.830841 z"
+                    id="red-tip-id"
+                    transform="matrix(0.2,0,0,0.13,668.9529,870)"
+                    inkscape:label="Red Tip" />
+            </g>
+            <g id="black-probe-id" transform="translate(-20,100)" style="display:inline" inkscape:label="Black Probe">
+              <g id="black-body-id" style="display:inline" transform="matrix(0.2,0,0,0.2,668.95285,862.4012)" inkscape:label="Black Body">                 
+                <path id="black-probe-handle-id"
+                  style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  d="m 663.42911,107.57408 c -30.44986,0.0494 -84.08551,-1.56699 -85.87891,33.83789 l -35.23437,695.54687 -83.23242,51.50391 -47.40235,814.96095 43.19336,37.5195 c 0,0 -133.04809,12.3873 -168.16406,13.9063 -67.33923,2.9129 -71.12183,132.8741 -10.29297,133.5058 36.0005,0.3737 155.70313,9.7364 155.70313,9.7364 l -0.15625,107.8808 35.12695,11.5723 -3.50586,44.1699 -68.01758,13.0762 0.16602,74.6484 68.24218,6.6895 1.78711,30.4785 -71.32812,16.9336 2.48047,82.2656 67.04101,9.6777 0.67383,16.1231 -66.02539,25.7715 2.59766,81.8164 65.48828,12.1093 1.77734,17.334 -72.7539,22.6856 4.02343,83.584 65.48828,12.1093 0.3418,11.8164 -66.45508,29.4141 3.8086,82.5977 64.26757,13.2031 0.78125,10.0488 -65.89843,29.082 -0.0586,81.1622 51.9043,21.3964 -0.98633,3.9746 -51.88476,27.4122 0.49804,78.955 43.29102,20.1856 -0.32227,6.9531 -41.39648,22.9981 1.05469,89.8828 43.51562,19.2968 -6.82617,1437.0606 c 3.49528,0.016 60.13199,-0.01 131.9043,-0.029 -1.53283,0.5979 -2.5293,1.5805 -2.5293,2.6953 v 7813.7108 c 0,1.831 2.68795,3.301 6.02539,3.301 h 175.98633 c 3.33744,0 6.02539,-1.47 6.02539,-3.301 V 4555.1229 c 0,-1.136 -1.03475,-2.1303 -2.61719,-2.7246 70.74853,-9e-4 126.4135,0.027 130.24414,0.1074 l -6.82617,-1438.4668 43.50586,-19.2871 1.04492,-89.8437 -41.37695,-22.9883 -0.32227,-6.9531 43.28125,-20.1661 0.48828,-78.916 -51.85546,-27.4121 -0.9961,-3.9746 51.89453,-21.3769 -0.0586,-81.1231 -65.87891,-29.0723 0.78125,-10.039 64.24805,-13.2031 3.79883,-82.5586 -66.42578,-29.4043 0.34179,-11.8067 65.45899,-12.0996 4.02344,-83.5547 -72.71485,-22.6758 1.77735,-17.3242 65.45898,-12.0996 2.58789,-81.7871 -65.98633,-25.7617 0.67383,-16.1133 67.00195,-9.668 2.48047,-82.2265 -71.29883,-16.9336 1.78711,-30.459 68.22266,-6.6895 0.15625,-74.6191 -67.98828,-13.0664 -3.50586,-44.1504 35.10742,-11.5625 -0.14648,-107.8418 c 0,0 119.65046,-9.3531 155.63476,-9.7266 60.8015,-0.6315 57.0159,-130.5356 -10.293,-133.4472 -35.1002,-1.5183 -168.09567,-13.8965 -168.09567,-13.8965 l 43.18359,-37.5 -47.3828,-814.59961 -83.19336,-51.48438 -35.21484,-695.22461 c -1.63257,-32.22994 -52.95115,-34.53991 -85.84961,-33.82812 z" />
+              </g>
+              <g id="black-tip-id" style="display:inline" transform="matrix(0.2,0,0,0.13,668.95285,870)" inkscape:label="Black Tip">
+                <path
+                  style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.88976;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  d="M 662.07158,-50.490341 616.24134,123.38971 c -5.4061,20.51079 86.498,30.17155 97.87943,0.95079 2.16337,0.0485 -52.04919,-174.830841 -52.04919,-174.830841 z"
+                  id="path1" /><!--transform="matrix(0.2,0,0,0.2,668.95285,862.4012)"-->
+                <!--<path id="path3"
+                  style="display:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  d="m 577.54688,141.41406 -35.23047,695.54102 -83.22852,51.50976 -47.4082,814.95896 43.19922,37.5176 c 0,0 -133.05005,12.3892 -168.16602,13.9082 -67.33923,2.9129 -71.12378,132.8781 -10.29492,133.5098 36.0005,0.3737 155.70312,9.7285 155.70312,9.7285 l -0.15234,107.8848 35.12109,11.5722 -3.5039,44.1719 -68.01367,13.0742 0.1582,74.6465 68.24609,6.6914 1.78516,30.4766 -71.32227,16.9394 2.48047,82.2656 67.0332,9.6739 0.67383,16.1211 -66.01757,25.7715 2.59179,81.8222 65.48828,12.1055 1.77735,17.3359 -72.75391,22.6817 4.02734,83.5898 65.49024,12.1035 0.33789,11.8164 -66.45703,29.4141 3.80664,82.5957 64.27539,13.209 0.7793,10.0488 -65.9043,29.084 -0.0586,81.1602 51.91211,21.3906 -0.99024,3.9746 -51.88281,27.418 0.49219,78.9531 43.29882,20.1816 -0.32812,6.9571 -41.39258,22.9941 1.04883,89.8848 43.51953,19.2949 -6.82227,1437.0605 c 9.7646,0.046 434.21168,-0.1789 445.03321,0.048 l -6.82032,-1438.4598 43.5,-19.289 1.05079,-89.8438 -41.37696,-22.9844 -0.32617,-6.9531 43.2793,-20.1719 0.49219,-78.916 -51.85938,-27.4062 -0.99023,-3.9746 51.88867,-21.379 -0.0586,-81.125 -65.875,-29.0703 0.7793,-10.0449 64.24609,-13.2031 3.80469,-82.5586 -66.42773,-29.4004 0.33984,-11.8105 65.45899,-12.0997 4.02734,-83.5507 -72.72266,-22.6739 1.77735,-17.3261 65.45898,-12.0996 2.58985,-81.7872 -65.98633,-25.7578 0.67187,-16.1152 67.00391,-9.6699 2.47851,-82.2285 -71.29101,-16.9317 1.78516,-30.4609 68.21679,-6.6914 0.15625,-74.6114 -67.98047,-13.0683 -3.50586,-44.1524 35.10743,-11.5664 -0.15235,-107.8359 c 0,0 119.64854,-9.3511 155.63284,-9.7246 60.8015,-0.6315 57.0198,-130.5376 -10.2891,-133.4492 -35.1002,-1.5183 -168.09179,-13.9024 -168.09179,-13.9024 l 43.17969,-37.5 -47.38672,-814.59372 -83.18945,-51.48633 -35.2168,-695.22656 c -1.63257,-32.22994 -52.94919,-34.53881 -85.84765,-33.82702 -30.44986,0.0494 -84.08941,-1.56419 -85.88281,33.84069 z" />
+              -->
                 </g>
+          </g>
+      </g>
 
-        </svg>
-      </section>
-    
-   </section>
+    </svg>
+  </section>
+  
+  </section>
         
 
     <script>
     	function indexInit(){
-			  console.log("In indexInit()");
+			  //console.log("In indexInit()");
         CentralControlManager.init();
-        document.getElementById("red-probe-id").addEventListener("click", startAnimation);
+        //document.getElementById("red-probe-id").addEventListener("click", startAnimation);
       }
     </script>
 
@@ -18625,32 +18658,266 @@
         inertia: false, // Disables momentum/throwing completely
         liveSnap: function(endValue) {
             // Snaps the rotation value in real-time to the nearest 22.5-degree step
-            //console.log("endvalue = ", endValue);
-            //console.log("Snapped value: = ", Math.round(endValue / step) * step);
+            ////console.log("endvalue = ", endValue);
+            ////console.log("Snapped value: = ", Math.round(endValue / step) * step);
             return Math.round(endValue / step) * step;
         },
       /*  snap: function(endValue) {
-        console.log("Snapping to:", endValue);
+        //console.log("Snapping to:", endValue);
         return clamp(snap(endValue));
       },*/
         onDrag: function() {
-          console.log("Current rotation:", this.rotation);
+          //console.log("Current rotation:", this.rotation);
         },
         onRelease: function() {
-          console.log("Released at:", this.rotation);
-          CentralControlManager.change("knob",newKnobSelection);
+          //console.log("Released at: " + this.rotation);
+          const thisRotation = this.rotation;
+          KnobSelectorManager.knobRotated(thisRotation);
         },
         onSnapComplete: function() {
-          console.log("Snapped to final angle:", this.rotation);
+          //console.log("Snapped to final angle:", this.rotation);
         }
       });
       
-      function startAnimation() {
-        gsap.to("#red-probe-id", {  x: -743, 
-                                    y:-665,
-                                    duration: 2,
-        });
+      const railPrefix = ["bg","bv","tg","tv"];
+      for(var j = 0; j < 4; ++j){
+        for(var i = 1; i<51; ++i){
+          let pin = document.getElementById(railPrefix[j] + i + "-id");
+          pin.classList.add("pin");
+        }
+      }  
+      const mainPrefix = ["a","b","c","d","e","f","g","h","i","j"];
+      for(var j = 0; j < 10; ++j){
+        for(var i = 1; i<64; ++i){
+          //console.log("mainPrefix[j] + i + -id = " + mainPrefix[j] + i + "-id");
+          let mainPin = document.getElementById(mainPrefix[j] + i + "-id");
+          mainPin.classList.add("pin");
+        }
       }
+      gsap.registerPlugin(Draggable);
+
+const redProbe = document.querySelector("#red-probe-id");
+const redProbeTip = document.querySelector("#red-tip-id");
+const breadboardTargets = document.querySelectorAll(".pin");
+
+Draggable.create(redProbe, {
+  type: "x,y",
+  startX: "",
+  startY: "",
+  onPress: function() {
+    this.startX = this.x;
+    this.startY = this.y;
+    //console.log("startXY = " + this.startX + "," + this.startY);
+  },
+
+  onRelease: function() {
+    let matchedTarget = null;
+    let isReturning = false;
+   
+    // Check if the redProbe overlaps any target
+    breadboardTargets.forEach(target => {
+      if (Draggable.hitTest(redProbeTip, target)) {
+        //console.log("Found matched target");
+        //console.log("matchedTarget.id = " + target.id);
+        matchedTarget = target;
+      }
+    });
+
+    if (matchedTarget) {
+      if(isReturning){return}
+      // Get the bounding boxes of both elements 
+      const redProbeTipRect = redProbeTip.getBoundingClientRect();
+      const targetRect = matchedTarget.getBoundingClientRect();
+     
+      // Calculate the difference to move the redProbe to the center
+      const dx = (targetRect.left + targetRect.width / 2) - (redProbeTipRect.left + redProbeTipRect.width / 2);
+      const dy = (targetRect.top + targetRect.height / 2) - (redProbeTipRect.top + redProbeTipRect.height / 2);
+      //const dy = (targetRect.top + targetRect.height / 2) - redPlugRect.top;
+      //console.log("dx = " + dx + "  dy = " + dy);
+      // Animate to the center position smoothly
+      gsap.to(this.target, {
+        x: `+=${dx}`,
+        y: `+=${dy}`,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    } else {
+      isReturning = true;
+      // Optional: Return to origin if not dropped on a target
+      gsap.to(this.target, { x: 800, y: 100, duration: 0.3 });
+      isReturning = false;
+    }
+  }
+});
+
+
+const blackProbe = document.querySelector("#black-probe-id");
+const blackProbeTip = document.querySelector("#black-tip-id");
+
+Draggable.create(blackProbe, {
+  type: "x,y",
+
+  onRelease: function() {
+    let matchedTarget = null;
+   
+    // Check if the blackProbe overlaps any target
+    breadboardTargets.forEach(target => {
+      if (Draggable.hitTest(blackProbeTip, target)) {
+        matchedTarget = target;
+      }
+    });
+
+    if (matchedTarget) {
+      //console.log("matchedTarget found");
+      //console.log("matchedTarget.id = " + matchedTarget.id);
+      // Get the bounding boxes of both elements 
+      const blackProbeTipRect = blackProbeTip.getBoundingClientRect();
+      const targetRect = matchedTarget.getBoundingClientRect();
+     
+      // Calculate the difference to move the blackProbe to the center
+      const dx = (targetRect.left + targetRect.width / 2) - (blackProbeTipRect.left + blackProbeTipRect.width / 2);
+      //const dy = (targetRect.top + targetRect.height / 2) - (blackProbeTipRect.top + blackProbeTipRect.height / 2);// + blackProbeTipRect.height / 2
+      const dy = (targetRect.top + targetRect.height/2) - (blackProbeTipRect.top);
+      //console.log("dx = " + dx + "  dy = " + dy);
+      // Animate to the center position smoothly
+      gsap.to(this.target, {
+        x: `+=${dx}`,
+        y: `+=${dy}`,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    } else {
+      // Optional: Return to origin if not dropped on a target
+      gsap.to(this.target, { x: -20, y: 100, duration: 0.3 });
+    }
+  }
+});
+
+
+
+
+const redPlugin = document.querySelector("#red-plugin-id");
+const redThumbPad = document.querySelector("#red-thumb-pad-id");
+const voltPluginTargets = document.querySelectorAll(".mm-volt-plugin-area");
+
+gsap.registerPlugin(Draggable);
+
+Draggable.create(redPlugin, {
+  type: "x,y",
+  isReturning: false,
+
+  onRelease: function() {
+    if(this.isReturning) return;
+    let matchedTarget = null;
+
+    // Loop through multiple drop zones for collision checking
+    voltPluginTargets.forEach(target => {
+      if (Draggable.hitTest(redThumbPad, target)) {
+        matchedTarget = target;
+      }
+    });
+
+    if (matchedTarget) {
+      //console.log("matchedTarget.id = " + matchedTarget.id);
+      // Get SVG local bounding boxes for precise center alignment
+     // const subBox   = redPluginHead.getBBox();
+     // const targetBox = matchedZone.getBBox();
+      const subBox   = redThumbPad.getBoundingClientRect();
+      const targetBox = matchedTarget.getBoundingClientRect();
+
+      // Current accumulated translation values on the dragged group
+      //console.log("currentX = " + this.x);
+      //console.log("currentY = " + this.y);
+      const currentX = this.x;
+      const currentY = this.y;
+
+      // Calculate sub-element offset relative to the parent group container
+      const subCenterX = subBox.x + subBox.width / 2;
+      const subCenterY = subBox.y + subBox.height / 2;
+      const targetCenterX = targetBox.x + targetBox.width / 2;
+      const targetCenterY = targetBox.y + targetBox.height / 2 + 10;
+      //console.log("subCenterX,Y = " + subCenterX + "," + subCenterY);
+      //console.log("targetCenterX,Y = " + targetCenterX + "," + targetCenterY);
+      // Adjust coordinate delta to align sub-element center to target center
+      //const dx = targetCenterX - (currentX + subCenterX);
+      //const dy = targetCenterY - (currentY + subCenterY);
+      const dx = targetCenterX - (subCenterX);
+      const dy = targetCenterY - (subCenterY);
+      //console.log("dx,dy = " + dx + "," + dy);
+      
+
+      gsap.to(redPlugin, {
+        x: currentX + dx,
+        y: currentY + dy,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    } else {
+      // Spring back or reset position on miss redPlugin
+      isReturning = true;
+      gsap.to(this.target, { x: -3150, y: 60, duration: 0.2 });
+      /*gsap.to(dragGroup, {
+        x: 0,
+        y: 0,
+        duration: 0.4,
+        ease: "elastic.out(1, 0.75)"
+      });*/
+      isReturning = false;
+    }
+  }
+}); 
+
+const blackPlugin = document.querySelector("#black-plugin-id");
+const blackThumbPad = document.querySelector("#black-thumb-pad-id");
+const comPluginTargets = document.querySelectorAll(".mm-com-plugin-area");
+
+Draggable.create(blackPlugin, {
+  type: "x,y",
+  startX: "",
+  startY: "",
+  isReturning: false,
+
+  onRelease: function() {
+    if(this.isReturning) return;
+
+    let matchedTarget = null;
+    //console.log("Checking for Collisions");
+    // Check if the blackProbe collides with any target
+    comPluginTargets.forEach(target => {
+      if (Draggable.hitTest(blackThumbPad, target)) {
+        matchedTarget = target;
+      }
+    });
+
+    if (matchedTarget) {
+      //console.log("matchedTarget found");
+      //console.log("matchedTarget.id = " + matchedTarget.id);
+      // Get the bounding boxes of both elements 
+      const blackThumbPadRect = this.target.getBoundingClientRect();
+      const targetRect = matchedTarget.getBoundingClientRect();
+     
+      // Calculate the difference to move the blackProbe to the center
+      const dx = (targetRect.left + targetRect.width / 2) - (blackThumbPadRect.left + blackThumbPadRect.width / 2);
+      const dy = (targetRect.top + targetRect.height / 2) - (blackThumbPadRect.top + 20);
+      //const dy = (targetRect.top + targetRect.height / 2) - blackProbeRect.top;
+      //console.log("dx = " + dx + "  dy = " + dy);
+      // Animate to the center position smoothly
+      gsap.to(this.target, {
+        x: `+=${dx}`,
+        y: `+=${dy}`,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    } else {
+      // Optional: Return to origin if not dropped on a target 
+     // gsap.set(this.target, { pointerEvents: "none" });
+      this.isReturning = true;
+      gsap.to(this.target, { x: -3333, y: 64, duration: 0.2});
+      //gsap.to(this.target, { x: -3275, y: 50, duration: 0.2 });
+      this.isReturning = false;
+    }
+  }
+});
     </script>
 </body>
 </html>
