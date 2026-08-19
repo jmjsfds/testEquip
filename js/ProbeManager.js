@@ -1,5 +1,5 @@
   
-    let ProbeManager = {
+    let ProbePluginManager = {
         //Properties
         initiated: false,
 
@@ -73,6 +73,14 @@
                 this.bothPluginsConnected = "true";
             }
             /*this.warningManager();*/
+        },
+
+        probeManager: function(probe) {
+            if(!this.initiated){
+                //console.log("Calling ProbeManager.init()");
+                this.init();
+                this.initiated = "true";
+            };
         },
 
         reset: function(){
