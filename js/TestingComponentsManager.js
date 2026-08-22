@@ -24,9 +24,9 @@ let TestingComponentsManager = {
                     //ComponentManager.show("breadboard","show");
                 }*/
     measureResistance: function(){
-        console.log("in measureResistance:");
+        //console.log("in measureResistance:");
         this.resistorValue = (this.colorNumberValue.indexOf(this.resistorBandOne)*10 + this.colorNumberValue.indexOf(this.resistorBandtwo))*(10**this.colorNumberValue.indexOf(this.resistorBandThree));
-        console.log("resistorValue = " + this.resistorValue);
+        //console.log("resistorValue = " + this.resistorValue);
     },
 
     reset: function(){
@@ -34,7 +34,7 @@ let TestingComponentsManager = {
     },
 
     init: function(){
-            console.log("in TestingComponentsManager.init()");
+           // console.log("in TestingComponentsManager.init()");
         this.measureResistance();
            // this.testingSelectorImg = document.getElementById("testing-img-id");
             testingImgDataString =  `[   [

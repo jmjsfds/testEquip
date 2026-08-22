@@ -191,8 +191,8 @@
             KnobSelectorManager.init();
             KnobSelectorManager.initiated = "true";
 
-            ProbeManager.init();
-            ProbeManager.initiated = "true";
+            ProbePluginManager.init();
+            ProbePluginManager.initiated = "true";
 
             ScreenManager.init();
             ScreenManager.initiated = "true";
