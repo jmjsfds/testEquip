@@ -95,14 +95,14 @@
         },
 
         init: function(){
-          console.log("in ProbePluginManager.init()");
+          //console.log("in ProbePluginManager.init()");
           const pinYdataString = `{ "tg": -1500, "tv": -1432, "a": -1216, "b": -1144, "c": -1072, "d": -1000, "e": -928, "f": -720,
                                   "g": -648, "h": -576, "i": -504, "j": -432, "bg": -210, "bv": -140
                                 }`
           this.pinYdata = JSON.parse(pinYdataString);
-            console.log("finished creating this.pinYdata");
-            console.log("this.pinYdata.tg = " + this.pinYdata.tg);
-            console.log("this.pinYdata.bv = " + this.pinYdata.bv);
+            //console.log("finished creating this.pinYdata");
+            //console.log("this.pinYdata.tg = " + this.pinYdata.tg);
+            //console.log("this.pinYdata.bv = " + this.pinYdata.bv);
       
           const railPrefix = ["bg","bv","tg","tv"];
           for(var j = 0; j < 4; ++j){
@@ -160,7 +160,7 @@
             type: "x,y",
             pinX: "",
             pinY: "",
-            pinNumber: 10,
+            pinNumber: 1,
             onPress: function() {
               //this.pinX = this.x;
               //this.pinY = this.y;
@@ -171,10 +171,13 @@
               let matchedTarget = null;
               let isReturning = false;
    
+             
               // Check if the redProbe overlaps any target
               breadboardTargets.forEach(target => {
                 if (Draggable.hitTest(redProbeTip, target)) {
                   matchedTarget = target;
+                }
+                if(matchedTarget){
                   console.log("matchedTarget.id = " + matchedTarget.id);
                   let matchedTargetIdDigit2 = matchedTarget.id.slice(1,2);
                   console.log("matchedTarget.id.slice(1,2) = " + matchedTargetIdDigit2);
@@ -204,14 +207,16 @@
                     }
                     console.log( "matchedTargetId y-coord = " + ProbePluginManager.yPinCoord );
                     // calculate the xPinCoord
-                    console.log("pinNumber = " + matchedTarget.id.slice(2,matchedTarget.id.length - 3));
+                    let railPinNumber = matchedTarget.id.slice(2,matchedTarget.id.length - 3);
+                    console.log("railPinNumber = " + railPinNumber);
                     let numberGroupFive = Math.trunc((matchedTarget.id.slice(2,matchedTarget.id.length - 3) -1 ) / 5 );// Need to add 0 to 4 more pins!
                     console.log("numberGroupFive = " + numberGroupFive);
-                    ProbePluginManager.xPinCoord = 3695 - 435.89 * numberGroupFive;
+                    console.log("railPinNumber - numberGroupFive * 5 = " + railPinNumber - numberGroupFive*5);
+                    ProbePluginManager.xPinCoord = 3695 - 435.89 * numberGroupFive - 73.3 * (railPinNumber - numberGroupFive * 5 - 1);
                   }else{
                     console.log("one of the main pins had been clicked");
                     // one of the main pins has been clicked (ie "a", "b", "c", ...  "j")
-                    ProbePluginManager.xPinCoord = 3695 - 72.5 * (matchedTarget.id.slice(1,matchedTarget.id.length - 3) - 1);
+                    //ProbePluginManager.xPinCoord = 3695 - 72.5 * (matchedTarget.id.slice(1,matchedTarget.id.length - 3) - 1);
                     switch (matchedTarget.id.slice(0,1)){
                       case "a":
                         ProbePluginManager.yPinCoord = ProbePluginManager.pinYdata.a;
@@ -261,6 +266,12 @@
                   }
                   
                   gsap.to(this.target, { x: ProbePluginManager.xPinCoord, y: ProbePluginManager.yPinCoord, duration: 0.3 });
+                }else{
+                  console.log("returning to starting position");
+                /*isReturning = true;
+                gsap.to(this.target, { x: 800, y: 100, duration: 7.2});
+                //gsap.to(this.target, { x: -3275, y: 50, duration: 0.2 });
+                isReturning = false;*/
                 }
               });
             }
